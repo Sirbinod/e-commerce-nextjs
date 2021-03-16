@@ -7,8 +7,10 @@ module.exports = {
         88: "21rem",
         90: "23.5rem",
         18: "4.5rem",
+        98: "28rem",
         100: "36.7rem",
         46: "11.5rem",
+        111: "55rem",
       },
     },
     boxShadow: {

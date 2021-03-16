@@ -1,12 +1,12 @@
 import FilterBar from "../component/FilterBar/FilterBar";
 import Footer from "../component/Footer/Footer";
 import Header from "../component/Header/Header";
-import ItemSelection from "../component/ItemSelection/ItemSelection";
 import MegaMenu from "../component/MegaMenu/MegaMenu";
+import ProductList from "../component/ProductList/ProductList";
 
-export default function Selection() {
+export default function ProductGrid() {
   return (
-    <div className="bg-gray-100">
+    <>
       <section>
         <Header />
       </section>
@@ -24,7 +24,7 @@ export default function Selection() {
               <div className="w-1/4">
                 <FilterBar />
               </div>
-              <ItemSelection />
+              <ProductList />
             </div>
           </div>
         </div>
@@ -36,6 +36,6 @@ export default function Selection() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }

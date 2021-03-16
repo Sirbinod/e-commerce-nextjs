@@ -55,7 +55,7 @@ const Footer = (props) => {
     },
   ];
   return (
-    <div className="pt-5 bg-gray-300">
+    <div className="pt-5">
       <div className="flex justify-between border-b border-gray-400">
         <div className="w-1/2">
           <div className="flex justify-between items-center">

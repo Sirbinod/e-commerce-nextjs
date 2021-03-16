@@ -111,8 +111,7 @@ const SellingCarousel = () => {
               key={item.id}
               className="inline-block w-48 text-center bg-white py-4"
             >
-              <div className="relative w-40 h-40 mx-4 my-2">
-                //product image
+              <div className="relative w-40 h-40 mx-4 my-2 rounded-xl">
                 <Image
                   src={item.img}
                   layout="fill"

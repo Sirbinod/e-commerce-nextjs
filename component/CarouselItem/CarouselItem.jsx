@@ -2,6 +2,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import React from "react";
 import Image from "next/image";
+import {AiFillStar} from "react-icons/ai";
 
 const CarouselItem = () => {
   const responsive = {
@@ -74,7 +75,7 @@ const CarouselItem = () => {
           return (
             <div
               key={item.id}
-              className="inline-block w-48 text-center bg-white py-4"
+              className="inline-block w-48 text-center bg-white py-4 rounded-lg hover:shadow-3xl"
             >
               <div className="relative w-40 h-40 mx-4 my-2">
                 <Image
@@ -85,9 +86,17 @@ const CarouselItem = () => {
                 />
               </div>
               <div className="mt-2">
-                <h3 className="text-xl">{item.title}</h3>
-                <h3 className="text-xl text-red-700">Rs. {item.price}</h3>
-                <span className="block"> 11110</span>
+                <h3 className="text-base font-semibold">{item.title}</h3>
+                <h3 className="text-lg font-semibold text-red-700">
+                  Rs. {item.price}
+                </h3>
+                <div className="flex mx-16">
+                  <AiFillStar style={{color: "yellow"}} />
+                  <AiFillStar style={{color: "yellow"}} />
+                  <AiFillStar style={{color: "yellow"}} />
+                  <AiFillStar />
+                  <AiFillStar />
+                </div>
               </div>
             </div>
           );

@@ -92,10 +92,10 @@ const CatagoryGrid = () => {
             key={item.id}
             className="inline-block text-center w-36 bg-white hover:shadow-3xl"
           >
-            <div className=" relative w-24 h-24 mx-6 my-3">
+            <div className=" relative w-24 h-24 mx-6 mt-3 rounded-3xl">
               <Image src={item.img} layout="fill" objectFit="fill" />
             </div>
-            <h3>{item.name}</h3>
+            <h3 className="my-3 text-sm font-normal">{item.name}</h3>
           </div>
         );
       })}

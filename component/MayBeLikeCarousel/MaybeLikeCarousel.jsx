@@ -1,7 +1,28 @@
 import React from "react";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import Image from "next/image";
 
-const JustInGrid = () => {
+const MaybeLikeCarousel = () => {
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: {max: 3000, min: 2000},
+      items: 7,
+    },
+    desktop: {
+      breakpoint: {max: 2000, min: 950},
+      items: 6,
+    },
+    tablet: {
+      breakpoint: {max: 950, min: 464},
+      items: 3,
+    },
+    mobile: {
+      breakpoint: {max: 464, min: 0},
+      items: 2,
+    },
+  };
   const items = [
     {
       id: 1,
@@ -67,47 +88,15 @@ const JustInGrid = () => {
       catagory: "phone",
       cut_proce: "20",
     },
-    {
-      id: 2,
-      img: "/bag.png",
-      title: "Makeup",
-      price: "200",
-      catagory: "phone",
-      cut_proce: "20",
-    },
-    {
-      id: 3,
-      img: "/bag.png",
-      title: "Refrigerator",
-      price: "200",
-      catagory: "phone",
-      cut_proce: "20",
-    },
-    {
-      id: 4,
-      img: "/bag.png",
-      title: "Watch",
-      price: "200",
-      catagory: "phone",
-      cut_proce: "20",
-    },
-    {
-      id: 5,
-      img: "/bag.png",
-      title: "Media",
-      price: "200",
-      catagory: "phone",
-      cut_proce: "20",
-    },
   ];
   return (
     <div>
-      <div className="grid grid-cols-6 gap-4">
+      <Carousel responsive={responsive}>
         {items.map((item) => {
           return (
             <div
               key={item.id}
-              className="inline-block w-48 text-center hover:shadow-3xl bg-white py-4 rounded-xl"
+              className="inline-block w-48 text-center hover:shadow-3xl bg-white rounded-xl"
             >
               <div className="relative w-40 h-40 mx-4 my-2">
                 <Image
@@ -135,9 +124,9 @@ const JustInGrid = () => {
             </div>
           );
         })}
-      </div>
+      </Carousel>
     </div>
   );
 };
 
-export default JustInGrid;
+export default MaybeLikeCarousel;

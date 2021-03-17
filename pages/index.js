@@ -75,9 +75,25 @@ export default function Home() {
       <section>
         <div className="my-7">
           <div className="container mx-auto">
-            <div className="flex items-center py-4 space-x-7  ">
-              <h1 className="text-2xl ">Deal of the day</h1>
-              <span className="text-xl">Date</span>
+            <div className="flex items-center py-4 space-x-40">
+              <h1 className="text-2xl font-semibold ">Deal of the day</h1>
+              <div className="flex">
+                <h4 className="text-sm">
+                  Ends in
+                  <span className="w-6 h-6 px-1.5 py-1.5 rounded-lg bg-red-600 text-white mx-1.5">
+                    01
+                  </span>
+                  :
+                  <span className="w-6 h-6 px-1.5 py-1.5 rounded-lg bg-red-600 text-white mx-1.5">
+                    01
+                  </span>
+                  :
+                  <span className="w-6 h-6 px-1.5 py-1.5 rounded-lg bg-red-600 text-white mx-1.5">
+                    01
+                  </span>
+                  hrs
+                </h4>
+              </div>
             </div>
             <CarouselItem />
           </div>
@@ -87,7 +103,7 @@ export default function Home() {
         <div className="my-7">
           <div className="container mx-auto">
             <div className="flex items-center py-4">
-              <h1 className="text-2xl ">Catagores</h1>
+              <h1 className="text-2xl font-semibold ">Catagores</h1>
             </div>
             <CatagoryGrid />
           </div>
@@ -102,7 +118,7 @@ export default function Home() {
                   <Image
                     src={ad.img}
                     layout="fill"
-                    objectFit="cover"
+                    objectFit="fill"
                     alt="ad banar"
                   />
                 </div>
@@ -115,7 +131,7 @@ export default function Home() {
         <div className="my-7">
           <div className="container mx-auto">
             <div className="items-center py-4">
-              <h1 className="text-2xl">Best Selling</h1>
+              <h1 className="text-2xl font-semibold ">Best Selling</h1>
             </div>
             <SellingCarousel />
           </div>
@@ -124,15 +140,15 @@ export default function Home() {
       <section>
         <div className="my-7">
           <div className="container mx-auto">
-            <div className="items-center py-4">
-              <h1 className="text-2xl">Collections</h1>
+            <div className="items-center py-4 mb-2">
+              <h1 className="text-2xl font-semibold ">Collections</h1>
             </div>
             <CollectionCard />
           </div>
         </div>
       </section>
       <section>
-        <div className="my-7">
+        <div className="my-7 pt-3">
           <div className="container mx-auto">
             <div className="flex justify-between">
               <div className="">
@@ -140,7 +156,7 @@ export default function Home() {
                   <Image
                     src="/ads1.png"
                     layout="fill"
-                    objectFit="cover"
+                    objectFit="fill"
                     alt="ads banar"
                   />
                 </div>
@@ -148,7 +164,7 @@ export default function Home() {
                   <Image
                     src="/ads2.png"
                     layout="fill"
-                    objectFit="cover"
+                    objectFit="fill"
                     alt="ads banar"
                   />
                 </div>
@@ -157,7 +173,7 @@ export default function Home() {
                 <Image
                   src="/ads3.png"
                   layout="fill"
-                  objectFit="cover"
+                  objectFit="fill"
                   alt="ads banar"
                 />
               </div>
@@ -169,7 +185,7 @@ export default function Home() {
         <div className="my-7">
           <div className="container mx-auto">
             <div className="items-center py-4">
-              <h1 className="text-2xl">Most Popular</h1>
+              <h1 className="text-2xl font-semibold ">Most Popular</h1>
             </div>
             <CarouselItem />
           </div>
@@ -179,7 +195,7 @@ export default function Home() {
         <div className="my-7">
           <div className="container mx-auto">
             <div className="items-center py-4">
-              <h1 className="text-2xl">Most Popular</h1>
+              <h1 className="text-2xl font-semibold ">Just In</h1>
             </div>
             <JustInGrid />
           </div>
@@ -189,7 +205,7 @@ export default function Home() {
         <div className="my-10">
           <div className="container mx-auto">
             <div className="items-center py-3">
-              <h1 className="text-2xl">Top Brands</h1>
+              <h1 className="text-2xl font-semibold ">Top Brands</h1>
             </div>
             <BrandLogo />
           </div>

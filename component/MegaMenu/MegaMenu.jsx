@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const MegaMenu = () => {
   return (
-    <div className="h-10 bg-gray-100 gap-100 sticky z-50">
+    <div className="h-10 bg-gray-100 gap-100 sticky z-50 py-1">
       <div className="container mx-auto items-center flex space-x-7 justify-between">
         <div class="group inline-block ">
           <button class="outline-none focus:outline-none px-3 py-1  rounded-sm flex items-center w-50">
@@ -55,25 +55,25 @@ const MegaMenu = () => {
           <div class="flex space-x-20 items-center">
             <a
               href="#"
-              class="text-black hover:bg-gray-700 hover:text-white  rounded-md text-sm font-medium"
+              class="text-black hover:bg-gray-700 hover:text-white  rounded-md text-sm font-semibold"
             >
               Flash Sale
             </a>
             <a
               href="#"
-              class="text-black hover:bg-gray-700 hover:text-white  rounded-md text-sm font-medium"
+              class="text-black hover:bg-gray-700 hover:text-white  rounded-md text-sm font-semibold"
             >
               Best Deal
             </a>
             <a
               href="#"
-              class="text-black hover:bg-gray-700 hover:text-white   rounded-md text-sm font-medium"
+              class="text-black hover:bg-gray-700 hover:text-white   rounded-md text-sm font-semibold"
             >
               Colection
             </a>
             <a
               href="#"
-              class="text-black hover:bg-gray-700 hover:text-white  rounded-md text-sm font-medium"
+              class="text-black hover:bg-gray-700 hover:text-white  rounded-md text-sm font-semibold"
             >
               Free Delivery
             </a>
@@ -81,13 +81,14 @@ const MegaMenu = () => {
         </div>
         <div className="hidden sm:block sm:ml-6">
           <div className="flex space-x-5 items-center">
-            <h3>
-              <FaShoppingCart />
+            <h3 className="mx-4">
+              <FcLike style={{fontSize: "18"}} />
             </h3>
             <h3>
-              <FcLike />
+              <FaShoppingCart style={{fontSize: "18"}} />
             </h3>
-            <h3>Rs. 200</h3>
+
+            <h3 className="font-semibold text-sm">Rs. 200</h3>
           </div>
         </div>
       </div>

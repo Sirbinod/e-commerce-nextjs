@@ -61,10 +61,10 @@ const CardChanel = () => {
           {array.map((item) => {
             return (
               <div className=" flex w-56 h-12 bg-white rounded-3xl items-center hover:bg-red-400 hove:shadow-2xl">
-                <div className=" relative w-8 h-8 rounded-full mx-3">
+                <div className=" relative w-8 h-8 rounded-full mx-3 ">
                   <Image src={item.img} layout="fill" objectFit="fill" />
                 </div>
-                <h3>{item.title}</h3>
+                <h3 className="text-base font-medium">{item.title}</h3>
               </div>
             );
           })}

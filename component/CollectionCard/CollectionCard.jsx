@@ -76,7 +76,7 @@ const CollectionCard = () => {
                 </div>
               </div>
               <div>
-                <h3 className=" text-lg py-1">{item.title}</h3>
+                <h3 className=" text-lg py-1 font-semibold">{item.title}</h3>
 
                 <h5 className="text-gray-400  text-sm">{item.totle}</h5>
               </div>

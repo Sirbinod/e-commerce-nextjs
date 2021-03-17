@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import {FcLike} from "react-icons/fc";
 import {AiOutlineStar} from "react-icons/ai";
+import Link from "next/link";
 
 const Product = () => {
   const image = [
@@ -29,7 +30,7 @@ const Product = () => {
   return (
     <div className="flex bg-white mb-5">
       <div className="w-1/2 items-center pb-5 bg-white">
-        <div className=" w-98 h-98 relative mx-18 my-7 ">
+        <div className=" w-98 h-80 relative mx-18 my-7 ">
           <Image
             src="/lap0.png"
             layout="fill"
@@ -40,7 +41,7 @@ const Product = () => {
         <div className="flex space-x-7 mx-16 ">
           {image.map((imge) => {
             return (
-              <div className="w-18 h-18 border-gray-300 border px-1.5 py-1.5 hover:border-red-500">
+              <div className="w-18 h-16 border-gray-300 border px-1.5 py-1.5 hover:border-red-500">
                 <div className="w-14 h-14 relative ">
                   <Image
                     src={imge.img}
@@ -60,7 +61,7 @@ const Product = () => {
             For OnePlus Nord Starry Sky Solid Color Series Shockproof PC plus
             TPU Protective Case
           </h2>
-          <div>
+          <div className="mx-2">
             <FcLike />
           </div>
         </div>
@@ -104,9 +105,11 @@ const Product = () => {
         </div>
         <div className="mx-5 my-5 border-b border-gray-300">
           <div className="flex space-x-3 items-center mb-5">
-            <button className="w-40 h-10 border border-red-600 rounded-3xl text-base text-red-700">
-              Add to Card
-            </button>
+            <Link href="/ShoppingCart">
+              <button className="w-40 h-10 border border-red-600 rounded-3xl text-base text-red-700">
+                Add to Card
+              </button>
+            </Link>
             <button className="w-40 h-10 bg-red-600 rounded-3xl text-base text-white">
               Buy Now
             </button>

@@ -11,6 +11,8 @@ const Header = () => {
   return (
     <div className="w-full bg-red-600 h-26 shadow-3xl sticky z-99 top-0">
       <div className="container mx-auto ">
+        {/* link nav bar / top small navbar */}
+
         <div className="flex justify-end pt-1">
           <Link href="action1.1">
             <a className="flex text-white ml-3 al items-center text-sm">
@@ -31,15 +33,24 @@ const Header = () => {
             </a>
           </Link>
         </div>
+        {/* Link bar end */}
+
+        {/* logo and search bar with contact number */}
+
         <div className="flex justify-between items-center">
+          {/* logo */}
           <div className="w-30 h-13">
-            <Image
-              src="/logo.svg"
-              width="200"
-              height="70"
-              alt="web site logo"
-            />
+            <Link href="/#  ">
+              <Image
+                src="/logo.svg"
+                width="200"
+                height="70"
+                alt="web site logo"
+              />
+            </Link>
           </div>
+
+          {/* search bar part */}
           <div className="bg-white  flex items-center rounded-full ">
             <input
               className="rounded-l-full widthSearch h-10 py-4 px-6 pr-2 text-gray-700  focus:outline-none"
@@ -54,6 +65,8 @@ const Header = () => {
               </a>
             </button>
           </div>
+
+          {/* contact number */}
           <Link href="action2.2">
             <a className="flex text-white ml-3 al items-center text-3xl">
               <FiPhoneCall />
@@ -61,6 +74,7 @@ const Header = () => {
             </a>
           </Link>
         </div>
+        {/* end logo search bar */}
       </div>
     </div>
   );

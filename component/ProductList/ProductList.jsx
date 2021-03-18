@@ -7,7 +7,7 @@ const ProductList = () => {
   const items = [
     {
       id: 5,
-      img: "/bag.png",
+      img: "/selec1.png",
       title: "For OnePlus Nord Starry Sky ",
       price: "200",
       catagory: "222",
@@ -15,7 +15,7 @@ const ProductList = () => {
     },
     {
       id: 6,
-      img: "/bag.png",
+      img: "/selec2.png",
       title: "For OnePlus Nord Starry Sky ",
       price: "200",
       catagory: "222",
@@ -23,8 +23,16 @@ const ProductList = () => {
     },
     {
       id: 7,
-      img: "/bag.png",
+      img: "/selec3.png",
       title: "Realme",
+      price: "200",
+      catagory: "222",
+      cut_proce: "20% OFF",
+    },
+    {
+      id: 5,
+      img: "/selec1.png",
+      title: "For OnePlus Nord Starry Sky ",
       price: "200",
       catagory: "222",
       cut_proce: "20% OFF",
@@ -44,10 +52,10 @@ const ProductList = () => {
             <Link href="/ProductDetail">
               <div
                 key={item.id}
-                className="w-111 h-44 flex bg-white border-b border-gray-200 justify-between"
+                className="w-111 h-48 flex bg-white border-b border-gray-200 justify-between"
               >
                 <div className="flex space-x-3 items-center">
-                  <div className="w-40 h-40  relative mx-4">
+                  <div className="w-44 h-40  relative mx-6 mt-1.5">
                     <Image
                       src={item.img}
                       layout="fill"

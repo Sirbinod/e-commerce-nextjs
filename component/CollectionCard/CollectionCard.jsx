@@ -5,62 +5,62 @@ const CollectionCard = () => {
   const collection = [
     {
       id: 1,
-      img: "/headphone.png",
+      img: "/fCaro4.png",
       title: "Mobile Phone",
       totle: "100 Products",
     },
     {
       id: 2,
-      img: "/headphone.png",
+      img: "/coll1.png",
       title: "Mobile Phone",
       totle: "100 Products",
     },
     {
       id: 3,
-      img: "/headphone.png",
-      title: "Mobile Phone",
+      img: "/call2.png",
+      title: "Groceries",
       totle: "100 Products",
     },
     {
       id: 4,
-      img: "/headphone.png",
-      title: "Mobile Phone",
+      img: "/call3.png",
+      title: "BagPacks",
       totle: "100 Products",
     },
     {
       id: 5,
-      img: "/headphone.png",
-      title: "Mobile Phone",
+      img: "/call4.png",
+      title: "Makeup Kits",
       totle: "100 Products",
     },
     {
       id: 6,
       img: "/headphone.png",
-      title: "Mobile Phone",
+      title: "health Care",
       totle: "100 Products",
     },
     {
       id: 7,
-      img: "/headphone.png",
-      title: "Mobile Phone",
+      img: "/call5.png",
+      title: "Clothings",
       totle: "100 Products",
     },
     {
       id: 8,
-      img: "/headphone.png",
-      title: "Mobile Phone",
+      img: "/shoes.png",
+      title: "Electronics",
       totle: "100 Products",
     },
     {
       id: 9,
-      img: "/headphone.png",
-      title: "Mobile Phone",
+      img: "/fCaro5.png",
+      title: "Appliances",
       totle: "100 Products",
     },
     {
       id: 10,
-      img: "/headphone.png",
-      title: "Mobile Phone",
+      img: "/watch.png",
+      title: "Watches",
       totle: "100 Products",
     },
   ];
@@ -71,7 +71,7 @@ const CollectionCard = () => {
           return (
             <div className=" flex w-56 h-16 items-center">
               <div className="w-18 h-18 bg-gray-300 rounded-full mr-3">
-                <div className=" relative w-16 h-16 rounded-full my-1 mx-1">
+                <div className=" relative w-12 h-12 rounded-full my-3 mx-3">
                   <Image src={item.img} layout="fill" objectFit="fill" />
                 </div>
               </div>

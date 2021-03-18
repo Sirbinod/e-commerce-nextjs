@@ -27,43 +27,49 @@ const CarouselItem = () => {
   const items = [
     {
       id: 1,
-      img: "/phone.png",
-      title: "Go Pro",
+      img: "/fCaro1.png",
+      title: "GoPro Hero",
       price: "200",
     },
     {
       id: 2,
-      img: "/phone.png",
-      title: "Makeup",
+      img: "/fCaro2.png",
+      title: "Makeup Kit",
       price: "200",
     },
     {
       id: 3,
-      img: "/phone.png",
-      title: "Refrigerator",
+      img: "/fCaro3.png",
+      title: "ultra Series Watch",
       price: "200",
     },
     {
       id: 4,
-      img: "/phone.png",
-      title: "Watch",
+      img: "/fCaro4.png",
+      title: "Huwaei Nova",
       price: "200",
     },
     {
       id: 5,
-      img: "/phone.png",
-      title: "Mobile",
+      img: "/fCaro5.png",
+      title: "Samsung Refrigerator",
       price: "200",
     },
     {
       id: 6,
-      img: "/phone.png",
-      title: "Laptop",
+      img: "/fCaro6.png",
+      title: "Hp Pavilion",
       price: "200",
     },
     {
       id: 7,
-      img: "/phone.png",
+      img: "/fCaro1.png",
+      title: "Realme",
+      price: "200",
+    },
+    {
+      id: 7,
+      img: "/fCaro2.png",
       title: "Realme",
       price: "200",
     },
@@ -77,7 +83,7 @@ const CarouselItem = () => {
               key={item.id}
               className="inline-block w-48 text-center bg-white py-4 rounded-lg hover:shadow-3xl"
             >
-              <div className="relative w-40 h-40 mx-4 my-2">
+              <div className="relative w-40 h-40 mx-4 my-1">
                 <Image
                   src={item.img}
                   layout="fill"

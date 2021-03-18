@@ -5,53 +5,53 @@ const CardChanel = () => {
   const array = [
     {
       id: 1,
-      img: "/chanelcard.svg",
+      img: "/chanel1.png",
       title: "Ktm Mall",
     },
     {
       id: 2,
-      img: "/chanelcard.svg",
+      img: "/chanel2.png",
       title: "TopUp",
     },
     {
       id: 3,
-      img: "/chanelcard.svg",
+      img: "/chanel3.png",
       title: "Movie Ticket",
     },
     {
       id: 4,
-      img: "/chanelcard.svg",
+      img: "/chanel4.png",
       title: "Flight",
     },
     {
       id: 5,
-      img: "/chanelcard.svg",
-      title: "Internet",
-    },
-    {
-      id: 6,
-      img: "/chanelcard.svg",
+      img: "/chanel5.png",
       title: "Bus",
     },
     {
+      id: 6,
+      img: "/chanel6.png",
+      title: "Internet",
+    },
+    {
       id: 7,
-      img: "/chanelcard.svg",
-      title: "Hotel",
+      img: "/chanel7.png",
+      title: "Electricity",
     },
     {
       id: 8,
-      img: "/chanelcard.svg",
-      title: "Electric",
+      img: "/chanel8.png",
+      title: "TV",
     },
     {
       id: 9,
-      img: "/chanelcard.svg",
-      title: "Electric",
+      img: "/chanel9.png",
+      title: "Hotel",
     },
     {
       id: 10,
-      img: "/chanelcard.svg",
-      title: "Electric",
+      img: "/chanel10.png",
+      title: "More",
     },
   ];
   return (
@@ -61,10 +61,10 @@ const CardChanel = () => {
           {array.map((item) => {
             return (
               <div className=" flex w-56 h-12 bg-white rounded-3xl items-center hover:bg-red-400 hove:shadow-2xl">
-                <div className=" relative w-8 h-8 rounded-full mx-3 ">
+                <div className=" relative w-8 h-8  mx-3.5">
                   <Image src={item.img} layout="fill" objectFit="fill" />
                 </div>
-                <h3 className="text-base font-medium">{item.title}</h3>
+                <h3 className="text-sm font-semibold">{item.title}</h3>
               </div>
             );
           })}

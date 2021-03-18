@@ -5,28 +5,28 @@ const CatagoryGrid = () => {
   const catagItem = [
     {
       id: 1,
-      img: "/watch.png",
-      name: "Watches",
+      img: "/catag1.png",
+      name: "Laptop",
     },
     {
       id: 2,
-      img: "/watch.png",
-      name: "Watches",
+      img: "/catag2.png",
+      name: "Mobiles",
     },
     {
       id: 3,
-      img: "/watch.png",
-      name: "Watches",
+      img: "/catag3.png",
+      name: "Shampoo",
     },
     {
       id: 4,
-      img: "/watch.png",
-      name: "Watches",
+      img: "/catag4.png",
+      name: "Shoes",
     },
     {
       id: 5,
-      img: "/watch.png",
-      name: "Watches",
+      img: "/catag5.png",
+      name: "Makeup Kit",
     },
     {
       id: 6,
@@ -35,53 +35,53 @@ const CatagoryGrid = () => {
     },
     {
       id: 7,
-      img: "/watch.png",
-      name: "Watches",
+      img: "/catag7.png",
+      name: "Bags",
     },
     {
       id: 8,
-      img: "/watch.png",
-      name: "Watches",
+      img: "/catag8.png",
+      name: "Grocer ies",
     },
     {
       id: 9,
-      img: "/watch.png",
-      name: "Watches",
+      img: "/catag9.png",
+      name: "Moniter",
     },
     {
       id: 10,
-      img: "/watch.png",
-      name: "Watches",
+      img: "/catag10.png",
+      name: "Furniture",
     },
     {
       id: 11,
-      img: "/watch.png",
-      name: "Watches",
+      img: "/catag11.png",
+      name: "Jackets",
     },
     {
       id: 12,
-      img: "/watch.png",
-      name: "Watches",
+      img: "/catag12.png",
+      name: "Sanitizer",
     },
     {
       id: 13,
-      img: "/watch.png",
-      name: "Watches",
+      img: "/catag13.png",
+      name: "Speaker",
     },
     {
       id: 14,
-      img: "/watch.png",
-      name: "Watches",
+      img: "/catag14.png",
+      name: "Flowers",
     },
     {
       id: 15,
-      img: "/watch.png",
-      name: "Watches",
+      img: "/catag15.png",
+      name: "Books",
     },
     {
       id: 16,
-      img: "/watch.png",
-      name: "Watches",
+      img: "/catag16.png",
+      name: "Home appliances",
     },
   ];
   return (
@@ -92,7 +92,7 @@ const CatagoryGrid = () => {
             key={item.id}
             className="inline-block text-center w-36 bg-white hover:shadow-3xl"
           >
-            <div className=" relative w-24 h-24 mx-6 mt-3 rounded-3xl">
+            <div className=" relative w-20 h-20 mx-6 mt-4 rounded-3xl">
               <Image src={item.img} layout="fill" objectFit="fill" />
             </div>
             <h3 className="my-3 text-sm font-normal">{item.name}</h3>

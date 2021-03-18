@@ -7,64 +7,64 @@ const ItemSelection = () => {
   const items = [
     {
       id: 1,
-      img: "/bag.png",
-      title: "Go Pro",
+      img: "/selec1.png",
+      title: "Dell Inspiron 15",
       price: "200",
       catagory: "phone",
       cut_proce: "222 ",
     },
     {
       id: 2,
-      img: "/bag.png",
-      title: "Makeup",
+      img: "/selec2.png",
+      title: "ACER ASPIRE 5",
       price: "200",
       catagory: "phone",
       cut_proce: "222",
     },
     {
       id: 3,
-      img: "/bag.png",
-      title: "Refrigerator",
+      img: "/selec3.png",
+      title: "Lenovo IdeaPad 3",
       price: "200",
       catagory: "phone",
       cut_proce: "222",
     },
     {
       id: 4,
-      img: "/bag.png",
-      title: "Watch",
+      img: "/selec4.png",
+      title: "ACER ASPIRE 5",
       price: "200",
       catagory: "phone",
       cut_proce: "222",
     },
     {
       id: 5,
-      img: "/bag.png",
-      title: "TV",
+      img: "/selec5.png",
+      title: "Dell Inspiron 15",
       price: "200",
       catagory: "phone",
       cut_proce: "20",
     },
     {
       id: 6,
-      img: "/bag.png",
-      title: "Laptop",
+      img: "/selec6.png",
+      title: "ACER ASPIRE 5",
       price: "200",
       catagory: "phone",
       cut_proce: "222",
     },
     {
       id: 7,
-      img: "/bag.png",
-      title: "Realme",
+      img: "/selec1.png",
+      title: "Lenovo IdeaPad 3",
       price: "200",
       catagory: "phone",
       cut_proce: "222",
     },
     {
       id: 1,
-      img: "/bag.png",
-      title: "Go Pro",
+      img: "/selec2.png",
+      title: "ACER ASPIRE 5",
       price: "200",
       catagory: "phone",
       cut_proce: "222",
@@ -79,14 +79,14 @@ const ItemSelection = () => {
             <h3>Sort by</h3>
           </div>
         </div>
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-4 gap-3">
           {items.map((item) => {
             return (
               <div
                 key={item.id}
-                className="inline-block w-52 text-center hover:shadow-3xl bg-white py-4 rounded-xl"
+                className="inline-block w-56 text-center hover:shadow-3xl bg-white py-4 rounded-xl"
               >
-                <div className="relative w-44 h-44 mx-4 my-2">
+                <div className="relative w-44 h-40 mx-6 my-2">
                   <Image
                     src={item.img}
                     layout="fill"
@@ -95,8 +95,8 @@ const ItemSelection = () => {
                   />
                 </div>
                 <div className="mt-2">
-                  <h3 className="text-lg font-light">{item.title}</h3>
-                  <h3 className="text-lg font-medium">{item.catagory}</h3>
+                  <h3 className="text-lg font-medium">{item.title}</h3>
+                  <h3 className="text-lg font-medium mb-1">{item.catagory}</h3>
                   <h3 className="text-xl font-semibold text-red-700">
                     Rs. {item.price}
                   </h3>
@@ -108,7 +108,7 @@ const ItemSelection = () => {
                       20% off
                     </span>
                   </div>
-                  <div className="items-center flex mx-16 my-3">
+                  <div className="items-center flex mx-16 mt-3">
                     <AiFillStar style={{color: "yellow"}} />
                     <AiFillStar style={{color: "yellow"}} />
                     <AiFillStar style={{color: "yellow"}} />

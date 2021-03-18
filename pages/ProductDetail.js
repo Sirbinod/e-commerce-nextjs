@@ -1,13 +1,13 @@
 import Footer from "../component/Footer/Footer";
 import Header from "../component/Header/Header";
+import MaybeLikeCarousel from "../component/MayBeLikeCarousel/MaybeLikeCarousel";
 import MegaMenu from "../component/MegaMenu/MegaMenu";
 import Product from "../component/Product/Product";
 import RatingReview from "../component/RatingReview/RatingReview";
-import SellingCarousel from "../component/SellingCarousel/SellingCarousel";
 
 export default function ProductDetail() {
   return (
-    <div className="bg-gray-5   0">
+    <div className="bg-gray-5">
       <section>
         <Header />
       </section>
@@ -30,7 +30,7 @@ export default function ProductDetail() {
             <div className="my-5 pt-3">
               <h1 className="text-2xl font-semibold">You might alo like</h1>
             </div>
-            <SellingCarousel />
+            <MaybeLikeCarousel />
           </div>
         </div>
       </section>

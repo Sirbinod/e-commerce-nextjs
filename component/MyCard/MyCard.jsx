@@ -7,7 +7,7 @@ const MyCard = () => {
   return (
     <div className="flex space-x-6">
       <div className=" w-110 bg-white rounded">
-        <div className="flex justify-between mx-3 border-b">
+        <div className="flex justify-between mx-3 border-b items-center">
           <div className="flex items-center space-x-4  py-3">
             <input
               type="checkbox"
@@ -15,12 +15,15 @@ const MyCard = () => {
             />
             <h3 className="text-sm font-semibold"> Select Item to delete</h3>
           </div>
+          <button className="w-20 h-7 text-center border border-red-500 text-sm font-semibold text-red-500    rounded-3xl">
+            View all
+          </button>
         </div>
         <div className="my-5 border-b mx-3 pb-2 flex">
           <input type="checkbox" class="form-checkbox h-4 w-4 text-gray-600" />
           <div className="flex">
             <div className="mx-5 w-40 h-28 relative">
-              <Image src="/lap0.png" layout="fill" objectFit="fill" />
+              <Image src="/selec2.png" layout="fill" objectFit="fill" />
             </div>
             <div className="mr-10">
               <h1 className="text-sm font-medium">

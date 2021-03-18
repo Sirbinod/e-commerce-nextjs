@@ -26,77 +26,56 @@ const SellingCarousel = () => {
   const array = [
     {
       id: 1,
-      img: "/shoes.png",
-      title: "Gold Star",
+      img: "/sell1.png",
+      title: "Converse All Star",
       price: "Ra. 200 onwards",
-      brand: "Brand",
+      brand: "All Star",
     },
     {
       id: 2,
-      img: "/shoes.png",
-      title: "Gold Star",
+      img: "/sell2.png",
+      title: "Running Shoes",
       price: "Ra. 200 onwards",
-      brand: "Brand",
+      brand: "Xianchonhg",
     },
     {
       id: 3,
-      img: "/shoes.png",
-      title: "Gold Star",
+      img: "/sell3.png",
+      title: "Vans off the hood",
       price: "Ra. 200 onwards",
-      brand: "Brand",
+      brand: "Club Vans",
     },
     {
       id: 4,
-      img: "/shoes.png",
-      title: "Gold Star",
+      img: "/sell4.png",
+      title: "Goldstar Black panter",
       price: "Ra. 200 onwards",
-      brand: "Brand",
+      brand: "Gold Star",
     },
     {
       id: 5,
       img: "/shoes.png",
-      title: "Gold Star",
+      title: "Nike Air Jordan",
       price: "Ra. 200 onwards",
-      brand: "Brand",
+      brand: "Nike",
     },
     {
       id: 6,
-      img: "/shoes.png",
-      title: "Gold Star",
+      img: "/sell6.png",
+      title: "Adidas Running Shoes",
       price: "Ra. 200 onwards",
-      brand: "Brand",
+      brand: "Adidas",
     },
     {
       id: 7,
-      img: "/shoes.png",
+      img: "/sell1.png",
       title: "Gold Star",
       price: "Ra. 200 onwards",
       brand: "Brand",
     },
     {
       id: 8,
-      img: "/shoes.png",
-      title: "Gold Star",
-      price: "Ra. 200 onwards",
-      brand: "Brand",
-    },
-    {
-      id: 9,
-      img: "/shoes.png",
-      title: "Gold Star",
-      price: "Ra. 200 onwards",
-      brand: "Brand",
-    },
-    {
-      id: 10,
-      img: "/shoes.png",
-      title: "Gold Star",
-      price: "Ra. 200 onwards",
-      brand: "Brand",
-    },
-    {
-      id: 11,
-      img: "/shoes.png",
+      img: "/sell2.png",
       title: "Gold Star",
       price: "Ra. 200 onwards",
       brand: "Brand",
@@ -109,9 +88,9 @@ const SellingCarousel = () => {
           return (
             <div
               key={item.id}
-              className="inline-block w-48 text-center bg-white py-4 rounded-xl hover:shadow-3xl  "
+              className="inline-block w-48 text-center bg-white py-2 rounded-xl hover:shadow-3xl  "
             >
-              <div className="relative w-40 h-40 mx-4 my-2 rounded-xl">
+              <div className="relative w-40 h-40 mx-4 rounded-xl">
                 <Image
                   src={item.img}
                   layout="fill"
@@ -120,8 +99,8 @@ const SellingCarousel = () => {
                 />
               </div>
               <div className="mt-1">
-                <h3 className="text-lg font-normal">{item.title}</h3>
-                <h3 className="border rounded-2xl w-36 mx-6 border-green-500 text-base font-medium text-green-500">
+                <h3 className="text-base my-1 font-semibold">{item.title}</h3>
+                <h3 className="border rounded-2xl mb-1 w-36 mx-6 border-green-500 text-base font-medium text-green-500">
                   {item.price}
                 </h3>
                 <span className="block text-gray-600">{item.brand}</span>

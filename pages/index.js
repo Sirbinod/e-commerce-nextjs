@@ -11,6 +11,7 @@ import JustInGrid from "../component/JustInGrid/JustInGrid";
 import BrandLogo from "../component/BrandLogo/BrandLogo";
 import Info from "../component/Info/Info";
 import Footer from "../component/Footer/Footer";
+import ViewButton from "../component/ViewButton/ViewButton";
 
 export default function Home() {
   const images = [
@@ -36,29 +37,33 @@ export default function Home() {
         <MegaMenu />
       </section>
       <section>
+        {/* home banar */}
         <div className="mb-10">
           <div className="container mx-auto">
             <div className="flex ml-72 justify-between">
+              {/* slide banar */}
               <div className=" relative w-2/3 h-96">
                 <Image
-                  src="/firstbanar.png"
+                  src="/homebanar1.png"
                   layout="fill"
                   objectFit="fill"
                   alt="first banar"
                 />
               </div>
-              <div className="">
-                <div className=" relative w-72 h-48">
+
+              {/* left side banar */}
+              <div className=" space-y-2 mt-1">
+                <div className=" relative w-72 h-44">
                   <Image
-                    src="/secondbanar.png"
+                    src="/homebanar2.png"
                     layout="fill"
                     objectFit="fill"
                     alt="first banar"
                   />
                 </div>
-                <div className=" relative w-72 h-48">
+                <div className=" relative w-72 h-44">
                   <Image
-                    src="/thirdbanar.png"
+                    src="/homebanar3.png"
                     layout="fill"
                     objectFit="fill"
                     alt="first banar"
@@ -75,24 +80,32 @@ export default function Home() {
       <section>
         <div className="my-7">
           <div className="container mx-auto">
-            <div className="flex items-center py-4 space-x-40">
-              <h1 className="text-2xl font-semibold ">Deal of the day</h1>
-              <div className="flex">
-                <h4 className="text-sm">
-                  Ends in
-                  <span className="w-6 h-6 px-1.5 py-1.5 rounded-lg bg-red-600 text-white mx-1.5">
-                    01
-                  </span>
-                  :
-                  <span className="w-6 h-6 px-1.5 py-1.5 rounded-lg bg-red-600 text-white mx-1.5">
-                    01
-                  </span>
-                  :
-                  <span className="w-6 h-6 px-1.5 py-1.5 rounded-lg bg-red-600 text-white mx-1.5">
-                    01
-                  </span>
-                  hrs
-                </h4>
+            <div className="flex items-center py-4 justify-between">
+              {/* heading carousel item */}
+              <div className="flex space-x-16 items-center">
+                <h1 className="text-2xl font-semibold ">Deal of the day</h1>
+                {/* date countdown */}
+                <div className="flex">
+                  <h4 className="text-sm">
+                    Ends in
+                    <span className="w-6 h-6 px-1.5 py-1.5 rounded-lg bg-red-600 text-white mx-1.5">
+                      01
+                    </span>
+                    :
+                    <span className="w-6 h-6 px-1.5 py-1.5 rounded-lg bg-red-600 text-white mx-1.5">
+                      01
+                    </span>
+                    :
+                    <span className="w-6 h-6 px-1.5 py-1.5 rounded-lg bg-red-600 text-white mx-1.5">
+                      01
+                    </span>
+                    hrs
+                  </h4>
+                </div>
+                {/* end countdown */}
+              </div>
+              <div>
+                <ViewButton />
               </div>
             </div>
             <CarouselItem />
@@ -112,6 +125,7 @@ export default function Home() {
       <section>
         <div className="container my-7 mx-auto">
           <div className="flex justify-between">
+            {/* middle pard banar using map method */}
             {images.map((ad) => {
               return (
                 <div key={ad.id} className="w-90 h-64 relative">
@@ -130,8 +144,10 @@ export default function Home() {
       <section>
         <div className="my-7">
           <div className="container mx-auto">
-            <div className="items-center py-4">
+            <div className=" flex justify-between items-center py-4">
+              {/* best selling section Header */}
               <h1 className="text-2xl font-semibold ">Best Selling</h1>
+              <ViewButton />
             </div>
             <SellingCarousel />
           </div>
@@ -141,6 +157,8 @@ export default function Home() {
         <div className="my-7">
           <div className="container mx-auto">
             <div className="items-center py-4 mb-2">
+              {/* collection section header */}
+
               <h1 className="text-2xl font-semibold ">Collections</h1>
             </div>
             <CollectionCard />
@@ -151,7 +169,9 @@ export default function Home() {
         <div className="my-7 pt-3">
           <div className="container mx-auto">
             <div className="flex justify-between">
-              <div className="">
+              {/* landing page last banar */}
+              <div>
+                {/* left side banar */}
                 <div className="w-100 h-46 mb-3 relative">
                   <Image
                     src="/ads1.png"
@@ -169,6 +189,7 @@ export default function Home() {
                   />
                 </div>
               </div>
+              {/* right side banar */}
               <div className="w-100 h-96 relative">
                 <Image
                   src="/ads3.png"
@@ -184,8 +205,10 @@ export default function Home() {
       <section>
         <div className="my-7">
           <div className="container mx-auto">
-            <div className="items-center py-4">
+            <div className=" flex justify-between items-center py-4">
+              {/* most popular section header */}
               <h1 className="text-2xl font-semibold ">Most Popular</h1>
+              <ViewButton />
             </div>
             <CarouselItem />
           </div>
@@ -195,6 +218,7 @@ export default function Home() {
         <div className="my-7">
           <div className="container mx-auto">
             <div className="items-center py-4">
+              {/* just in section header */}
               <h1 className="text-2xl font-semibold ">Just In</h1>
             </div>
             <JustInGrid />
@@ -205,6 +229,7 @@ export default function Home() {
         <div className="my-10">
           <div className="container mx-auto">
             <div className="items-center py-3">
+              {/* top brand section header */}
               <h1 className="text-2xl font-semibold ">Top Brands</h1>
             </div>
             <BrandLogo />

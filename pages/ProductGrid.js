@@ -21,7 +21,7 @@ export default function ProductGrid() {
               <h3>Computer</h3>
             </div>
             <div className="flex space-x-7">
-              <div className="w-1/4">
+              <div className="w-56">
                 <FilterBar />
               </div>
               <ProductList />

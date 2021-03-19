@@ -12,8 +12,27 @@ import BrandLogo from "../component/BrandLogo/BrandLogo";
 import Info from "../component/Info/Info";
 import Footer from "../component/Footer/Footer";
 import ViewButton from "../component/ViewButton/ViewButton";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 export default function Home() {
+  const responsive = {
+    desktop: {
+      breakpoint: {max: 3000, min: 1024},
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: {max: 1024, min: 464},
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: {max: 464, min: 0},
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+  };
   const images = [
     {
       id: 1,
@@ -28,6 +47,17 @@ export default function Home() {
       img: "/ad3.png",
     },
   ];
+  const banars = [
+    {id: 1, img: "/banner01.png"},
+    {
+      id: 2,
+      img: "/banar02.png",
+    },
+    {
+      id: 3,
+      img: "/banar03.png",
+    },
+  ];
   return (
     <div className="bg-gray-100">
       <section>
@@ -40,20 +70,34 @@ export default function Home() {
         {/* home banar */}
         <div className="mb-10">
           <div className="container mx-auto">
-            <div className="flex ml-72 justify-between">
+            <div className="flex ml-60 justify-between">
               {/* slide banar */}
-              <div className=" relative w-2/3 h-96">
-                <Image
-                  src="/homebanar1.png"
-                  layout="fill"
-                  objectFit="fill"
-                  alt="first banar"
-                />
+              <div className="w-102">
+                <Carousel
+                  responsive={responsive}
+                  infinite={true}
+                  autoPlay={true}
+                  autoPlaySpeed={10000}
+                  removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
+                >
+                  {banars.map((banar) => {
+                    return (
+                      <div key={banar.id} className=" relative w-102 h-89">
+                        <Image
+                          src={banar.img}
+                          layout="fill"
+                          objectFit="fill"
+                          alt="first banar"
+                        />
+                      </div>
+                    );
+                  })}
+                </Carousel>
               </div>
 
               {/* left side banar */}
-              <div className=" space-y-2 mt-1">
-                <div className=" relative w-72 h-44">
+              <div className=" space-y-2">
+                <div className="relative w-72 h-44">
                   <Image
                     src="/homebanar2.png"
                     layout="fill"

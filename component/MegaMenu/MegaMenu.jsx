@@ -17,7 +17,7 @@ const MegaMenu = () => {
               </svg>
             </span>
           </button>
-          <ul class="bg-white z-10 border rounded-sm transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-60">
+          <ul class="bg-white mt-1 z-10 border rounded-sm transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-56">
             <li class="rounded-sm relative px-3 py-1 hover:bg-red-400">
               <button class="w-full text-left flex items-center outline-none focus:outline-none">
                 <span class="pr-1 flex-1">Electric Device</span>

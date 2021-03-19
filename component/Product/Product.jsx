@@ -28,9 +28,9 @@ const Product = () => {
     },
   ];
   return (
-    <div className="flex bg-white mb-5">
-      <div className="w-1/2 items-center pb-5 bg-white">
-        <div className=" w-98 h-80 relative mx-18 my-7 ">
+    <div className="flex bg-white mb-1">
+      <div className="w-1/2 items-center pb-2 bg-white">
+        <div className=" w-98 h-80 relative mx-18 my-5 ">
           <Image
             src="/lap0.png"
             layout="fill"
@@ -55,8 +55,8 @@ const Product = () => {
           })}
         </div>
       </div>
-      <div className="w-1/2 py-5">
-        <div className="flex ">
+      <div className="w-1/2 py-3 overflow-auto h-100">
+        <div className="flex item-center">
           <h2 className="ml-5 w-100 text-xl">
             For OnePlus Nord Starry Sky Solid Color Series Shockproof PC plus
             TPU Protective Case
@@ -65,7 +65,7 @@ const Product = () => {
             <FcLike />
           </div>
         </div>
-        <div className="my-3 mx-5 border-b border-gray-300">
+        <div className="my-2 mx-5 border-b border-gray-300">
           <div className="flex space-x-4 items-center">
             <div className="flex ">
               <AiOutlineStar />
@@ -76,14 +76,14 @@ const Product = () => {
             </div>
             <h3 className=" text-blue-700">0.01 ratings | 10 Reviews</h3>
           </div>
-          <div className="flex my-3">
+          <div className="flex my-2">
             <h2 className="text-gray-400">
               brand: <span className="text-blue-700">HP | More from HP</span>
             </h2>
           </div>
         </div>
-        <div className="mx-5 my-5 border-b border-gray-300">
-          <div className=" flex  space-x-6 mb-5 items-center">
+        <div className="mx-5 my-3 border-b border-gray-300">
+          <div className=" flex  space-x-6 mb-3 items-center">
             <h1 className="text-red-700 text-4xl font-extrabold"> Rs. 65000</h1>
             <h3 className="text-gray-400 text-2xl line-through"> Rs 72000</h3>
             <h4 className=" w-24 h-8 py-1 text-center text-base rounded-2xl text-green-500 font-semibold border border-green-600">
@@ -91,8 +91,8 @@ const Product = () => {
             </h4>
           </div>
         </div>
-        <div className="mx-5 my-5 border-b border-gray-300">
-          <div className="flex space-x-2 items-center mb-5">
+        <div className="mx-5 my-3 border-b border-gray-300">
+          <div className="flex space-x-2 items-center mb-3">
             <h2 className="text-gray-400">Quantity:</h2>
             <div className="flex items-center space-x-1">
               <button className="w-5 h-5  bg-gray-400">-</button>
@@ -103,7 +103,7 @@ const Product = () => {
             </div>
           </div>
         </div>
-        <div className="mx-5 my-5 border-b border-gray-300">
+        <div className="mx-5 my-4 border-b border-gray-300">
           <div className="flex space-x-3 items-center mb-5">
             <Link href="/ShoppingCart">
               <button className="w-40 h-10 border border-red-600 rounded-3xl text-base text-red-700">
@@ -115,8 +115,8 @@ const Product = () => {
             </button>
           </div>
         </div>
-        <div className="mx-5 my-5 border-b border-gray-300">
-          <div className="flex space-x-10 items-center mb-5">
+        <div className="mx-5 my-3 border-b border-gray-300">
+          <div className="flex space-x-10 items-center mb-3">
             <div className=" w-40 flex space-x-4 items-center">
               <div className="w-10 h-10 relative">
                 <Image src="/del1.png" layout="fill" objectFit="fill" />
@@ -132,8 +132,8 @@ const Product = () => {
             </div>
           </div>
         </div>
-        <div className="mx-5 my-5 border-b border-gray-300">
-          <div className="flex space-x-10 items-center mb-5">
+        <div className="mx-5 my-3 border-b border-gray-300">
+          <div className="flex space-x-10 items-center mb-3">
             <div className="w-40 flex space-x-4 items-center">
               <div className="w-10 h-10 relative">
                 <Image src="/del2.png" layout="fill" objectFit="fill" />
@@ -146,6 +146,21 @@ const Product = () => {
             <div>
               <h2 className="text-blue-700">View other from this seller </h2>
             </div>
+          </div>
+        </div>
+        <div className="mx-4 my-7">
+          <h1 className="text-lg font-semibold my-2">About this product</h1>
+          <div className="flex space-x-20">
+            <h2 className="text-sm text-gray-500">Sales Package</h2>
+            <h2 className="text-sm">
+              Laptop, power adaptor, user Guide, Warranty Documents
+            </h2>
+          </div>
+        </div>
+        <div className="mx-4 my-7">
+          <h1 className="text-lg font-semibold my-2">Specification</h1>
+          <div>
+            <h2 className="text-sm text-gray-500">2TB ssd j ho tai ho so</h2>
           </div>
         </div>
       </div>

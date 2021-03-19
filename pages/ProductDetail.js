@@ -16,7 +16,7 @@ export default function ProductDetail() {
       </section>
       <section>
         <div className="container mx-auto">
-          <div className="flex space-x-3 items-center my-2">
+          <div className="flex space-x-3 items-center my-1.5">
             <h3>Electric =</h3>
             <h3>Computer</h3>
           </div>

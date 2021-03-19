@@ -2,6 +2,9 @@ import React from "react";
 import Image from "next/image";
 import {FcLike} from "react-icons/fc";
 import {RiDeleteBin5Line} from "react-icons/ri";
+import OrderSummary from "../OrderSummary/OrderSummary";
+import CouponApply from "../coupon/CouponApply";
+import Link from "next/link";
 
 const MyCard = () => {
   return (
@@ -32,7 +35,6 @@ const MyCard = () => {
               </h1>
               <div className="flex space-x-8 items-center my-1">
                 <h2 className="text-red-700 text-lg font-semibold">
-                  {" "}
                   Rs. 15000
                 </h2>
                 <h3 className="text-gray-500 line-through text-base font-medium">
@@ -115,35 +117,19 @@ const MyCard = () => {
           </div>
         </div>
       </div>
-      <div className="w-80 h-64 bg-white px-4 py-3 rounded">
-        <h1 className="text-base font-semibold">Order Summary</h1>
-        <div className="flex justify-between my-3">
-          <h2 className="text-sm text-gray-500">Subtotal (1 item)</h2>
-          <h2 className="text-sm font-semibold">Rs 15000</h2>
-        </div>
-        <div className="flex justify-between my-3">
-          <h2 className="text-sm text-gray-500">Delivary Charge</h2>
-          <h2 className="text-sm font-semibold">Rs 100 </h2>
-        </div>
-        <div className=" border border-gray-300 h-9 flex items-center w-72 rounded-full my-3">
-          <input
-            className=" rounded-full w-48 h-6 py-4 text-gray-700 px-3 mr-5 focus:outline-none"
-            id="search"
-            type="text"
-            placeholder="Enter Voucher Code"
-          />
+      <div className="w-80 h-64 bg-white px-9 py-3 rounded">
+        <OrderSummary />
+        <CouponApply />
 
-          <button class="bg-blue-700 w-18 text-white h-8 rounded-full py-2.5 px-4 hover:bg-gray-400 focus:outline-none flex items-center ">
-            <a className="text-white">Apply</a>
-          </button>
-        </div>
         <div className="flex justify-between my-3">
           <h2 className="text-sm font-semibold">Total</h2>
           <h2 className="text-sm font-semibold">Rs 15100 </h2>
         </div>
-        <button className=" bg-yellow-800 text-center w-72 h-10 rounded-3xl text-white my-2">
-          Procced to chackout
-        </button>
+        <Link href="/Success">
+          <button className=" bg-yellow-800 text-center w-64 h-10 rounded-3xl text-white my-2">
+            Procced to chackout
+          </button>
+        </Link>
       </div>
     </div>
   );

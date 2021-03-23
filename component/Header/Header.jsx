@@ -9,27 +9,33 @@ import {FiPhoneCall} from "react-icons/fi";
 
 const Header = () => {
   return (
-    <div className="w-full bg-red-600 h-26 shadow-3xl sticky z-99 top-0">
-      <div className="container mx-auto ">
+    <div className="w-full bg-red-600 h-26 pb-1 shadow-3xl">
+      <div className="container mx-auto">
         {/* link nav bar / top small navbar */}
 
-        <div className="flex justify-end pt-1">
+        <div className="flex justify-end pt-1 mr-1 lg:mb-2">
           <Link href="action1.1">
             <a className="flex text-white ml-3 al items-center text-sm">
               <HiLocationMarker />
-              <h4 className="pl-1">Store Locator</h4>
+              <h4 className="pl-1 text-xs font-medium sm:font-semibold">
+                Store Locator
+              </h4>
             </a>
           </Link>
           <Link href="action1.1">
             <a className="flex text-white ml-3 al items-center text-sm">
               <FiTruck />
-              <h4 className="pl-1">Store Locator</h4>
+              <h4 className="pl-1 text-xs font-medium sm:font-semibold">
+                Store Locator
+              </h4>
             </a>
           </Link>
           <Link href="action1.1">
             <a className="flex text-white ml-3 al items-center text-sm">
               <BsPerson />
-              <h4 className="pl-1">Store Locator</h4>
+              <h4 className="pl-1 text-xs font-medium sm:font-semibold">
+                Store Locator
+              </h4>
             </a>
           </Link>
         </div>
@@ -37,42 +43,47 @@ const Header = () => {
 
         {/* logo and search bar with contact number */}
 
-        <div className="flex justify-between items-center">
+        <div className=" block lg:flex justify-between items-center lg:py-2">
           {/* logo */}
-          <div className="w-30 h-13">
+          <div className=" flex-grow w-28 h-8 mx-28 md:w-32 md:h-10 mb-1 lg:w-32 lg:h-10 relative">
             <Link href="/#  ">
               <Image
-                src="/logo.svg"
-                width="200"
-                height="70"
+                className="hover:cursor-pointer"
+                src="/logo.png"
+                layout="fill"
+                objectFit="fill"
                 alt="web site logo"
               />
             </Link>
           </div>
 
           {/* search bar part */}
-          <div className="bg-white  flex items-center rounded-full ">
-            <input
-              className="rounded-l-full widthSearch h-10 py-4 px-6 pr-2 text-gray-700  focus:outline-none"
-              id="search"
-              type="text"
-              placeholder="Search"
-            />
+          <div className="flex space-x-3">
+            <div className="flex-grow bg-white w-80 lg:w-99 flex items-center lg:rounded-full">
+              <input
+                className=" flex-grow  rounded-l-full w-72 h-7 px-2 lg:w-98.6 lg:h-7text-xs text-gray-700  focus:outline-none"
+                id="search"
+                type="text"
+                placeholder="Search"
+              />
+              {/* search icon  */}
+              <button class="mx-2 sm:bg-white 2xl:bg-gray-300 text-white rounded-full hover:bg-blue-400 focus:outline-none flex items-center ">
+                <a className="text-gray-900">
+                  <BiSearch />
+                </a>
+              </button>
+            </div>
 
-            <button class="bg-gray-300 text-white rounded-full p-2 mr-1 hover:bg-blue-400 focus:outline-none w-8 h-8 flex items-center justify-center">
-              <a className="text-gray-900">
-                <BiSearch />
+            {/* contact number */}
+            <Link href="action2.2">
+              <a className="flex text-white items-center text-xl hover:cursor-pointer ">
+                <FiPhoneCall />
+                <h4 className="pl-1 hidden text-base md:block font-semibold ">
+                  0123456789
+                </h4>
               </a>
-            </button>
+            </Link>
           </div>
-
-          {/* contact number */}
-          <Link href="action2.2">
-            <a className="flex text-white ml-3 al items-center text-3xl">
-              <FiPhoneCall />
-              <h4 className="pl-2">0123456789</h4>
-            </a>
-          </Link>
         </div>
         {/* end logo search bar */}
       </div>

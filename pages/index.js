@@ -60,19 +60,19 @@ export default function Home() {
   ];
   return (
     <div className="bg-gray-100">
-      <section>
+      <section className="w-full z-50 sticky top-0">
         <Header />
       </section>
-      <section>
+      <section className="w-full z-50 sticky top-14 sm:top-18">
         <MegaMenu />
       </section>
       <section>
         {/* home banar */}
         <div className="mb-10">
           <div className="container mx-auto">
-            <div className="flex ml-60 justify-between">
+            <div className="lg:pl-48 block space-y-1  md:space-y-1 lg:space-y-0 lg:space-x-2 lg:flex ">
               {/* slide banar */}
-              <div className="w-102">
+              <div className="lg:w-102">
                 <Carousel
                   responsive={responsive}
                   infinite={true}
@@ -82,7 +82,10 @@ export default function Home() {
                 >
                   {banars.map((banar) => {
                     return (
-                      <div key={banar.id} className=" relative w-102 h-89">
+                      <div
+                        key={banar.id}
+                        className="flex-grow relative w-100%  h-40 md:w-100% md:h-60 lg:w-103 lg:h-89"
+                      >
                         <Image
                           src={banar.img}
                           layout="fill"
@@ -96,8 +99,8 @@ export default function Home() {
               </div>
 
               {/* left side banar */}
-              <div className=" space-y-2">
-                <div className="relative w-72 h-44">
+              <div className="flex space-x-0.5 lg:block lg:space-x-0">
+                <div className="flex-grow relative w-44 h-24 md:h-40 lg:w-72 lg:h-44 lg:mb-1.5">
                   <Image
                     src="/homebanar2.png"
                     layout="fill"
@@ -105,7 +108,7 @@ export default function Home() {
                     alt="first banar"
                   />
                 </div>
-                <div className=" relative w-72 h-44">
+                <div className="flex-grow relative w-44 h-24 md:h-40 lg:w-72 lg:h-44 lg:mb-1.5">
                   <Image
                     src="/homebanar3.png"
                     layout="fill"
@@ -126,11 +129,13 @@ export default function Home() {
           <div className="container mx-auto">
             <div className="flex items-center py-4 justify-between">
               {/* heading carousel item */}
-              <div className="flex space-x-16 items-center">
-                <h1 className="text-2xl font-semibold ">Deal of the day</h1>
+              <div className="flex space-x-4 md:space-x-16 items-center">
+                <h1 className=" text-xl md:text-2xl font-semibold ">
+                  Deal of the day
+                </h1>
                 {/* date countdown */}
                 <div className="flex">
-                  <h4 className="text-sm">
+                  <h4 className="text-xs md:text-sm">
                     Ends in
                     <span className="w-6 h-6 px-1.5 py-1.5 rounded-lg bg-red-600 text-white mx-1.5">
                       01
@@ -160,7 +165,7 @@ export default function Home() {
         <div className="my-7">
           <div className="container mx-auto">
             <div className="flex items-center py-4">
-              <h1 className="text-2xl font-semibold ">Catagores</h1>
+              <h1 className="text-xl md:text-2xl font-semibold ">Catagores</h1>
             </div>
             <CatagoryGrid />
           </div>
@@ -172,7 +177,7 @@ export default function Home() {
             {/* middle pard banar using map method */}
             {images.map((ad) => {
               return (
-                <div key={ad.id} className="w-90 h-64 relative">
+                <div key={ad.id} className="w-90 h-28 md:h-64 relative">
                   <Image
                     src={ad.img}
                     layout="fill"
@@ -216,7 +221,7 @@ export default function Home() {
               {/* landing page last banar */}
               <div>
                 {/* left side banar */}
-                <div className="w-100 h-46 mb-3 relative">
+                <div className=" flex-grow w-44 h-24 md:w-80 lg:w-100 lg:h-46 mb-1 lg:mb-3 relative">
                   <Image
                     src="/ads1.png"
                     layout="fill"
@@ -224,7 +229,7 @@ export default function Home() {
                     alt="ads banar"
                   />
                 </div>
-                <div className="w-100 h-46 mt-4 relative">
+                <div className="flex-grow w-44 h-24 md:w-80 lg:w-100 lg:h-46 mt-1 lg:mt-4 relative">
                   <Image
                     src="/ads2.png"
                     layout="fill"
@@ -234,7 +239,7 @@ export default function Home() {
                 </div>
               </div>
               {/* right side banar */}
-              <div className="w-100 h-96 relative">
+              <div className=" flex-grow w-44 h-48 lg:w-100 lg:h-96 relative">
                 <Image
                   src="/ads3.png"
                   layout="fill"

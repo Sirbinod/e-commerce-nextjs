@@ -16,11 +16,11 @@ const CarouselItem = () => {
       items: 6,
     },
     tablet: {
-      breakpoint: {max: 950, min: 464},
-      items: 3,
+      breakpoint: {max: 950, min: 591},
+      items: 4,
     },
     mobile: {
-      breakpoint: {max: 464, min: 0},
+      breakpoint: {max: 590, min: 0},
       items: 2,
     },
   };
@@ -76,6 +76,7 @@ const CarouselItem = () => {
   ];
   return (
     <div>
+      {/* item card slider */}
       <Carousel responsive={responsive}>
         {items.map((item) => {
           return (
@@ -84,6 +85,7 @@ const CarouselItem = () => {
               className="inline-block w-48 text-center bg-white py-4 rounded-lg hover:shadow-3xl"
             >
               <div className="relative w-40 h-40 mx-4 my-1">
+                {/* item Image */}
                 <Image
                   src={item.img}
                   layout="fill"
@@ -92,10 +94,13 @@ const CarouselItem = () => {
                 />
               </div>
               <div className="mt-2">
+                {/* item title */}
                 <h3 className="text-base font-semibold">{item.title}</h3>
+                {/* item Price */}
                 <h3 className="text-lg font-semibold text-red-700">
                   Rs. {item.price}
                 </h3>
+                {/* rating star */}
                 <div className="flex mx-16">
                   <AiFillStar style={{color: "yellow"}} />
                   <AiFillStar style={{color: "yellow"}} />

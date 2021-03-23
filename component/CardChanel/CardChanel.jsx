@@ -57,14 +57,18 @@ const CardChanel = () => {
   return (
     <div className="my-7">
       <div className="container mx-auto">
-        <div className="grid grid-cols-5 gap-4">
+        {/* create 5 column  */}
+        <div className="grid grid-cols-5 gap-2 md:gap-3">
+          {/* make chenal card  */}
           {array.map((item) => {
             return (
-              <div className=" flex w-56 h-12 bg-white rounded-3xl items-center hover:bg-red-400 hove:shadow-2xl">
-                <div className=" relative w-8 h-8  mx-3.5">
+              <div className="block text-center md:flex md:w-34 md:h-12 lg:w-56 lg:h-12 md:bg-white rounded-3xl items-center md:hover:bg-red-400 hove:shadow-2xl">
+                <div className=" mb-2 relative w-8 h-8 mx-3.5 md:m-2">
+                  {/* card Image */}
                   <Image src={item.img} layout="fill" objectFit="fill" />
                 </div>
-                <h3 className="text-sm font-semibold">{item.title}</h3>
+                {/* card title */}
+                <h3 className=" text-sm font-semibold">{item.title}</h3>
               </div>
             );
           })}

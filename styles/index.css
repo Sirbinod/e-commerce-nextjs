@@ -11,9 +11,9 @@ body {
   background-color: #f2efef;
   font-family: Roboto, sans-serif;
 }
-.container {
+/* .container {
   width: 74rem;
-}
+} */
 .widthSearch {
   width: 35rem;
 }
@@ -43,3 +43,9 @@ li:hover > button svg {
 .min-w-32 {
   min-width: 8rem;
 }
+
+/* @media only screen and (max-width: 600px) {
+  .container {
+    width: 27rem;
+  }
+} */

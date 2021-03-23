@@ -85,16 +85,19 @@ const CatagoryGrid = () => {
     },
   ];
   return (
-    <div className="grid grid-cols-8 gap-1">
+    // create 8 column
+    <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-1">
       {catagItem.map((item) => {
         return (
           <div
             key={item.id}
-            className="inline-block text-center w-36 bg-white hover:shadow-3xl"
+            className="inline-block text-center w-24 md:w-36 bg-white hover:shadow-3xl"
           >
-            <div className=" relative w-20 h-20 mx-6 mt-4 rounded-3xl">
+            <div className=" relative w-20 h-20 mx-2 mt-2 md:w-20 md:h-20 md:mx-6 md:mt-4 rounded-3xl">
+              {/* catagory image  */}
               <Image src={item.img} layout="fill" objectFit="fill" />
             </div>
+            {/* catagory name */}
             <h3 className="my-3 text-sm font-normal">{item.name}</h3>
           </div>
         );

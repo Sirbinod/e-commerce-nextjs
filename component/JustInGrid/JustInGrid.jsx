@@ -102,14 +102,14 @@ const JustInGrid = () => {
   ];
   return (
     <div>
-      <div className="grid grid-cols-6 gap-4">
+      <div className="grid grid-cols-3 md:grid-cols-6 gap-2 md:gap-4">
         {items.map((item) => {
           return (
             <div
               key={item.id}
-              className="inline-block w-48 text-center hover:shadow-3xl bg-white py-4 rounded-xl"
+              className="inline-block w-28 md:w-48 text-center hover:shadow-3xl bg-white md:py-4 rounded-xl"
             >
-              <div className="relative w-40 h-40 mx-4 my-2">
+              <div className="relative w-24 h-24 m-2 md:w-40 md:h-40 md:mx-4 md:my-2">
                 <Image
                   src={item.img}
                   layout="fill"
@@ -118,16 +118,20 @@ const JustInGrid = () => {
                 />
               </div>
               <div className="mt-2">
-                <h3 className="text-lg font-medium">{item.title}</h3>
-                <h3 className="text-lg font-medium">{item.catagory}</h3>
-                <h3 className="text-xl font-semibold text-red-700">
+                <h3 className=" text-xs font-light md:text-lg md:font-medium">
+                  {item.title}
+                </h3>
+                <h3 className=" text-xs font-light md:text-lg md:font-medium">
+                  {item.catagory}
+                </h3>
+                <h3 className="text-base font-medium md:text-xl md:font-semibold text-red-700">
                   Rs. {item.price}
                 </h3>
-                <div className="flex justify-around my-2 items-center">
-                  <span className="block text-gray-400 line-through">
-                    Rs.{item.cut_proce}{" "}
+                <div className="flex justify-around my-1 md:my-2 items-center">
+                  <span className=" text-xs font-extralight block text-gray-400 line-through">
+                    Rs.{item.cut_proce}
                   </span>
-                  <span className="border rounded-2xl w-18 items-center border-green-600 text-green-600 text-sm ">
+                  <span className="border rounded-2xl text-xs w-14 md:w-18 items-center border-green-600 text-green-600 md:text-sm ">
                     20% off
                   </span>
                 </div>

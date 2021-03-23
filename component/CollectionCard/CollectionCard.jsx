@@ -66,19 +66,27 @@ const CollectionCard = () => {
   ];
   return (
     <div>
-      <div className="grid grid-cols-5 gap-9">
+      {/* create 5 column  */}
+      <div className="grid grid-cols-5 gap-3 md:gap-9">
         {collection.map((item) => {
           return (
-            <div className=" flex w-56 h-16 items-center">
-              <div className="w-18 h-18 bg-gray-300 rounded-full mr-3">
-                <div className=" relative w-12 h-12 rounded-full my-3 mx-3">
+            // collection card
+            <div className=" flex md:w-56 md:h-16 items-center">
+              <div className="w-16 h-16 md:w-18 md:h-18 bg-gray-300 rounded-2xl md:rounded-full md:mr-3">
+                <div className=" relative w-12 h-12 md:w-12 md:h-12 rounded-full my-2 mx-2 md:my-3 md:mx-3">
+                  {/* collection product image  */}
                   <Image src={item.img} layout="fill" objectFit="fill" />
                 </div>
               </div>
               <div>
-                <h3 className=" text-lg py-1 font-semibold">{item.title}</h3>
-
-                <h5 className="text-gray-400  text-sm">{item.totle}</h5>
+                {/* collection product title  */}
+                <h3 className=" hidden md:block md:text-lg md:py-1 md:font-semibold">
+                  {item.title}
+                </h3>
+                {/* collection product quantity */}
+                <h5 className="hidden md:block md:text-gray-400  md:text-sm">
+                  {item.totle}
+                </h5>
               </div>
             </div>
           );

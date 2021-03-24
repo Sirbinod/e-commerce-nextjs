@@ -15,6 +15,8 @@ import ViewButton from "../component/ViewButton/ViewButton";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
+//import "./index.css";
+
 export default function Home() {
   const responsive = {
     desktop: {
@@ -44,7 +46,7 @@ export default function Home() {
     },
     {
       id: 3,
-      img: "/ad3.png",
+      img: "/ad1.png",
     },
   ];
   const banars = [
@@ -63,14 +65,14 @@ export default function Home() {
       <section className="w-full z-50 sticky top-0">
         <Header />
       </section>
-      <section className="w-full z-50 sticky top-14 sm:top-18">
+      <section className="w-full z-50 sticky top-14 sm:top-20">
         <MegaMenu />
       </section>
       <section>
         {/* home banar */}
         <div className="mb-10">
           <div className="container mx-auto">
-            <div className="lg:pl-48 block space-y-1  md:space-y-1 lg:space-y-0 lg:space-x-2 lg:flex ">
+            <div className="pl-60 block space-y-1  md:space-y-1 lg:space-y-0 lg:space-x-3 lg:flex ">
               {/* slide banar */}
               <div className="lg:w-102">
                 <Carousel
@@ -100,7 +102,7 @@ export default function Home() {
 
               {/* left side banar */}
               <div className="flex space-x-0.5 lg:block lg:space-x-0">
-                <div className="flex-grow relative w-44 h-24 md:h-40 lg:w-72 lg:h-44 lg:mb-1.5">
+                <div className="flex-grow relative w-44 h-24 md:h-40 lg:w-73 lg:h-44 lg:mb-1.5">
                   <Image
                     src="/homebanar2.png"
                     layout="fill"
@@ -108,7 +110,7 @@ export default function Home() {
                     alt="first banar"
                   />
                 </div>
-                <div className="flex-grow relative w-44 h-24 md:h-40 lg:w-72 lg:h-44 lg:mb-1.5">
+                <div className="flex-grow relative w-44 h-24 md:h-40 lg:w-73 lg:h-44 lg:mb-1.5">
                   <Image
                     src="/homebanar3.png"
                     layout="fill"
@@ -173,11 +175,11 @@ export default function Home() {
       </section>
       <section>
         <div className="container my-7 mx-auto">
-          <div className="flex justify-between">
+          <div className="flex justify-between ">
             {/* middle pard banar using map method */}
             {images.map((ad) => {
               return (
-                <div key={ad.id} className="w-90 h-28 md:h-64 relative">
+                <div key={ad.id} className="w-96 h-64 relative">
                   <Image
                     src={ad.img}
                     layout="fill"
@@ -274,6 +276,24 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="sticky bottom-0 lg:hidden border-t border-gray-400 bg-white">
+        <div className="container mx-5">
+          <div className="flex justify-between">
+            <div className="">
+              <div className="w-6 h-6 relative">
+                <Image
+                  src="/mobilelogo.png"
+                  layout="fill"
+                  objectFit="fill"
+                  alt="mobile logo"
+                />
+              </div>
+              <h2 className="text-xs">home</h2>
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </section>
       <section>
         <div className="my-10">
           <div className="container mx-auto">
@@ -292,6 +312,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section>
         <div className=" bg-gray-300">
           <div className="container mx-auto">

@@ -27,6 +27,7 @@ const BrandLogo = () => {
   return (
     <div>
       <div className="flex justify-around items-center">
+        {/* top brand logo / image mapping  */}
         {logos.map((logo) => {
           return (
             <div key={logo.id} className="w-16 h-8 relative">

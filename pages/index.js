@@ -86,7 +86,7 @@ export default function Home() {
                     return (
                       <div
                         key={banar.id}
-                        className="flex-grow relative w-100%  h-40 md:w-100% md:h-60 lg:w-103 lg:h-89"
+                        className="flex-grow relative w-100%  h-40 md:w-100% md:h-60 lg:w-103 lg:h-89 2xl:w-104"
                       >
                         <Image
                           src={banar.img}
@@ -102,7 +102,7 @@ export default function Home() {
 
               {/* left side banar */}
               <div className="flex space-x-0.5 lg:block lg:space-x-0">
-                <div className="flex-grow relative w-44 h-24 md:h-40 lg:w-73 lg:h-44 lg:mb-1.5">
+                <div className="flex-grow relative w-44 h-24 md:h-40 lg:w-73 lg:h-44 lg:mb-1.5 2xl:">
                   <Image
                     src="/homebanar2.png"
                     layout="fill"
@@ -167,7 +167,7 @@ export default function Home() {
         <div className="my-7">
           <div className="container mx-auto">
             <div className="flex items-center py-4">
-              <h1 className="text-xl md:text-2xl font-semibold ">Catagores</h1>
+              <h1 className="text-xl md:text-2xl font-semibold ">Categores</h1>
             </div>
             <CatagoryGrid />
           </div>

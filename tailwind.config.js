@@ -9,7 +9,7 @@ module.exports = {
         md: "1rem",
         lg: "2rem",
         xl: "3rem",
-        "2xl": "4rem",
+        "2xl": "5rem",
       },
     },
     // screens: {
@@ -34,6 +34,7 @@ module.exports = {
         34: "8.5rem",
         102: "39.5rem",
         103: "45rem",
+        104: "48rem",
         110: "52rem",
         88: "21rem",
         73: "18.7rem",

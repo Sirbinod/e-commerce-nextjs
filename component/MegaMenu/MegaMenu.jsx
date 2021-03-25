@@ -62,15 +62,11 @@ const MegaMenu = () => {
         {/* megamenu start */}
         <div className="group inline-block">
           {/* mega menu name  */}
-          <button className="outline-none focus:outline-none py-0.5 rounded-sm  space-x-10 flex items-center w-50">
-            <div className="flex space-x-3 items-center">
-              <div className="text-base">
-                <BsFillGrid3X3GapFill />
-              </div>
-              <h1 className="font-semibold pr-3 text-base p-0.5">
-                All Catagory
-              </h1>
-            </div>
+          <button className="outline-none focus:outline-none py-0.5 rounded-sm space-x-10 flex items-center w-50">
+            <h1 className="font-semibold pr-2 mr-6 text-base p-0.5">
+              All Catagory
+            </h1>
+
             <span className="">
               <svg className="fill-current h-4 w-4 transform group-hover:-rotate-180 transition duration-150 ease-in-out">
                 <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
@@ -78,12 +74,12 @@ const MegaMenu = () => {
             </span>
           </button>
           {/* menu item  */}
-          <ul class="bg-white z-10 border rounded-sm transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-60">
+          <ul className=" bg-white z-10 border rounded-sm transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-60">
             {menus.map((menu) => {
               return (
                 <li
                   key={menu.id}
-                  class="rounded-sm relative px-0.5 md:px-1 py-1.3 hover:bg-red-400"
+                  className="rounded-sm relative px-0.5 md:px-1 py-1.3 hover:bg-red-400"
                 >
                   <button className="w-full text-left text-sm pl-2 font-semibold flex items-center outline-none focus:outline-none">
                     <span className="flex-1">{menu.name}</span>
@@ -95,7 +91,7 @@ const MegaMenu = () => {
                   </button>
 
                   {/* submenu item  */}
-                  <ul className="bg-white z-4 border rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left w-52 h-48">
+                  <ul className="bg-white z-4 border rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left w-52 h-48 ">
                     <li className="rounded-sm relative px-3 py-1 hover:bg-gray-100">
                       <button className="w-full text-left flex items-center outline-none focus:outline-none">
                         <span className="pr-1 flex-1">Kitchen</span>
@@ -106,7 +102,7 @@ const MegaMenu = () => {
                         </span>
                       </button>
                       {/* sub ko ni sub menu item  */}
-                      <ul class="bg-white z-10 border rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left w-52 h-40">
+                      <ul className="bg-white z-10 border rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left w-52 h-40">
                         <Link href="/Selection">
                           <li className="px-3 py-1 hover:bg-gray-100">
                             <button className="items-center outline-none focus:outline-none">

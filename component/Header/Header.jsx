@@ -67,7 +67,7 @@ const Header = () => {
               placeholder="Search"
             />
             {/* search icon  */}
-            <button class=" w-7 h-7 p-2 mr-1.5 xl:bg-gray-300 text-white rounded-full hover:bg-blue-400 focus:outline-none flex items-center ">
+            <button className=" w-7 h-7 p-2 mr-1.5 xl:bg-gray-300 text-white rounded-full hover:bg-blue-400 focus:outline-none flex items-center ">
               <a className="text-gray-900">
                 <BiSearch />
               </a>

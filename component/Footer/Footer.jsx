@@ -78,9 +78,9 @@ const Footer = (props) => {
             })}
           </div>
         </div>
-        <div class="w-1/2 ml-32 h-auto">
+        <div className="w-1/2 ml-32 h-auto">
           <div className="w-90">
-            <div class="text-base font-semibold mb-2">Subscribe</div>
+            <div className="text-base font-semibold mb-2">Subscribe</div>
 
             <div className=" bg-white flex items-center w-89 rounded-full ">
               <input
@@ -90,13 +90,13 @@ const Footer = (props) => {
                 placeholder="Search"
               />
 
-              <button class="bg-gray-300 text-white h-7 rounded-full px-2 py-1 mr-1 hover:bg-gray-400 focus:outline-none flex items-center ">
+              <button className="bg-gray-300 text-white h-7 rounded-full px-2 py-1 mr-1 hover:bg-gray-400 focus:outline-none flex items-center ">
                 <a className=" text-sm font-semibold text-gray-900">
                   Subscribe
                 </a>
               </button>
             </div>
-            <p class="text-sm font-medium mt-3 leading-normal">
+            <p className="text-sm font-medium mt-3 leading-normal">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi,
               consectetur.
             </p>

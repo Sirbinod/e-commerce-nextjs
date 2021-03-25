@@ -1,7 +1,9 @@
 import Link from "next/link";
-import React from "react";
 import {BiSearch} from "react-icons/bi";
-const FilterBar = () => {
+import BrandLogo from "../BrandLogo/BrandLogo";
+
+const FilterBar = (props) => {
+  console.log(props);
   return (
     <div>
       {/* side selection with filter product bar */}
@@ -11,28 +13,29 @@ const FilterBar = () => {
           <h3 className="text-lg font-semibold">brand</h3>
           <div className="my-2">
             {/* first checkbox with brand name  */}
-            <label class="flex items-center ">
+            <label className="flex items-center ">
               <input
                 type="checkbox"
-                class="form-checkbox h-4 w-4 text-gray-600"
+                className="form-checkbox h-4 w-4 text-gray-600"
+                name="apple"
               />
-              <span class="ml-2 text-base font-medium">Apple</span>
+              <span className="ml-2 text-base font-medium">Apple</span>
             </label>
             {/* end first checkbox  */}
-            <label class="flex items-center my-2">
+            <label className="flex items-center my-2">
               <input
                 type="checkbox"
-                class="form-checkbox h-4 w-4 text-gray-600"
+                className="form-checkbox h-4 w-4 text-gray-600"
               />
-              <span class="ml-2 text-base font-medium">Samsung</span>
+              <span className="ml-2 text-base font-medium">Samsung</span>
             </label>
 
-            <label class="flex items-center my-2">
+            <label className="flex items-center my-2">
               <input
                 type="checkbox"
-                class="form-checkbox h-4 w-4 text-gray-600"
+                className="form-checkbox h-4 w-4 text-gray-600"
               />
-              <span class="ml-2 text-base font-medium">HP</span>
+              <span className="ml-2 text-base font-medium">HP</span>
             </label>
           </div>
           {/* end brand section  */}
@@ -72,23 +75,23 @@ const FilterBar = () => {
         <div className="flex flex-col border-b py-2 border-gray-300">
           <h3 className="text-lg font-semibold">Processer</h3>
           {/* chack box and Processer name  */}
-          <label class="inline-flex items-center mt-3">
+          <label className="inline-flex items-center mt-3">
             <Link href="/ProductGrid">
               <input
                 type="checkbox"
-                class="form-checkbox h-4 w-4 text-gray-600"
+                className="form-checkbox h-4 w-4 text-gray-600"
               />
             </Link>
-            <span class="ml-2 text-base font-medium">intel</span>
+            <span className="ml-2 text-base font-medium">intel</span>
           </label>
-          <label class="inline-flex items-center mt-3">
+          <label className="inline-flex items-center mt-3">
             <Link href="/ProductGrid">
               <input
                 type="checkbox"
-                class="form-checkbox h-4 w-4 text-gray-600"
+                className="form-checkbox h-4 w-4 text-gray-600"
               />
             </Link>
-            <span class="ml-2 text-base font-medium">ADM</span>
+            <span className="ml-2 text-base font-medium">ADM</span>
           </label>
         </div>
         {/* end Processer section  */}
@@ -97,19 +100,19 @@ const FilterBar = () => {
         <div className="flex flex-col border-b py-2 border-gray-300">
           <h3 className="text-lg font-semibold">Screen Size</h3>
           {/* checkbox with name  */}
-          <label class="flex items-center mt-3">
+          <label className="flex items-center mt-3">
             <input
               type="checkbox"
-              class="form-checkbox h-4 w-4 text-gray-600"
+              className="form-checkbox h-4 w-4 text-gray-600"
             />
-            <span class="ml-2 text-base font-medium">15 inch</span>
+            <span className="ml-2 text-base font-medium">15 inch</span>
           </label>
-          <label class="flex items-center mt-3">
+          <label className="flex items-center mt-3">
             <input
               type="checkbox"
-              class="form-checkbox h-4 w-4 text-gray-600"
+              className="form-checkbox h-4 w-4 text-gray-600"
             />
-            <span class="ml-2 text-base font-medium">14 inch</span>
+            <span className="ml-2 text-base font-medium">14 inch</span>
           </label>
         </div>
         {/* end section  */}
@@ -118,19 +121,19 @@ const FilterBar = () => {
         <div className="flex flex-col border-b py-2 border-gray-300">
           <h3 className="text-lg font-semibold">Warrenty Period</h3>
           {/* checkbox with name  */}
-          <label class="flex items-center mt-3">
+          <label className="flex items-center mt-3">
             <input
               type="checkbox"
-              class="form-checkbox h-4 w-4 text-gray-600"
+              className="form-checkbox h-4 w-4 text-gray-600"
             />
-            <span class="ml-2 text-base font-medium">yes</span>
+            <span className="ml-2 text-base font-medium">yes</span>
           </label>
-          <label class="flex items-center mt-3">
+          <label className="flex items-center mt-3">
             <input
               type="checkbox"
-              class="form-checkbox h-4 w-4 text-gray-600"
+              className="form-checkbox h-4 w-4 text-gray-600"
             />
-            <span class="ml-2 text-base font-medium">No</span>
+            <span className="ml-2 text-base font-medium">No</span>
           </label>
         </div>
       </div>

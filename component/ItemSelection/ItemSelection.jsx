@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import {AiFillStar} from "react-icons/ai";
 
-const ItemSelection = () => {
+const ItemSelection = (props) => {
+  console.log("asdsadasd", props);
   const items = [
     {
       id: 1,
@@ -70,6 +71,7 @@ const ItemSelection = () => {
       cut_proce: "222",
     },
   ];
+
   return (
     <div>
       <div className="mb-4 ">

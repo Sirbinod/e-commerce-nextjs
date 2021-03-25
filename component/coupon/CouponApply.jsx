@@ -11,7 +11,7 @@ const CouponApply = () => {
           placeholder="Enter Voucher Code"
         />
 
-        <button class="bg-blue-700 w-18 text-white h-8 rounded-full py-2.5 px-4 hover:bg-gray-400 focus:outline-none flex items-center ">
+        <button className="bg-blue-700 w-18 text-white h-8 rounded-full py-2.5 px-4 hover:bg-gray-400 focus:outline-none flex items-center ">
           <a className="text-white">Apply</a>
         </button>
       </div>

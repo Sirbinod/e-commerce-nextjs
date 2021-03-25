@@ -60,9 +60,12 @@ const CardChanel = () => {
         {/* create 5 column  */}
         <div className="grid grid-cols-5 gap-2 md:gap-3">
           {/* make chenal card  */}
-          {array.map((item) => {
+          {array.map((item, i) => {
             return (
-              <div className="block text-center md:flex md:w-34 md:h-12 lg:w-56 lg:h-12 md:bg-white rounded-3xl items-center md:hover:bg-red-400 hove:shadow-2xl">
+              <div
+                key={i}
+                className="block text-center md:flex md:w-34 md:h-12 lg:w-56 lg:h-12 md:bg-white rounded-3xl items-center md:hover:bg-red-400 hove:shadow-2xl"
+              >
                 <div className=" mb-2 relative w-8 h-8 mx-3.5 md:m-2">
                   {/* card Image */}
                   <Image src={item.img} layout="fill" objectFit="fill" />

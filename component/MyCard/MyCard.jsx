@@ -14,7 +14,7 @@ const MyCard = () => {
           <div className="flex items-center space-x-4  py-3">
             <input
               type="checkbox"
-              class="form-checkbox h-4 w-4 text-gray-600"
+              className="form-checkbox h-4 w-4 text-gray-600"
             />
             <h3 className="text-sm font-semibold"> Select Item to delete</h3>
           </div>
@@ -23,7 +23,10 @@ const MyCard = () => {
           </button>
         </div>
         <div className="my-5 border-b mx-3 pb-2 flex">
-          <input type="checkbox" class="form-checkbox h-4 w-4 text-gray-600" />
+          <input
+            type="checkbox"
+            className="form-checkbox h-4 w-4 text-gray-600"
+          />
           <div className="flex">
             <div className="mx-5 w-40 h-28 relative">
               <Image src="/selec2.png" layout="fill" objectFit="fill" />
@@ -70,7 +73,10 @@ const MyCard = () => {
           </div>
         </div>
         <div className="my-5 border-b mx-3 pb-2 flex">
-          <input type="checkbox" class="form-checkbox h-4 w-4 text-gray-600" />
+          <input
+            type="checkbox"
+            className="form-checkbox h-4 w-4 text-gray-600"
+          />
           <div className="flex">
             <div className="mx-5 w-40 h-28 relative">
               <Image src="/lap0.png" layout="fill" objectFit="fill" />

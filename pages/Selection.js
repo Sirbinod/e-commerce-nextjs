@@ -1,10 +1,29 @@
+import React, {useState} from "react";
 import FilterBar from "../component/FilterBar/FilterBar";
 import Footer from "../component/Footer/Footer";
 import Header from "../component/Header/Header";
 import ItemSelection from "../component/ItemSelection/ItemSelection";
 import MegaMenu from "../component/MegaMenu/MegaMenu";
+import dynamic from "next/dynamic";
+
+export const DynamicComponentWithNoSSR = dynamic(
+  () => import("../component/ProductList/ProductList"),
+  {
+    ssr: false,
+  }
+);
 
 export default function Selection() {
+  const [brand, setBrand] = useState({
+    apple: false,
+  });
+
+  const filterHandler = ({target: {name, checked}}) => {
+    setBrand({
+      [name]: checked,
+    });
+  };
+
   return (
     <div className="bg-gray-100">
       <section>
@@ -22,9 +41,9 @@ export default function Selection() {
             </div>
             <div className="flex space-x-7">
               <div className="w-56">
-                <FilterBar />
+                <FilterBar brand={brand} filterHandler={filterHandler} />
               </div>
-              <ItemSelection />
+              <ItemSelection hello="adsasd" />
             </div>
           </div>
         </div>

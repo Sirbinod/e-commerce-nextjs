@@ -62,9 +62,9 @@ const Footer = (props) => {
       <div className="flex justify-between border-b border-gray-400">
         <div className="w-1/2">
           <div className="flex justify-between items-center">
-            {array.map((item) => {
+            {array.map((item, i) => {
               return (
-                <div className="items-center">
+                <div className="items-center" key={i}>
                   <h1 className="text-base font-semibold">{item.title}</h1>
                   {subarr.map((arr) => {
                     return (

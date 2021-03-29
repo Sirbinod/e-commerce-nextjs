@@ -3,75 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {AiFillStar} from "react-icons/ai";
 
-const ItemSelection = (props) => {
-  console.log("asdsadasd", props);
-  const items = [
-    {
-      id: 1,
-      img: "/selec1.png",
-      title: "Dell Inspiron 15",
-      price: "200",
-      catagory: "phone",
-      cut_proce: "222 ",
-    },
-    {
-      id: 2,
-      img: "/selec2.png",
-      title: "ACER ASPIRE 5",
-      price: "200",
-      catagory: "phone",
-      cut_proce: "222",
-    },
-    {
-      id: 3,
-      img: "/selec3.png",
-      title: "Lenovo IdeaPad 3",
-      price: "200",
-      catagory: "phone",
-      cut_proce: "222",
-    },
-    {
-      id: 4,
-      img: "/selec4.png",
-      title: "ACER ASPIRE 5",
-      price: "200",
-      catagory: "phone",
-      cut_proce: "222",
-    },
-    {
-      id: 5,
-      img: "/selec5.png",
-      title: "Dell Inspiron 15",
-      price: "200",
-      catagory: "phone",
-      cut_proce: "20",
-    },
-    {
-      id: 6,
-      img: "/selec6.png",
-      title: "ACER ASPIRE 5",
-      price: "200",
-      catagory: "phone",
-      cut_proce: "222",
-    },
-    {
-      id: 7,
-      img: "/selec1.png",
-      title: "Lenovo IdeaPad 3",
-      price: "200",
-      catagory: "phone",
-      cut_proce: "222",
-    },
-    {
-      id: 1,
-      img: "/selec2.png",
-      title: "ACER ASPIRE 5",
-      price: "200",
-      catagory: "phone",
-      cut_proce: "222",
-    },
-  ];
-
+const ItemSelection = ({items}) => {
   return (
     <div>
       <div className="mb-4 ">

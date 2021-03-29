@@ -1,10 +1,8 @@
 import Head from "next/head";
-import Header from "../component/Header/Header";
-import MegaMenu from "../component/MegaMenu/MegaMenu";
 import Image from "next/image";
 import CardChanel from "../component/CardChanel/CardChanel";
 import CarouselItem from "../component/CarouselItem/CarouselItem";
-import CatagoryGrid from "../component/CatagoryGrid/CatagoryGrid";
+import CatagoryGrid from "../component/CategoryGrid/CategoryGrid";
 import SellingCarousel from "../component/SellingCarousel/SellingCarousel";
 import CollectionCard from "../component/CollectionCard/CollectionCard";
 import JustInGrid from "../component/JustInGrid/JustInGrid";
@@ -14,6 +12,7 @@ import Footer from "../component/Footer/Footer";
 import ViewButton from "../component/ViewButton/ViewButton";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Layout from "../component/Layout/Layout";
 
 //import "./index.css";
 
@@ -62,19 +61,16 @@ export default function Home() {
   ];
   return (
     <div className="bg-gray-100">
-      <section className="w-full z-50 sticky top-0">
-        <Header />
-      </section>
-      <section className="w-full z-50 sticky top-14 sm:top-20">
-        <MegaMenu />
+      <section className="sticky top-0 z-10">
+        <Layout />
       </section>
       <section>
         {/* home banar */}
         <div className="mb-10">
           <div className="container mx-auto">
-            <div className="pl-60 block space-y-1  md:space-y-1 lg:space-y-0 lg:space-x-3 lg:flex ">
+            <div className="pl-60 block space-y-1  md:space-y-1 lg:space-y-0 lg:space-x-3 lg:flex">
               {/* slide banar */}
-              <div className="lg:w-102">
+              <div className="lg:w-102 2xl:w-105">
                 <Carousel
                   responsive={responsive}
                   infinite={true}
@@ -86,7 +82,7 @@ export default function Home() {
                     return (
                       <div
                         key={banar.id}
-                        className="flex-grow relative w-100%  h-40 md:w-100% md:h-60 lg:w-103 lg:h-89 2xl:w-104"
+                        className="flex-grow relative w-100%  h-40 md:w-100% md:h-60 lg:w-103 lg:h-89 2xl:w-105 2xl:h-97"
                       >
                         <Image
                           src={banar.img}
@@ -102,7 +98,7 @@ export default function Home() {
 
               {/* left side banar */}
               <div className="flex space-x-0.5 lg:block lg:space-x-0">
-                <div className="flex-grow relative w-44 h-24 md:h-40 lg:w-73 lg:h-44 lg:mb-1.5 2xl:">
+                <div className="flex-grow relative w-44 h-24 md:h-40 lg:w-73 lg:h-44 lg:mb-1.5 2xl:w-89 2xl:h-48">
                   <Image
                     src="/homebanar2.png"
                     layout="fill"
@@ -110,7 +106,7 @@ export default function Home() {
                     alt="first banar"
                   />
                 </div>
-                <div className="flex-grow relative w-44 h-24 md:h-40 lg:w-73 lg:h-44 lg:mb-1.5">
+                <div className="flex-grow relative w-44 h-24 md:h-40 lg:w-73 lg:h-44 lg:mb-1.5 2xl:w-89 2xl:h-48">
                   <Image
                     src="/homebanar3.png"
                     layout="fill"
@@ -175,11 +171,11 @@ export default function Home() {
       </section>
       <section>
         <div className="container my-7 mx-auto">
-          <div className="flex justify-between ">
+          <div className="flex space-x-2 justify-between ">
             {/* middle pard banar using map method */}
             {images.map((ad) => {
               return (
-                <div key={ad.id} className="w-96 h-64 relative">
+                <div key={ad.id} className=" flex-grow w-96 h-64 relative">
                   <Image
                     src={ad.img}
                     layout="fill"

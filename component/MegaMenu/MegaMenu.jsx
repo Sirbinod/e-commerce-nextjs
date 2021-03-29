@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Head from "next/head";
 import {GrCart} from "react-icons/gr";
 import {GrFavorite} from "react-icons/gr";
@@ -6,6 +6,38 @@ import {BsFillGrid3X3GapFill} from "react-icons/bs";
 import Link from "next/link";
 
 const MegaMenu = () => {
+  const handleScroll = () => {
+    const selector = document.querySelector(".home .custom-menu");
+
+    // if (window.scrollY > 20) {
+    //   selector && selector.classList
+    //     ? selector.classList.add("transform", "scale-0")
+    //     : null;
+    // } else {
+    //   selector && selector.classList
+    //     ? selector.classList.remove("transform", "scale-0")
+    //     : null;
+    if (window.scrollY <= 0) {
+      selector && selector.classList
+        ? selector.classList.remove("transform", "scale-0")
+        : null;
+    } else {
+      selector && selector.classList
+        ? selector.classList.add("transform", "scale-0")
+        : null;
+    }
+
+    // selector.classList.add("custom-menu");
+    // }
+    // }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleScroll]);
   const menus = [
     {
       id: 1,
@@ -56,6 +88,7 @@ const MegaMenu = () => {
       name: "Babies & Toys",
     },
   ];
+
   return (
     <div className="h-8  bg-gray-100 gap-100 ">
       <div className="container mx-auto items-center flex space-x-7 justify-between">
@@ -74,7 +107,7 @@ const MegaMenu = () => {
             </span>
           </button>
           {/* menu item  */}
-          <ul className=" bg-white z-10 border rounded-sm transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-60">
+          <ul className="custom-menu bg-white z-10 border rounded-sm group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-60">
             {menus.map((menu) => {
               return (
                 <li
@@ -91,7 +124,7 @@ const MegaMenu = () => {
                   </button>
 
                   {/* submenu item  */}
-                  <ul className="bg-white z-4 border rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left w-52 h-48 ">
+                  <ul className=" transform scale-0 bg-white z-4 border rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left w-52 h-48 ">
                     <li className="rounded-sm relative px-3 py-1 hover:bg-gray-100">
                       <button className="w-full text-left flex items-center outline-none focus:outline-none">
                         <span className="pr-1 flex-1">Kitchen</span>
@@ -102,7 +135,7 @@ const MegaMenu = () => {
                         </span>
                       </button>
                       {/* sub ko ni sub menu item  */}
-                      <ul className="bg-white z-10 border rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left w-52 h-40">
+                      <ul className="bg-white z-10 border rounded-sm  absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left w-52 h-40">
                         <Link href="/Selection">
                           <li className="px-3 py-1 hover:bg-gray-100">
                             <button className="items-center outline-none focus:outline-none">

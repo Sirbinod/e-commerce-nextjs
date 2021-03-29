@@ -7,11 +7,11 @@ const SellingCarousel = () => {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
-      breakpoint: {max: 3000, min: 2000},
+      breakpoint: {max: 3000, min: 1536},
       items: 7,
     },
     desktop: {
-      breakpoint: {max: 2000, min: 950},
+      breakpoint: {max: 1535, min: 950},
       items: 6,
     },
     tablet: {

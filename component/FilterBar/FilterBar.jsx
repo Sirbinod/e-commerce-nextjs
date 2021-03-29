@@ -1,9 +1,26 @@
+import react, {useState} from "react";
 import Link from "next/link";
 import {BiSearch} from "react-icons/bi";
 import BrandLogo from "../BrandLogo/BrandLogo";
 
-const FilterBar = (props) => {
-  console.log(props);
+const FilterBar = ({items}) => {
+  const [chacked, setChacked] = useState([]);
+  const handleToggle = (it) => {
+    // return the first index or -1
+    const curBarandId = chacked.indexOf(it);
+    const newCheckedBrandId = [...chacked];
+
+    // if currently chacked was not already in checked state the push
+    // else pull/take off
+    if (curBarandId === -1) {
+      newCheckedBrandId.push(it);
+    } else {
+      newCheckedBrandId.splice(curBarandId, 1);
+    }
+    console.log(newCheckedBrandId);
+    // setChacked(newCheckedBrandId);
+  };
+
   return (
     <div>
       {/* side selection with filter product bar */}
@@ -13,32 +30,26 @@ const FilterBar = (props) => {
           <h3 className="text-lg font-semibold">brand</h3>
           <div className="my-2">
             {/* first checkbox with brand name  */}
-            <label className="flex items-center ">
-              <input
-                type="checkbox"
-                className="form-checkbox h-4 w-4 text-gray-600"
-                name="apple"
-              />
-              <span className="ml-2 text-base font-medium">Apple</span>
-            </label>
-            {/* end first checkbox  */}
-            <label className="flex items-center my-2">
-              <input
-                type="checkbox"
-                className="form-checkbox h-4 w-4 text-gray-600"
-              />
-              <span className="ml-2 text-base font-medium">Samsung</span>
-            </label>
 
-            <label className="flex items-center my-2">
-              <input
-                type="checkbox"
-                className="form-checkbox h-4 w-4 text-gray-600"
-              />
-              <span className="ml-2 text-base font-medium">HP</span>
-            </label>
+            {items.map((it, i) => {
+              return (
+                <li className="list-none" key={i}>
+                  <input
+                    type="checkbox"
+                    onChange={handleToggle(it.id)}
+                    value={chacked.indexOf(it.id === -1)}
+                    className="form-checkbox h-4 w-4"
+                  />
+                  <label className="ml-2 text-base font-medium">
+                    {it.brand.name}
+                  </label>
+                </li>
+              );
+            })}
+            {/* end first checkbox  */}
           </div>
           {/* end brand section  */}
+
           {/* view more part  */}
           <a href="" className="text-base font-semibold text-blue-400">
             View More

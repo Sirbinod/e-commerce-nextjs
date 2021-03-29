@@ -16,41 +16,45 @@ const ItemSelection = ({items}) => {
         <div className="grid grid-cols-4 gap-3">
           {items.map((item) => {
             return (
-              <div
-                key={item.id}
-                className="inline-block w-56 text-center hover:shadow-3xl bg-white py-4 rounded-xl"
-              >
-                <div className="relative w-44 h-40 mx-6 my-2">
-                  <Image
-                    src={item.img}
-                    layout="fill"
-                    objectFit="fill"
-                    alt="product image"
-                  />
-                </div>
-                <div className="mt-2">
-                  <h3 className="text-lg font-medium">{item.title}</h3>
-                  <h3 className="text-lg font-medium mb-1">{item.catagory}</h3>
-                  <h3 className="text-xl font-semibold text-red-700">
-                    Rs. {item.price}
-                  </h3>
-                  <div className="flex justify-around my-2 items-center">
-                    <span className="block text-gray-400 line-through">
-                      Rs.{item.cut_proce}
-                    </span>
-                    <span className="border rounded-2xl w-18 items-center border-green-600 text-green-600 text-sm ">
-                      20% off
-                    </span>
+              <Link href="/ProductDetail">
+                <div
+                  key={item.id}
+                  className="inline-block w-56 text-center hover:shadow-3xl bg-white py-4 rounded-xl"
+                >
+                  <div className="relative w-44 h-40 mx-6 my-2">
+                    <Image
+                      src={item.img}
+                      layout="fill"
+                      objectFit="fill"
+                      alt="product image"
+                    />
                   </div>
-                  <div className="items-center flex mx-16 mt-3">
-                    <AiFillStar style={{color: "yellow"}} />
-                    <AiFillStar style={{color: "yellow"}} />
-                    <AiFillStar style={{color: "yellow"}} />
-                    <AiFillStar />
-                    <AiFillStar />
+                  <div className="mt-2">
+                    <h3 className="text-lg font-medium">{item.title}</h3>
+                    <h3 className="text-lg font-medium mb-1">
+                      {item.catagory}
+                    </h3>
+                    <h3 className="text-xl font-semibold text-red-700">
+                      Rs. {item.price}
+                    </h3>
+                    <div className="flex justify-around my-2 items-center">
+                      <span className="block text-gray-400 line-through">
+                        Rs.{item.cut_proce}
+                      </span>
+                      <span className="border rounded-2xl w-18 items-center border-green-600 text-green-600 text-sm ">
+                        20% off
+                      </span>
+                    </div>
+                    <div className="items-center flex mx-16 mt-3">
+                      <AiFillStar style={{color: "yellow"}} />
+                      <AiFillStar style={{color: "yellow"}} />
+                      <AiFillStar style={{color: "yellow"}} />
+                      <AiFillStar />
+                      <AiFillStar />
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>

@@ -115,7 +115,7 @@ export default function Selection() {
   // }, []);
   return (
     <div className="bg-gray-100">
-      <section>
+      <section className="z-10 sticky top-0">
         <Layout />
       </section>
 

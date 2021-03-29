@@ -1,18 +1,16 @@
 import Footer from "../component/Footer/Footer";
-import Header from "../component/Header/Header";
+import Layout from "../component/Layout/Layout";
+// import Header from "../component/Header/Header";
 import MaybeLikeCarousel from "../component/MayBeLikeCarousel/MaybeLikeCarousel";
-import MegaMenu from "../component/MegaMenu/MegaMenu";
+// import MegaMenu from "../component/MegaMenu/MegaMenu";
 import Product from "../component/Product/Product";
 import RatingReview from "../component/RatingReview/RatingReview";
 
 export default function ProductDetail() {
   return (
     <div className="bg-gray-5">
-      <section>
-        <Header />
-      </section>
-      <section>
-        <MegaMenu />
+      <section className="sticky top-0 z-10">
+        <Layout />
       </section>
       <section>
         <div className="container mx-auto">

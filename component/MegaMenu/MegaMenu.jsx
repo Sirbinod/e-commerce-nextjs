@@ -4,32 +4,34 @@ import {GrCart} from "react-icons/gr";
 import {GrFavorite} from "react-icons/gr";
 import {BsFillGrid3X3GapFill} from "react-icons/bs";
 import Link from "next/link";
+import {useRouter} from "next/router";
 
 const MegaMenu = () => {
+  const router = useRouter();
   const handleScroll = () => {
     const selector = document.querySelector(".home .custom-menu");
 
-    // if (window.scrollY > 20) {
-    //   selector && selector.classList
-    //     ? selector.classList.add("transform", "scale-0")
-    //     : null;
-    // } else {
-    //   selector && selector.classList
-    //     ? selector.classList.remove("transform", "scale-0")
-    //     : null;
-    if (window.scrollY <= 0) {
-      selector && selector.classList
-        ? selector.classList.remove("transform", "scale-0")
-        : null;
-    } else {
+    if (window.scrollY > 25) {
       selector && selector.classList
         ? selector.classList.add("transform", "scale-0")
         : null;
+    } else {
+      selector && selector.classList
+        ? selector.classList.remove("transform", "scale-0")
+        : null;
     }
 
+    // if (window.scrollY == 0) {
+    //   selector && selector.classList
+    //     ? selector.classList.remove("transform", "scale-0")
+    //     : null;
+    // } else {
+    //   selector && selector.classList
+    //     ? selector.classList.add("transform", "scale-0")
+    //     : null;
+    // }
+
     // selector.classList.add("custom-menu");
-    // }
-    // }
   };
 
   useEffect(() => {
@@ -107,7 +109,13 @@ const MegaMenu = () => {
             </span>
           </button>
           {/* menu item  */}
-          <ul className="custom-menu bg-white z-10 border rounded-sm group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-60">
+          <ul
+            className={
+              router.pathname == "/"
+                ? "home custom-menu bg-white z-10 border rounded-sm group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-60 "
+                : "custom-menu transform scale-0 bg-white z-10 border rounded-sm group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-60"
+            }
+          >
             {menus.map((menu) => {
               return (
                 <li

@@ -1,8 +1,8 @@
-import FilterBar from "../component/FilterBar/FilterBar";
+// import FilterBar from "../component/FilterBar/FilterBar";
 import Footer from "../component/Footer/Footer";
 import Header from "../component/Header/Header";
 import MegaMenu from "../component/MegaMenu/MegaMenu";
-import ProductList from "../component/ProductList/ProductList";
+// import ProductList from "../component/ProductList/ProductList";
 
 export default function ProductGrid() {
   return (
@@ -20,12 +20,12 @@ export default function ProductGrid() {
               <h3>Electric </h3>
               <h3>Computer</h3>
             </div>
-            <div className="flex space-x-7">
+            {/* <div className="flex space-x-7">
               <div className="w-56">
                 <FilterBar />
               </div>
               <ProductList />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

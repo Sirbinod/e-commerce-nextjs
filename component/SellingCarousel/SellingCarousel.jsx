@@ -14,6 +14,10 @@ const SellingCarousel = () => {
       breakpoint: {max: 1535, min: 950},
       items: 6,
     },
+    laptop: {
+      breakpoint: {max: 1220, min: 981},
+      items: 5,
+    },
     tablet: {
       breakpoint: {max: 950, min: 464},
       items: 3,
@@ -88,22 +92,21 @@ const SellingCarousel = () => {
           return (
             <div
               key={item.id}
-              className="inline-block w-48 text-center bg-white py-2 rounded-xl hover:shadow-3xl  "
+              className="inline-block w-46 text-center bg-white-100 py-2 rounded-xl hover:shadow-3xl  "
             >
               <div className="relative w-40 h-40 mx-4 rounded-xl">
-                <Image
+                <img
                   src={item.img}
-                  layout="fill"
-                  objectFit="cover"
+                  style={{maxWidth: "150px", maxHeight: "150px"}}
                   alt="product image"
                 />
               </div>
               <div className="mt-1">
                 <h3 className="text-base my-1 font-semibold">{item.title}</h3>
-                <h3 className="border rounded-2xl mb-1 w-36 mx-6 border-green-500 text-base font-medium text-green-500">
+                <h3 className="border rounded-2xl mb-1 w-36 mx-6 border-green-555 text-base font-medium text-green-555">
                   {item.price}
                 </h3>
-                <span className="block text-gray-600">{item.brand}</span>
+                <span className="block text-gray-111">{item.brand}</span>
               </div>
             </div>
           );

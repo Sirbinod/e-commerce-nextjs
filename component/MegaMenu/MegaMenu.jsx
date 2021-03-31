@@ -5,6 +5,7 @@ import {GrFavorite} from "react-icons/gr";
 import {BsFillGrid3X3GapFill} from "react-icons/bs";
 import Link from "next/link";
 import {useRouter} from "next/router";
+import Image from "next/image";
 
 const MegaMenu = () => {
   const router = useRouter();
@@ -92,17 +93,18 @@ const MegaMenu = () => {
   ];
 
   return (
-    <div className="h-8  bg-gray-100 gap-100 ">
+    <div className="h-8 bg-white-100 ">
       <div className="container mx-auto items-center flex space-x-7 justify-between">
         {/* megamenu start */}
         <div className="group inline-block">
           {/* mega menu name  */}
-          <button className="outline-none focus:outline-none py-0.5 rounded-sm space-x-10 flex items-center w-50">
-            <h1 className="font-semibold pr-2 mr-6 text-base p-0.5">
-              All Catagory
+          <button className="outline-none focus:outline-none py-0.5 rounded-sm flex items-center w-50">
+            <Image src="/categorylogo.png" width="18" height="14" />
+            <h1 className=" font-semibold pr-2 ml-2 mr-24 text-base p-0.5 font-sans">
+              All Category
             </h1>
 
-            <span className="">
+            <span className="text-xs font-normal">
               <svg className="fill-current h-4 w-4 transform group-hover:-rotate-180 transition duration-150 ease-in-out">
                 <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
               </svg>
@@ -112,41 +114,41 @@ const MegaMenu = () => {
           <ul
             className={
               router.pathname == "/"
-                ? "home custom-menu bg-white z-10 border rounded-sm group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-60 "
-                : "custom-menu transform scale-0 bg-white z-10 border rounded-sm group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-60"
+                ? "home custom-menu bg-white-100 z-10 rounded-sm group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-60 "
+                : "custom-menu transform scale-0 bg-white-100 z-10  rounded-sm group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-60"
             }
           >
             {menus.map((menu) => {
               return (
                 <li
                   key={menu.id}
-                  className="rounded-sm relative px-0.5 md:px-1 py-1.3 hover:bg-red-400"
+                  className="rounded-sm relative px-0.5 md:px-1 "
                 >
-                  <button className="w-full text-left text-sm pl-2 font-semibold flex items-center outline-none focus:outline-none">
+                  <button className="w-full text-left lg:text-sm 2xl:text-base pl-2 my-1.6 xl:my-3 font-sans font-normal flex items-center outline-none focus:outline-none">
                     <span className="flex-1">{menu.name}</span>
-                    <span className="mr-auto">
-                      <svg className="fill-current h-4 w-4 transition duration-150 ease-in-out">
+                    <span className="mr-auto  ">
+                      <svg className=" fill-current h-4 w-4  text-gray-111 transition duration-150 ease-in-out">
                         <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                       </svg>
                     </span>
                   </button>
 
                   {/* submenu item  */}
-                  <ul className=" transform scale-0 bg-white z-4 border rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left w-52 h-48 ">
-                    <li className="rounded-sm relative px-3 py-1 hover:bg-gray-100">
-                      <button className="w-full text-left flex items-center outline-none focus:outline-none">
+                  <ul className=" transform scale-0 bg-white-100 z-4 rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left w-52 h-48 ">
+                    <li className="rounded-sm relative px-3 py-1">
+                      <button className="  font-sans w-full text-left text-sm font-normal  flex items-center outline-none focus:outline-none">
                         <span className="pr-1 flex-1">Kitchen</span>
                         <span className="mr-auto">
-                          <svg className="fill-current h-4 w-4 transition duration-150 ease-in-out">
+                          <svg className="fill-current h-4 w-4 text-gray-111 transition duration-150 ease-in-out">
                             <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                           </svg>
                         </span>
                       </button>
                       {/* sub ko ni sub menu item  */}
-                      <ul className="bg-white z-10 border rounded-sm  absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left w-52 h-40">
+                      <ul className="bg-white-100 z-10 rounded-sm  absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left w-52 h-40">
                         <Link href="/Selection">
                           <li className="px-3 py-1 hover:bg-gray-100">
-                            <button className="items-center outline-none focus:outline-none">
+                            <button className="items-center text-sm font-normal  outline-none focus:outline-none">
                               Washing machine
                             </button>
                           </li>
@@ -165,25 +167,25 @@ const MegaMenu = () => {
             {/* nab bar items */}
             <a
               href="#"
-              className="hover:cursor-pointer text-black text-sm sm:font-semibold"
+              className="hover:cursor-pointer text-black text-sm font-semibold font-sans"
             >
               Flash Sale
             </a>
             <a
               href="#"
-              className="hover:cursor-pointer text-black text-sm sm:font-semibold"
+              className="hover:cursor-pointer text-black text-sm font-semibold font-sans"
             >
               Best Deal
             </a>
             <a
               href="#"
-              className="hover:cursor-pointer text-black text-sm sm:font-semibold"
+              className="hover:cursor-pointer text-black text-sm font-semibold font-sans"
             >
               Colection
             </a>
             <a
               href="#"
-              className="hover:cursor-pointer text-black text-sm sm:font-semibold"
+              className="hover:cursor-pointer text-black text-sm font-semibold font-sans"
             >
               Free Delivery
             </a>

@@ -13,12 +13,16 @@ const CarouselItem = () => {
       items: 7,
     },
     desktop: {
-      breakpoint: {max: 1535, min: 1020},
+      breakpoint: {max: 1535, min: 1221},
       items: 6,
     },
+    laptop: {
+      breakpoint: {max: 1220, min: 981},
+      items: 5,
+    },
     tablet: {
-      breakpoint: {max: 950, min: 591},
-      items: 4,
+      breakpoint: {max: 980, min: 591},
+      items: 3,
     },
     mobile: {
       breakpoint: {max: 590, min: 0},
@@ -83,24 +87,25 @@ const CarouselItem = () => {
           return (
             <div
               key={item.id}
-              className="inline-block w-48 text-center bg-white py-4 rounded-lg hover:shadow-3xl"
+              className="inline-block w-46 text-center bg-white-100 py-4 rounded-lg hover:shadow-3xl"
             >
               <Link href="/ProductDetail">
-                <div className="relative w-40 h-40 mx-4 my-1">
+                <div className=" mx-4 w-40 h-40 my-1">
                   {/* item Image */}
-                  <Image
+                  <img
                     src={item.img}
-                    layout="fill"
-                    objectFit="fill"
                     alt="product image"
+                    style={{maxWidth: "150px", maxHeight: "150px"}}
                   />
                 </div>
               </Link>
               <div className="mt-2">
                 {/* item title */}
-                <h3 className="text-base font-semibold">{item.title}</h3>
+                <h3 className="text-base font-semibold font-sans">
+                  {item.title}
+                </h3>
                 {/* item Price */}
-                <h3 className="text-lg font-semibold text-red-700">
+                <h3 className="text-lg font-semibold text-red-666">
                   Rs. {item.price}
                 </h3>
                 {/* rating star */}

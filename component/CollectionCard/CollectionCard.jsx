@@ -72,7 +72,7 @@ const CollectionCard = () => {
           return (
             // collection card
             <div className=" flex md:w-56 md:h-16 items-center">
-              <div className="w-16 h-16 md:w-18 md:h-18 bg-gray-300 rounded-2xl md:rounded-full md:mr-3">
+              <div className="w-16 h-16 md:w-18 md:h-18 bg-gray-111 rounded-2xl md:rounded-full md:mr-3">
                 <div className=" relative w-12 h-12 md:w-12 md:h-12 rounded-full my-2 mx-2 md:my-3 md:mx-3">
                   {/* collection product image  */}
                   <Image src={item.img} layout="fill" objectFit="fill" />

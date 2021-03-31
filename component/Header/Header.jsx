@@ -9,31 +9,31 @@ import {FiPhoneCall} from "react-icons/fi";
 
 const Header = () => {
   return (
-    <div className="w-full bg-red-600 h-26 pb-1 shadow-3xl">
+    <div className="w-full bg-red-555 h-26 pb-1 shadow-3xl">
       <div className="container mx-auto">
         {/* link nav bar / top small navbar */}
 
         <div className="flex justify-end pt-1 mr-1">
           <Link href="action1.1">
-            <a className="flex text-white ml-3 al items-center text-sm">
+            <a className="flex text-white-100 ml-3 al items-center text-sm">
               <HiLocationMarker />
-              <h4 className="pl-1 text-xs font-medium sm:font-semibold">
+              <h4 className="pl-1 text-xs font-normal font-sans">
                 Store Locator
               </h4>
             </a>
           </Link>
           <Link href="action1.1">
-            <a className="flex text-white ml-3 al items-center text-sm">
+            <a className="flex text-white-100 ml-3 al items-center text-sm ">
               <FiTruck />
-              <h4 className="pl-1 text-xs font-medium sm:font-semibold">
+              <h4 className="pl-1 text-xs font-normal font-sans">
                 Store Locator
               </h4>
             </a>
           </Link>
           <Link href="action1.1">
-            <a className="flex text-white ml-3 al items-center text-sm">
+            <a className="flex text-white-100 ml-3 al items-center text-sm">
               <BsPerson />
-              <h4 className="pl-1 text-xs font-medium sm:font-semibold">
+              <h4 className="pl-1 text-xs font-normal font-sans">
                 Store Locator
               </h4>
             </a>
@@ -45,7 +45,7 @@ const Header = () => {
 
         <div className=" flex justify-between md:space-x-32 xlspace-x-40 items-center pt-2 py-2">
           {/* logo */}
-          <div className=" w-20 h-7 xl:w-32 xl:h-10 relative">
+          <div className=" w-20 h-7 xl:w-48 xl:h-12 relative">
             <Link href="/#  ">
               <Image
                 className="hover:cursor-pointer"
@@ -59,7 +59,7 @@ const Header = () => {
 
           {/* search bar part */}
 
-          <div className="flex-grow bg-white  xl:w-99 flex items-center rounded-full">
+          <div className="flex-grow bg-white-100  xl:w-99 flex items-center rounded-full">
             <input
               className=" flex-grow text-base rounded-l-full mx-3 px-1 xl:w-98.6 xl:h-9 text-gray-700  focus:outline-none"
               id="search"
@@ -76,9 +76,11 @@ const Header = () => {
 
           {/* contact number */}
           <Link href="action2.2">
-            <a className="flex text-white items-center text-2xl hover:cursor-pointer ">
+            <a className="flex text-white-100 items-center text-2xl hover:cursor-pointer ">
               <FiPhoneCall />
-              <h4 className="pl-2 text-base  font-semibold ">0123456789</h4>
+              <h4 className="pl-2 text-base font-semibold font-sans">
+                0123456789
+              </h4>
             </a>
           </Link>
         </div>

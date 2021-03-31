@@ -2,14 +2,44 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    colors: {
+      green: {
+        555: "#83B735",
+      },
+      red: {
+        555: "#D80005",
+        666: "#F42C2C",
+        444: "#FF6253",
+      },
+      white: {
+        100: "#FFFFFF",
+      },
+      yellow: {
+        555: "#FED700",
+      },
+      gray: {
+        111: "#D4D4D4",
+        222: "#696969",
+        333: "#E5E5E5",
+        444: "#F5F5F5",
+        555: "#223263",
+      },
+      blue: {
+        111: "#0564D2",
+        222: "#add8e6",
+      },
+    },
+    fontFamily: {
+      sans: ["Roboto"],
+    },
     container: {
       padding: {
         DEFAULT: "0.3rem",
         sm: "0.5rem",
-        md: "1rem",
-        lg: "2rem",
-        xl: "3rem",
-        "2xl": "5rem",
+        md: "1.5rem",
+        lg: "3rem",
+        xl: "4rem",
+        "2xl": "6rem",
       },
     },
     // screens: {
@@ -30,13 +60,19 @@ module.exports = {
     // },
     extend: {
       spacing: {
-        1.3: "0.32rem",
+        0.4: "0.20rem",
+        1.6: "0.42rem",
         34: "8.5rem",
         42: "10.5rem",
+        46: "11.4rem",
+        54: "13.8rem",
         102: "39.5rem",
-        103: "45rem",
+        103: "40rem",
         105: "48rem",
         110: "52rem",
+        70: "16.7rem",
+        81: "20.2rem",
+        82: "20.5rem",
         88: "21rem",
         73: "18.7rem",
         89: "22.5rem",
@@ -44,6 +80,8 @@ module.exports = {
         90: "23.5rem",
         18: "4.5rem",
         98: "28rem",
+        99: "31rem",
+        96.5: "27rem",
         97: "24.5rem",
         98.6: "30rem",
         100: "36.7rem",

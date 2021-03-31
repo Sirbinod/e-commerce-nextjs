@@ -107,31 +107,33 @@ const JustInGrid = () => {
           return (
             <div
               key={item.id}
-              className="inline-block w-28 md:w-48 text-center hover:shadow-3xl bg-white md:py-4 rounded-xl"
+              className="inline-block w-28 md:w-46 text-center hover:shadow-3xl bg-white-100 md:py-4 rounded-xl"
             >
               <div className="relative w-24 h-24 m-2 md:w-40 md:h-40 md:mx-4 md:my-2">
                 <Image
                   src={item.img}
-                  layout="fill"
-                  objectFit="fill"
+                  layout="fixed"
+                  // objectFit="fill"
+                  width="130"
+                  height="135"
                   alt="product image"
                 />
               </div>
               <div className="mt-2">
-                <h3 className=" text-xs font-light md:text-lg md:font-medium">
+                <h3 className=" text-base font-normal md:text-lg md:font-medium font-sans ">
                   {item.title}
                 </h3>
-                <h3 className=" text-xs font-light md:text-lg md:font-medium">
+                <h3 className=" text-base font-normal md:text-lg md:font-medium font-sans">
                   {item.catagory}
                 </h3>
-                <h3 className="text-base font-medium md:text-xl md:font-semibold text-red-700">
+                <h3 className="text-base font-medium md:text-xl md:font-semibold text-red-666">
                   Rs. {item.price}
                 </h3>
                 <div className="flex justify-around my-1 md:my-2 items-center">
-                  <span className=" text-xs font-extralight block text-gray-400 line-through">
+                  <span className=" text-xs font-extralight block text-gray-222 line-through">
                     Rs.{item.cut_proce}
                   </span>
-                  <span className="border rounded-2xl text-xs w-14 md:w-18 items-center border-green-600 text-green-600 md:text-sm ">
+                  <span className="border rounded-2xl text-xs w-14 md:w-18 items-center border-green-555 text-green-555 md:text-sm ">
                     20% off
                   </span>
                 </div>

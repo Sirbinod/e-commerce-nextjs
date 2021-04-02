@@ -30,11 +30,10 @@ const BrandLogo = () => {
         {/* top brand logo / image mapping  */}
         {logos.map((logo) => {
           return (
-            <div key={logo.id} className="w-16 h-8 2xl:w-20 2xl:h-10 relative">
-              <Image
+            <div key={logo.id}>
+              <img
                 src={logo.img}
-                layout="fill"
-                objectFit="fill"
+                style={{maxWidth: "80", maxHeight: "40"}}
                 alt="brand logo"
               />
             </div>

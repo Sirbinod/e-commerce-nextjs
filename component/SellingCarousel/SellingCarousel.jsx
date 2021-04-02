@@ -101,8 +101,10 @@ const SellingCarousel = () => {
                   alt="product image"
                 />
               </div>
-              <div className="mt-1">
-                <h3 className="text-base my-1 font-semibold">{item.title}</h3>
+              <div className="my-1">
+                <h3 className="text-base my-1 font-semibold leading-6">
+                  {item.title}
+                </h3>
                 <h3 className="border rounded-2xl mb-1 w-36 mx-6 border-green-555 text-base font-medium text-green-555">
                   {item.price}
                 </h3>

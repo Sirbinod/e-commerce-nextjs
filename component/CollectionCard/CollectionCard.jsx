@@ -67,24 +67,28 @@ const CollectionCard = () => {
   return (
     <div>
       {/* create 5 column  */}
-      <div className="grid grid-cols-5 gap-3 md:gap-9">
+      <div className="grid grid-cols-5 gap-3 lg:gap-9">
         {collection.map((item) => {
           return (
             // collection card
             <div className=" flex md:w-56 md:h-16 items-center">
-              <div className="w-16 h-16 md:w-18 md:h-18 bg-gray-111 rounded-2xl md:rounded-full md:mr-3">
-                <div className=" relative w-12 h-12 md:w-12 md:h-12 rounded-full my-2 mx-2 md:my-3 md:mx-3">
+              <div className="w-16 h-16  bg-gray-111 rounded-2xl md:rounded-full md:mr-3">
+                <div className=" relative   rounded-full my-2 mx-2 lg:mx-2.5">
                   {/* collection product image  */}
-                  <Image src={item.img} layout="fill" objectFit="fill" />
+                  <img
+                    src={item.img}
+                    style={{maxWidth: "50px", maxHeight: "50px"}}
+                    alt="collection image"
+                  />
                 </div>
               </div>
               <div>
                 {/* collection product title  */}
-                <h3 className=" hidden md:block md:text-lg md:py-1 md:font-semibold">
+                <h3 className=" hidden lg:block md:text-lg md:py-1 md:font-semibold">
                   {item.title}
                 </h3>
                 {/* collection product quantity */}
-                <h5 className="hidden md:block md:text-gray-400  md:text-sm">
+                <h5 className="hidden lg:block md:text-gray-400  md:text-sm">
                   {item.totle}
                 </h5>
               </div>

@@ -7,25 +7,24 @@ import Link from "next/link";
 
 const CarouselItem = () => {
   const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: {max: 3000, min: 1536},
-      items: 7,
+    largedesktop: {
+      breakpoint: {max: 1500, min: 1280},
+      items: 6,
     },
     desktop: {
-      breakpoint: {max: 1535, min: 1221},
+      breakpoint: {max: 1500, min: 1280},
       items: 6,
     },
     laptop: {
-      breakpoint: {max: 1220, min: 981},
+      breakpoint: {max: 1280, min: 1024},
       items: 5,
     },
     tablet: {
-      breakpoint: {max: 980, min: 591},
+      breakpoint: {max: 1024, min: 700},
       items: 3,
     },
-    mobile: {
-      breakpoint: {max: 590, min: 0},
+    mobie: {
+      breakpoint: {max: 700, min: 464},
       items: 2,
     },
   };
@@ -82,7 +81,7 @@ const CarouselItem = () => {
   return (
     <div>
       {/* item card slider */}
-      <Carousel responsive={responsive} renderButtonGroupOutside={true}>
+      <Carousel responsive={responsive}>
         {items.map((item) => {
           return (
             <div
@@ -101,20 +100,26 @@ const CarouselItem = () => {
               </Link>
               <div className="mt-2">
                 {/* item title */}
-                <h3 className="text-base font-semibold font-sans">
+                <h3 className="text-xl-1 font-medium leading-7 font-sans">
                   {item.title}
                 </h3>
                 {/* item Price */}
-                <h3 className="text-lg font-semibold text-red-666">
+                <h3 className="text-xl-3 font-semibold leading-7 text-red-666">
                   Rs. {item.price}
                 </h3>
                 {/* rating star */}
-                <div className="flex mx-16">
-                  <AiFillStar style={{color: "yellow"}} />
-                  <AiFillStar style={{color: "yellow"}} />
-                  <AiFillStar style={{color: "yellow"}} />
-                  <AiFillStar />
-                  <AiFillStar />
+                <div className="flex mx-16 space-x-0.5">
+                  <AiFillStar
+                    style={{width: "23px", height: "25px", color: "yellow"}}
+                  />
+                  <AiFillStar
+                    style={{width: "23px", height: "25px", color: "yellow"}}
+                  />
+                  <AiFillStar
+                    style={{width: "23px", height: "25px", color: "yellow"}}
+                  />
+                  <AiFillStar style={{width: "23px", height: "25px"}} />
+                  <AiFillStar style={{width: "23px", height: "25px"}} />
                 </div>
               </div>
             </div>

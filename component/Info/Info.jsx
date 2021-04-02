@@ -29,10 +29,9 @@ const Info = () => {
           return (
             <div className="flex items-center">
               <div className="w-14 h-14 relative mr-3">
-                <Image
+                <img
                   src={info.img}
-                  layout="fill"
-                  objectFit="fill"
+                  style={{maxHeight: "50px", maxWidth: "50"}}
                   alt="info icon"
                 />
               </div>

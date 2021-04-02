@@ -102,20 +102,17 @@ const JustInGrid = () => {
   ];
   return (
     <div>
-      <div className="grid grid-cols-3 lg:grid-cols-6 gap-2 lg:gap-4 2xl:grid-cols-7">
+      <div className="grid grid-cols-2 sm:grid sm:grid-cols-4 lg:grid-cols-6 gap-2 lg:gap-4 2xl:grid-cols-7">
         {items.map((item) => {
           return (
             <div
               key={item.id}
-              className="inline-block w-28 md:w-46 text-center hover:shadow-3xl bg-white-100 md:py-4 rounded-xl"
+              className="inline-block w-46 sm:w-44 lg:w-46 text-center hover:shadow-3xl bg-white-100 md:py-4 rounded-xl"
             >
-              <div className="relative w-24 h-24 m-2 md:w-40 md:h-40 md:mx-4 md:my-2">
-                <Image
+              <div className="relative w-40 h-40 mx-4 sm:mx-2 lg:mx-4 my-2">
+                <img
                   src={item.img}
-                  layout="fixed"
-                  // objectFit="fill"
-                  width="130"
-                  height="135"
+                  style={{maxHeight: "150px", maxWidth: "150px"}}
                   alt="product image"
                 />
               </div>

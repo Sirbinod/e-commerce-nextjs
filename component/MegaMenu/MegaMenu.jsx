@@ -93,15 +93,15 @@ const MegaMenu = () => {
   ];
 
   return (
-    <div className="h-8 bg-white-100 ">
-      <div className="container mx-auto items-center flex space-x-7 justify-between">
+    <div className="h-10">
+      <div className="container mx-auto py-1.5 items-center flex space-x-7 justify-between">
         {/* megamenu start */}
-        <div className="group inline-block">
+        <div className="hidden lg:group lg:inline-block">
           {/* mega menu name  */}
           <button className="outline-none focus:outline-none py-0.5 rounded-sm flex items-center w-50">
-            <Image src="/categorylogo.png" width="18" height="14" />
-            <h1 className=" font-semibold pr-2 ml-2 mr-24 text-base p-0.5 font-sans">
-              All Category
+            <img src="/categorylogo.png" width="18" height="14" />
+            <h1 className=" font-semibold leading-4 pr-2 ml-2 mr-18 xl:text-base  lg:p-0 xl:p-0.5 font-sans">
+              All Categories
             </h1>
 
             <span className="text-xs font-normal">
@@ -115,7 +115,7 @@ const MegaMenu = () => {
             className={
               router.pathname == "/"
                 ? "home custom-menu bg-white-100 z-10 rounded-sm group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-60 "
-                : "custom-menu transform scale-0 bg-white-100 z-10  rounded-sm group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-60"
+                : "custom-menu transform scale-0 bg-white-100 z-10  max-h-100 rounded-sm group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-60"
             }
           >
             {menus.map((menu) => {
@@ -124,7 +124,7 @@ const MegaMenu = () => {
                   key={menu.id}
                   className="rounded-sm relative px-0.5 md:px-1 "
                 >
-                  <button className="w-full text-left lg:text-sm 2xl:text-base pl-2 my-1.6 xl:my-3 font-sans font-normal flex items-center outline-none focus:outline-none">
+                  <button className="w-full text-left lg:text-sm-5 leading-150  pl-2 my-1.6 xl:my-2 2xl:my-4 font-sans font-normal flex items-center outline-none focus:outline-none">
                     <span className="flex-1">{menu.name}</span>
                     <span className="mr-auto  ">
                       <svg className=" fill-current h-4 w-4  text-gray-111 transition duration-150 ease-in-out">
@@ -136,7 +136,7 @@ const MegaMenu = () => {
                   {/* submenu item  */}
                   <ul className=" transform scale-0 bg-white-100 z-4 rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left w-52 h-48 ">
                     <li className="rounded-sm relative px-3 py-1">
-                      <button className="  font-sans w-full text-left text-sm font-normal  flex items-center outline-none focus:outline-none">
+                      <button className="  font-sans w-full text-left lg:text-sm-5 leading-150  font-normal  flex items-center outline-none focus:outline-none">
                         <span className="pr-1 flex-1">Kitchen</span>
                         <span className="mr-auto">
                           <svg className="fill-current h-4 w-4 text-gray-111 transition duration-150 ease-in-out">
@@ -148,7 +148,7 @@ const MegaMenu = () => {
                       <ul className="bg-white-100 z-10 rounded-sm  absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left w-52 h-40">
                         <Link href="/Selection">
                           <li className="px-3 py-1 hover:bg-gray-100">
-                            <button className="items-center text-sm font-normal  outline-none focus:outline-none">
+                            <button className="items-center lg:text-sm-5 leading-150  font-normal  outline-none focus:outline-none">
                               Washing machine
                             </button>
                           </li>
@@ -163,29 +163,29 @@ const MegaMenu = () => {
         </div>
         {/* nab bar */}
         <div className="flex">
-          <div className="hidden sm:flex sm:space-x-4 md:space-x-10 lg:space-x-16 items-center ">
+          <div className="hidden lg:flex sm:space-x-4 md:space-x-10 lg:space-x-16 items-center ">
             {/* nab bar items */}
             <a
               href="#"
-              className="hover:cursor-pointer text-black text-sm font-semibold font-sans"
+              className="hover:cursor-pointer text-black text-base leading-4 font-semibold font-sans"
             >
               Flash Sale
             </a>
             <a
               href="#"
-              className="hover:cursor-pointer text-black text-sm font-semibold font-sans"
+              className="hover:cursor-pointer text-black text-base leading-4 font-semibold font-sans"
             >
               Best Deal
             </a>
             <a
               href="#"
-              className="hover:cursor-pointer text-black text-sm font-semibold font-sans"
+              className="hover:cursor-pointer text-black text-base leading-4 font-semibold font-sans"
             >
               Colection
             </a>
             <a
               href="#"
-              className="hover:cursor-pointer text-black text-sm font-semibold font-sans"
+              className="hover:cursor-pointer text-black text-base leading-6 font-semibold font-sans"
             >
               Free Delivery
             </a>
@@ -195,16 +195,16 @@ const MegaMenu = () => {
         <div className="block sm:ml-6">
           <div className="flex  space-x-0 sm:space-x-4 items-center my-1 text-xl">
             {/* fav/like icon */}
-            <h3 className="mx-4">
+            <h3 className="mx-4 text-xl-1 leading-6">
               <GrFavorite />
             </h3>
-            <div className="flex items-center space-x-2 text-xl">
+            <div className="flex items-center space-x-2 text-xl-1 leading-6">
               {/* shopping cart icon  */}
               <h3>
                 <GrCart />
               </h3>
               {/* totol mony display */}
-              <h3 className="font-semibold text-sm">Rs. 20000</h3>
+              <h3 className="font-semibold text-xl-1 leading-6">Rs. 20000</h3>
             </div>
           </div>
         </div>

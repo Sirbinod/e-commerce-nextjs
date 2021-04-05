@@ -1,0 +1,13 @@
+.react-multiple-carousel__arrow {
+  position: absolute;
+  transition: all;
+  margin-left: -15px;
+  margin-right: -15px;
+  justify-content: space-between;
+  border-radius: 50px;
+  z-index: 1;
+  background: blue;
+  min-width: 30px;
+  min-height: 30px;
+  cursor: pointer;
+}

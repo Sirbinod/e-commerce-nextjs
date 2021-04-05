@@ -92,7 +92,7 @@ const SellingCarousel = () => {
           return (
             <div
               key={item.id}
-              className="inline-block w-46 text-center bg-white-100 py-2 rounded-xl hover:shadow-3xl  "
+              className="inline-block best-selling-card bg-white py-2 rounded-xl"
             >
               <div className="relative w-40 h-40 mx-4 rounded-xl">
                 <img
@@ -102,13 +102,11 @@ const SellingCarousel = () => {
                 />
               </div>
               <div className="my-1">
-                <h3 className="text-base my-1 font-semibold leading-6">
-                  {item.title}
-                </h3>
-                <h3 className="border rounded-2xl mb-1 w-36 mx-6 border-green-555 text-base font-medium text-green-555">
+                <h1 className="best-selling-title my-1 ">{item.title}</h1>
+                <h3 className=" best-selling-price rounded-2xl py-1 mb-1 mx-6">
                   {item.price}
                 </h3>
-                <span className="block text-gray-111">{item.brand}</span>
+                <span className="best-selling-brand">{item.brand}</span>
               </div>
             </div>
           );

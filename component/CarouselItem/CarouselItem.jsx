@@ -8,23 +8,19 @@ import Link from "next/link";
 const CarouselItem = () => {
   const responsive = {
     largedesktop: {
-      breakpoint: {max: 1500, min: 1280},
-      items: 6,
+      breakpoint: {max: 2000, min: 1580},
+      items: 7,
     },
     desktop: {
       breakpoint: {max: 1500, min: 1280},
       items: 6,
     },
-    laptop: {
-      breakpoint: {max: 1280, min: 1024},
-      items: 5,
-    },
     tablet: {
-      breakpoint: {max: 1024, min: 700},
-      items: 3,
+      breakpoint: {max: 1024, min: 500},
+      items: 4,
     },
-    mobie: {
-      breakpoint: {max: 700, min: 464},
+    min: {
+      breakpoint: {max: 500, min: 200},
       items: 2,
     },
   };
@@ -86,27 +82,23 @@ const CarouselItem = () => {
           return (
             <div
               key={item.id}
-              className="inline-block w-46 text-center bg-white-100 py-4 rounded-lg hover:shadow-3xl"
+              className="inline-block card-item bg-white py-4 rounded-lg "
             >
               <Link href="/ProductDetail">
-                <div className=" mx-4 w-40 h-40 my-1">
+                <div className=" mx-4 h-40 w-40 my-1">
                   {/* item Image */}
                   <img
                     src={item.img}
+                    style={{maxHeight: "150px", maxWidth: "150px"}}
                     alt="product image"
-                    style={{maxWidth: "150px", maxHeight: "150px"}}
                   />
                 </div>
               </Link>
               <div className="mt-2">
                 {/* item title */}
-                <h3 className="text-xl-1 font-medium leading-7 font-sans">
-                  {item.title}
-                </h3>
+                <h3 className="card-item-title">{item.title}</h3>
                 {/* item Price */}
-                <h3 className="text-xl-3 font-semibold leading-7 text-red-666">
-                  Rs. {item.price}
-                </h3>
+                <h3 className="card-item-price">Rs. {item.price}</h3>
                 {/* rating star */}
                 <div className="flex mx-16 space-x-0.5">
                   <AiFillStar

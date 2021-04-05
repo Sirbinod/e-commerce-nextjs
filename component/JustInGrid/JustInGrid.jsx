@@ -102,12 +102,12 @@ const JustInGrid = () => {
   ];
   return (
     <div>
-      <div className="grid grid-cols-2 sm:grid sm:grid-cols-4 lg:grid-cols-6 gap-2 lg:gap-4 2xl:grid-cols-7">
+      <div className="grid grid-cols-2 sm:grid sm:grid-cols-3 lg:grid-cols-6 gap-2 lg:gap-3 2xl:grid-cols-7">
         {items.map((item) => {
           return (
             <div
               key={item.id}
-              className="inline-block w-46 sm:w-44 lg:w-46 text-center hover:shadow-3xl bg-white-100 md:py-4 rounded-xl"
+              className="inline-block justin-card md:py-4 rounded-xl"
             >
               <div className="relative w-40 h-40 mx-4 sm:mx-2 lg:mx-4 my-2">
                 <img
@@ -117,20 +117,12 @@ const JustInGrid = () => {
                 />
               </div>
               <div className="mt-2">
-                <h3 className=" text-base font-normal md:text-lg md:font-medium font-sans ">
-                  {item.title}
-                </h3>
-                <h3 className=" text-base font-normal md:text-lg md:font-medium font-sans">
-                  {item.catagory}
-                </h3>
-                <h3 className="text-base font-medium md:text-xl md:font-semibold text-red-666">
-                  Rs. {item.price}
-                </h3>
+                <h1 className="justin-title">{item.title}</h1>
+                <h1 className="justin-category">{item.catagory}</h1>
+                <h3 className="justin-price">Rs. {item.price}</h3>
                 <div className="flex justify-around my-1 md:my-2 items-center">
-                  <span className=" text-xs font-extralight block text-gray-222 line-through">
-                    Rs.{item.cut_proce}
-                  </span>
-                  <span className="border rounded-2xl text-xs w-14 md:w-18 items-center border-green-555 text-green-555 md:text-sm ">
+                  <span className="cut-price">Rs.{item.cut_proce}</span>
+                  <span className="discount rounded-2xl  items-center ">
                     20% off
                   </span>
                 </div>

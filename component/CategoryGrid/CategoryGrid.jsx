@@ -93,7 +93,7 @@ const CatagoryGrid = () => {
           <Link href="/Selection">
             <div
               key={item.id}
-              className="inline-block text-center w-30 md:w-34 xl:w-35  2xl:w-41 bg-white-100 hover:shadow-3xl"
+              className="inline-block text-center w-30 md:w-34 xl:w-35  2xl:w-41 bg-white hover:shadow-3xl"
             >
               <div className=" md:mx-4 mt-4 2xl:w-24 2xl:h-24 2xl:mx-8 2xl:mt-6">
                 {/* catagory image  */}

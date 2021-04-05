@@ -64,20 +64,18 @@ const CardChanel = () => {
             return (
               <div
                 key={i}
-                className="block text-center md:flex  lg:w-44 xl:w-56 xl:h-11 lg:bg-white-100 rounded-3xl items-center md:hover:bg-red-555 md:hover:text-white-100 hove:shadow-2xl"
+                className="block text-center md:flex  lg:w-44 xl:w-52  xl:h-11 2xl:w-60 lg:bg-white rounded-3xl items-center md:hover:bg-red-500 md:hover:text-white"
               >
                 <div className="mb-2 mx-2 sm:mx-1 lg:mx-2 md:m-2.5">
                   {/* card Image */}
                   <img
                     src={item.img}
-                    className="max-w-7.2 max-h-7.2"
+                    style={{maxHeight: "30px", maxWidth: "30px"}}
                     alt="chanel card"
                   />
                 </div>
                 {/* card title */}
-                <h3 className=" text-xl leading-5 font-semibold">
-                  {item.title}
-                </h3>
+                <h3 className="chanel-title">{item.title}</h3>
               </div>
             );
           })}

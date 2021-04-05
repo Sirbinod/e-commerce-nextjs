@@ -23,7 +23,7 @@ const Info = () => {
     },
   ];
   return (
-    <div className="border-b border-gray-111 ">
+    <div className="border-b border-gray-300 py-3">
       <div className="flex pb-3 justify-between items-center">
         {infos.map((info) => {
           return (
@@ -36,8 +36,8 @@ const Info = () => {
                 />
               </div>
               <div className=" items-center">
-                <h3 className=" text-base font-semibold">{info.title}</h3>
-                <h4 className="text-sm text-gray-222">{info.sub}</h4>
+                <h3 className=" text-base font-meduim">{info.title}</h3>
+                <h4 className="text-sm text-gray-400">{info.sub}</h4>
               </div>
             </div>
           );

@@ -64,12 +64,12 @@ export default function Home() {
     },
   ];
   return (
-    <div className="bg-gray-444">
+    <div>
       <section
         className={
           router.pathname == "/"
-            ? "home w-full bg-white-100 sticky top-24 z-10"
-            : "w-full bg-white-100 sticky top-24 z-10"
+            ? "home w-full bg-white sticky top-24 z-10"
+            : "w-full bg-white sticky top-24 z-10"
         }
       >
         <MegaMenu />
@@ -77,11 +77,11 @@ export default function Home() {
 
       <section>
         {/* home banar */}
-        <div className="mb-6">
+        <div className="mb-6 bg">
           <div className="container mx-auto">
             <div className="lg:pl-60 block space-y-1 md:space-y-1 lg:space-y-0 lg:space-x-2 xl:space-x-3 lg:flex">
               {/* slide banar */}
-              <div className="lg:w-103 2xl:w-105">
+              <div className="banner-1">
                 <Carousel
                   responsive={responsive}
                   infinite={true}
@@ -91,14 +91,12 @@ export default function Home() {
                 >
                   {banars.map((banar) => {
                     return (
-                      <div
-                        key={banar.id}
-                        // className=" h-52 sm:h-80 lg:h-82 xl:h-97 w-100% 2xl:h-99"
-                      >
-                        <img
+                      <div key={banar.id} className="banner-1">
+                        <Image
                           src={banar.img}
-                          // style={{minWidth: "640px", maxHeight: "450px"}}
-                          className="lg:w-103 2xl:w-105 lg:h-97 2xl:h-98.6 "
+                          layout="fill"
+                          objectFit="fill"
+                          quality="100"
                           alt="first banar"
                         />
                       </div>
@@ -109,17 +107,22 @@ export default function Home() {
 
               {/* left side banar */}
               <div className="flex space-x-0.5 lg:block lg:space-x-0">
-                <div className="lg:mt-0.5">
-                  <img
+                <div className="lg:mt-0.5 banner-2 relative">
+                  <Image
                     src="/homebanar2.png"
-                    className="lg:w-65 lg:h-49 2xl:w-80 2xl:h-60"
+                    layout="fill"
+                    objectFit="fill"
+                    quality="100"
                     alt="first banar"
                   />
                 </div>
-                <div className="lg:mt-0.5">
-                  <img
+                <div className="lg:mt-0.5 banner-2 relative ">
+                  <Image
                     src="/homebanar3.png"
-                    className="lg:w-65 lg:h-49 2xl:w-80 2xl:h-60"
+                    // className="lg:w-65 lg:h-49 2xl:w-80 2xl:h-60"
+                    layout="fill"
+                    objectFit="fill"
+                    quality="100"
                     alt="first banar"
                   />
                 </div>
@@ -143,7 +146,7 @@ export default function Home() {
         <div className="my-7">
           <div className="container mx-auto">
             <div className="flex items-center py-4">
-              <h1 className="text-xl md:text-2xl font-semibold ">Categores</h1>
+              <h1 className="category">Categores</h1>
             </div>
             <CatagoryGrid />
           </div>
@@ -155,10 +158,12 @@ export default function Home() {
             {/* middle pard banar using map method */}
             {images.map((ad) => {
               return (
-                <div key={ad.id} className="">
-                  <img
+                <div key={ad.id} className="middle-banner">
+                  <Image
                     src={ad.img}
-                    className=" lg:w-73 lg:h-52 xl:w-90 xl:h-64 2xl:w-96.5 2xl:h-72"
+                    layout="fill"
+                    objectFit="fill"
+                    quality="100"
                     // style={{maxWidth: "440px", maxHeight: "239px"}}
                     alt="ad banar"
                   />
@@ -173,7 +178,7 @@ export default function Home() {
           <div className="container mx-auto">
             <div className=" flex justify-between items-center py-4">
               {/* best selling section Header */}
-              <h1 className="text-2xl font-semibold ">Best Selling</h1>
+              <h1 className="category">Best Selling</h1>
               <ViewButton />
             </div>
             <SellingCarousel />
@@ -186,7 +191,7 @@ export default function Home() {
             <div className="items-center py-4 mb-2">
               {/* collection section header */}
 
-              <h1 className="text-2xl font-semibold ">Collections</h1>
+              <h1 className="category">Collections</h1>
             </div>
             <CollectionCard />
           </div>
@@ -199,29 +204,38 @@ export default function Home() {
               {/* landing page last banar */}
               <div>
                 {/* left side banar */}
-                <div className="mb-1">
-                  <img
+                <div className="mb-1 last-banner-1">
+                  <Image
                     src="/ads1.png"
-                    className="w-44 h-24 md:w-80 lg:w-98 xl:w-100 2xl:w-104 2xl:h-60 lg:h-52 lg:mb-3"
+                    // className="w-44 h-24 md:w-80 lg:w-98 xl:w-100 2xl:w-104 2xl:h-60 lg:h-52 lg:mb-3"
+                    layout="fill"
+                    objectFit="fill"
+                    quality="100"
                     // style={{width: "590px", height: "230px"}}
                     alt="ads banar"
                   />
                 </div>
-                <div className="mt-1">
-                  <img
+                <div className="mb-1 last-banner-1">
+                  <Image
                     src="/ads2.png"
+                    // className="w-44 h-24 md:w-80 lg:w-98 xl:w-100 2xl:w-104 2xl:h-60 lg:h-52 lg:mb-3"
+                    layout="fill"
+                    objectFit="fill"
+                    quality="100"
                     // style={{width: "590px", height: "230px"}}
-                    className="w-44 h-24 md:w-80 lg:w-98 xl:w-100 2xl:w-104 2xl:h-60 lg:h-52 lg:mb-3"
                     alt="ads banar"
                   />
                 </div>
               </div>
               {/* right side banar */}
-              <div className="">
-                <img
+              <div className="mb-1 last-banner-2">
+                <Image
                   src="/ads3.png"
-                  // style={{width: "560px", height: "464px"}}
-                  className="w-44 h-48 lg:w-98 xl:w-100 2xl:w-104 2xl:h-99 lg:h-96.5"
+                  // className="w-44 h-24 md:w-80 lg:w-98 xl:w-100 2xl:w-104 2xl:h-60 lg:h-52 lg:mb-3"
+                  layout="fill"
+                  objectFit="fill"
+                  quality="100"
+                  // style={{width: "590px", height: "230px"}}
                   alt="ads banar"
                 />
               </div>
@@ -234,7 +248,7 @@ export default function Home() {
           <div className="container mx-auto">
             <div className=" flex justify-between items-center py-4">
               {/* most popular section header */}
-              <h1 className="text-2xl font-semibold ">Most Popular</h1>
+              <h1 className="category">Most Popular</h1>
               <ViewButton />
             </div>
             <CarouselItem />
@@ -246,7 +260,7 @@ export default function Home() {
           <div className="container mx-auto">
             <div className="items-center py-4">
               {/* just in section header */}
-              <h1 className="text-2xl font-semibold ">Just In</h1>
+              <h1 className="category">Just In</h1>
             </div>
             <JustInGrid />
           </div>
@@ -258,18 +272,18 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div className="my-10">
+        <div className="my-10 ">
           <div className="container mx-auto">
             <div className="items-center py-3">
               {/* top brand section header */}
-              <h1 className="text-2xl font-semibold ">Top Brands</h1>
+              <h1 className="category">Top Brands</h1>
             </div>
             <BrandLogo />
           </div>
         </div>
       </section>
       <section>
-        <div className="pt-5 bg-gray-333">
+        <div className="pt-5 bgc">
           <div className="container mx-auto">
             <Info />
           </div>

@@ -1,0 +1,37 @@
+.header {
+  width: 100%;
+  background-color: #d80005;
+  height: 6rem;
+}
+.link-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+  padding-top: 0.25rem;
+  margin-left: 1.25rem;
+}
+.link-bar-item {
+  display: flex;
+  color: white;
+  margin-left: 0.75rem;
+  align-items: center;
+  font-size: small;
+}
+.link-bar-item-text {
+  padding-left: 0.25rem;
+}
+
+.menu-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0 5rem;
+}
+.logo {
+  max-width: 14rem;
+  max-height: 3.583rem;
+}
+.number {
+  font-size: 1.525rem;
+  line-height: 1.904ren;
+}

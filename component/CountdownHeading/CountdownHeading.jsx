@@ -7,20 +7,20 @@ const CountdownHeading = () => {
       <div className=" hidden lg:flex items-center py-4 justify-between">
         {/* heading carousel item */}
         <div className="flex space-x-4 md:space-x-16 items-center">
-          <h1 className="text-2xl font-semibold ">Deal of the day</h1>
+          <h1 className="countdown-title">Deal of the day</h1>
           {/* date countdown */}
           <div className="flex">
             <h4 className="text-xs md:text-sm">
               Ends in
-              <span className="w-6 h-6 px-1.5 py-1.5 rounded-lg bg-red-555 text-white-100 mx-1.5">
+              <span className=" countdown-item px-1.5 py-1.5 rounded-lg  text-white mx-1.5">
                 01
               </span>
               :
-              <span className="w-6 h-6 px-1.5 py-1.5 rounded-lg bg-red-555 text-white-100 mx-1.5">
+              <span className="countdown-item px-1.5 py-1.5 rounded-lg text-white mx-1.5">
                 01
               </span>
               :
-              <span className="w-6 h-6 px-1.5 py-1.5 rounded-lg bg-red-555 text-white-100 mx-1.5">
+              <span className=" countdown-item px-1.5 py-1.5 rounded-lg  text-white mx-1.5">
                 01
               </span>
               hrs
@@ -34,25 +34,25 @@ const CountdownHeading = () => {
       </div>
       <div className="block lg:hidden">
         <div className="flex justify-between items-center">
-          <h1 className=" text-xl md:text-2xl font-semibold ">
+          <h1 className=" text-xl md:text-2xl font-semibold">
             Deal of the day
           </h1>
           <div>
             <ViewButton />
           </div>
         </div>
-        <div className="  my-1 py-1.5 h-10 bg-red-555">
-          <h1 className="text-white-100 mx-14 sm:px-40 flex items-center text-base font-medium">
+        <div className="my-1 py-2 mobile-countdown mb-3">
+          <h1 className="text-white mx-14 sm:px-40 flex items-center text-xl font-medium">
             Ends in
-            <span className=" text-gray-555 w-7 h-7 px-1.5 py-0.4  bg-white-100  mx-1.5">
+            <span className=" text-gray-500 w-8 h-8 px-1.5 py-0.5  bg-white  mx-1.5">
               01
             </span>
             :
-            <span className=" text-gray-555 w-7 h-7 px-1.5 py-0.4  bg-white-100 mx-1.5">
+            <span className=" text-gray-500 w-8 h-8 px-1.5 py-0.5 bg-white mx-1.5">
               01
             </span>
             :
-            <span className=" text-gray-555 w-7 h-7 px-1.5 py-0.4  bg-white-100 mx-1.5">
+            <span className=" text-gray-500 w-8 h-8 px-1.5 py-0.5 bg-white mx-1.5">
               01
             </span>
             hrs

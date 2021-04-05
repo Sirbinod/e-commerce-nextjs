@@ -1,0 +1,64 @@
+.footer-item {
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+  font-weight: 500;
+}
+.footer-subitem {
+  font-size: 1rem;
+  line-height: 2rem;
+  color: #535353;
+}
+.search {
+  background-color: white;
+  width: 29rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.search-button {
+  background-color: rgba(5, 100, 210, 0.3);
+  height: 2.1rem;
+}
+.search-button-text {
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #0564d2;
+}
+.footer-info {
+  font-size: 1;
+  line-height: 1.5rem;
+  color: #535353;
+}
+.download-card {
+  width: 12rem;
+  height: 3rem;
+  background-color: #ff6253;
+  display: flex;
+}
+.download-card-title-1 {
+  font-size: 0.7rem;
+  line-height: 0.7rem;
+  color: white;
+}
+.download-card-title-2 {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: white;
+  font-weight: 500;
+}
+.method {
+  line-height: 150%;
+  font-size: 1.3rem;
+}
+.series {
+  color: #535353;
+  font-size: 0.9rem;
+  line-height: 2.3rem;
+}
+.copyright {
+  color: #535353;
+  font-size: 0.9rem;
+  line-height: 2rem;
+}

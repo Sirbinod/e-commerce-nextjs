@@ -9,33 +9,27 @@ import {FiPhoneCall} from "react-icons/fi";
 
 const Header = () => {
   return (
-    <div className="w-full bg-red-555 h-24 pb-1 shadow-3xl">
+    <div className="header   pb-1">
       <div className="container mx-auto">
         {/* link nav bar / top small navbar */}
 
-        <div className="flex justify-end mb-2 lg:mb-0 pt-1 ml-5">
+        <div className="link-bar lg:mb-0">
           <Link href="action1.1">
-            <a className="flex text-white-100 ml-3 al items-center text-sm">
+            <a className=" link-bar-item">
               <HiLocationMarker />
-              <h4 className="pl-1 text-sm-2 l-1 font-normal font-sans">
-                Store Locator
-              </h4>
+              <h1 className="pl-1">Store Locator</h1>
             </a>
           </Link>
           <Link href="action1.1">
-            <a className="flex text-white-100 ml-3 al items-center text-sm ">
+            <a className="link-bar-item">
               <FiTruck />
-              <h4 className="pl-1 text-sm-2 l-1 font-normal font-sans">
-                Track Order
-              </h4>
+              <h1 className="pl-1">Track Order</h1>
             </a>
           </Link>
           <Link href="action1.1">
-            <a className="flex text-white-100 ml-3 al items-center text-sm">
+            <a className="link-bar-item">
               <BsPerson />
-              <h4 className="pl-1 text-sm-2 l-1 font-normal font-sans">
-                Login & Register
-              </h4>
+              <h1 className="pl-1">Login & Register</h1>
             </a>
           </Link>
         </div>
@@ -43,20 +37,17 @@ const Header = () => {
 
         {/* logo and search bar with contact number */}
 
-        <div className="flex justify-between md:space-x-32 xlspace-x-40 items-center lg:pb-2 ">
+        <div className="menu-bar lg:space-x-20 xl:space-x-32 lg:pb-2 ">
           {/* logo */}
           <div className="hidden lg:block mb-3">
             <Link href="/#  ">
-              <img
-                className="hover:cursor-pointer w-56 h-17 "
-                src="/logo.png"
-              />
+              <img className="hover:cursor-pointer logo" src="/logo.png" />
             </Link>
           </div>
 
           {/* search bar part */}
 
-          <div className="flex-grow bg-white-100 h-14 lg:h-10 xl:w-99 flex items-center lg:rounded-full">
+          <div className="flex-grow bg-white h-14 lg:h-10 flex items-center lg:rounded-full">
             <input
               className=" flex-grow text-lg mr-3 lg:text-base rounded-l-full h-12  px-4 xl:w-98.6 lg:h-9 focus:outline-none"
               id="search"
@@ -64,8 +55,8 @@ const Header = () => {
               placeholder="Search for product"
             />
             {/* search icon  */}
-            <button className=" w-8 h-8 p-2 lg:mr-1 lg:bg-gray-111 lg:text-white-100 rounded-full hover:bg-blue-400 focus:outline-none flex items-center ">
-              <a className="text-2xl lg:text-sm">
+            <button className=" w-8 h-8 p-2 lg:mr-1 lg:bg-gray-300 lg:text-white rounded-full hover:bg-blue-400 focus:outline-none flex items-center ">
+              <a className="text-2xl lg:text-base">
                 <BiSearch />
               </a>
             </button>
@@ -73,9 +64,9 @@ const Header = () => {
 
           {/* contact number */}
           <Link href="action2.2">
-            <a className="hidden lg:flex text-white-100 items-center hover:cursor-pointer ">
+            <a className="hidden lg:flex text-white items-center hover:cursor-pointer ">
               <FiPhoneCall style={{width: "30px", height: "30px"}} />
-              <h4 className="pl-2 text-xl-2 l-7 font-medium">0123456789</h4>
+              <h4 className="pl-2 number">0123456789</h4>
             </a>
           </Link>
         </div>

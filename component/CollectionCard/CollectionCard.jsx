@@ -72,21 +72,21 @@ const CollectionCard = () => {
           return (
             // collection card
             <div className=" flex md:w-56 md:h-16 items-center">
-              <div className="w-16 h-16  bg-gray-111 rounded-2xl md:rounded-full md:mr-3">
-                <div className=" relative   rounded-full my-2 mx-2 lg:mx-2.5">
+              <div className="collection-logo rounded-2xl md:rounded-full md:mr-3">
+                <div className=" relative   rounded-full my-2 mx-2 lg:mx-4">
                   {/* collection product image  */}
                   <img
                     src={item.img}
-                    style={{maxWidth: "50px", maxHeight: "50px"}}
+                    style={{width: "50px", height: "60px"}}
                     alt="collection image"
                   />
                 </div>
               </div>
               <div>
                 {/* collection product title  */}
-                <h3 className=" hidden lg:block md:text-lg md:py-1 md:font-semibold">
+                <h1 className=" hidden lg:block collection-title ">
                   {item.title}
-                </h3>
+                </h1>
                 {/* collection product quantity */}
                 <h5 className="hidden lg:block md:text-gray-400  md:text-sm">
                   {item.totle}

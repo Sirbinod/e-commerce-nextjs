@@ -1,0 +1,138 @@
+.banner-1 {
+  width: 41rem;
+  height: 26rem;
+}
+.banner-2 {
+  width: 15rem;
+  height: 12.85rem;
+}
+.category {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 105.5%;
+}
+.middle-banner {
+  position: relative;
+  width: 23rem;
+  height: 16rem;
+}
+.last-banner-1 {
+  width: 36rem;
+  height: 14.85rem;
+  position: relative;
+}
+.last-banner-2 {
+  width: 36rem;
+  height: 30rem;
+  position: relative;
+}
+@media only screen and (min-width: 1532px) {
+  .banner-1 {
+    width: 48rem;
+    height: 29.3rem;
+  }
+  .banner-2 {
+    width: 20.2rem;
+    height: 14.55rem;
+  }
+  .middle-banner {
+    position: relative;
+    width: 27rem;
+    height: 19rem;
+  }
+  .last-banner-1 {
+    width: 41.5rem;
+    height: 15.85rem;
+    position: relative;
+  }
+  .last-banner-2 {
+    width: 41.5rem;
+    height: 32rem;
+    position: relative;
+  }
+}
+@media only screen and (max-width: 1279px) {
+  .banner-1 {
+    width: 30.6rem;
+    height: 20.8rem;
+  }
+  .banner-2 {
+    width: 11.9rem;
+    height: 10.27rem;
+  }
+  .middle-banner {
+    position: relative;
+    width: 19rem;
+    height: 13rem;
+  }
+  .last-banner-1 {
+    width: 29rem;
+    height: 12.85rem;
+    position: relative;
+  }
+  .last-banner-2 {
+    width: 29rem;
+    height: 26rem;
+    position: relative;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .banner-1 {
+    width: 45rem;
+    height: 25.8rem;
+  }
+  .banner-2 {
+    width: 22.4rem;
+    height: 15rem;
+  }
+  .last-banner-1 {
+    width: 20rem;
+    height: 5.85rem;
+    position: relative;
+  }
+  .last-banner-2 {
+    width: 20rem;
+    height: 14rem;
+    position: relative;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .banner-1 {
+    width: 100%;
+    height: 25rem;
+  }
+  .banner-2 {
+    width: 22.4rem;
+    height: 12rem;
+  }
+  .last-banner-1 {
+    width: 22rem;
+    height: 6.85rem;
+    position: relative;
+  }
+  .last-banner-2 {
+    width: 22rem;
+    height: 14rem;
+    position: relative;
+  }
+}
+@media only screen and (max-width: 390px) {
+  .banner-1 {
+    width: 100%;
+    height: 12rem;
+  }
+  .banner-2 {
+    height: 8rem;
+  }
+  .last-banner-1 {
+    width: 11.5rem;
+    height: 3.85rem;
+    position: relative;
+  }
+  .last-banner-2 {
+    width: 11.5rem;
+    height: 8rem;
+    position: relative;
+  }
+}

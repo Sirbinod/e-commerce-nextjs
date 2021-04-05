@@ -3,6 +3,7 @@ import FilterBar from "../component/FilterBar/FilterBar";
 import Footer from "../component/Footer/Footer";
 import ItemSelection from "../component/ItemSelection/ItemSelection";
 import Layout from "../component/Layout/Layout";
+import MegaMenu from "../component/MegaMenu/MegaMenu";
 
 export default function Selection() {
   const items = [
@@ -115,16 +116,17 @@ export default function Selection() {
   // }, []);
   return (
     <div className="bg-gray-100">
-      <section className="z-10 sticky top-0">
-        <Layout />
+      <section className="z-10 bg-white sticky top-24">
+        <MegaMenu />
       </section>
 
       <section>
         <div className="my-5">
           <div className="container mx-auto">
-            <div className="flex space-x-2">
-              <h3>Electric </h3>
-              <h3>Computer</h3>
+            <div className="flex space-x-2 mb-2">
+              <h3 className="text-base text-gray-500 mr-1">Electric </h3>
+              &#62;
+              <h3 className="text-base">Computer</h3>
             </div>
             <div className="flex space-x-7">
               <div className="w-56">
@@ -135,13 +137,6 @@ export default function Selection() {
 
               <ItemSelection items={items} />
             </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div className="bg-gray-300">
-          <div className="container mx-auto">
-            <Footer />
           </div>
         </div>
       </section>

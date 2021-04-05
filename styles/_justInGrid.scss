@@ -1,0 +1,34 @@
+.justin-card {
+  width: 11.7rem;
+  background-color: white;
+  text-align: center;
+}
+.justin-title {
+  font-size: 1.2rem;
+  line-height: 133%;
+}
+.justin-category {
+  font-size: 1.2rem;
+  line-height: 133%;
+}
+
+.justin-price {
+  font-size: 1.3rem;
+  line-height: 105%;
+  font-weight: 500;
+  color: red;
+}
+.cut-price {
+  font-size: 1.1rem;
+  line-height: 105%;
+  text-decoration: line-through;
+  color: #d4d4d4;
+}
+.discount {
+  border: 1px solid #83b735;
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 105%;
+  color: #83b735;
+  padding: 0.2rem 0.8rem;
+}

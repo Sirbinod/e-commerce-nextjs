@@ -14,7 +14,8 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-icons": "^4.2.0",
-    "react-multi-carousel": "^2.6.2"
+    "react-multi-carousel": "^2.6.2",
+    "sass": "^1.32.8"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",

@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import Head from "next/head";
 import {GrCart} from "react-icons/gr";
-import {GrFavorite} from "react-icons/gr";
+import {MdFavoriteBorder} from "react-icons/md";
 import {BsFillGrid3X3GapFill} from "react-icons/bs";
 import Link from "next/link";
 import {useRouter} from "next/router";
@@ -21,18 +21,6 @@ const MegaMenu = () => {
         ? selector.classList.remove("transform", "scale-0")
         : null;
     }
-
-    // if (window.scrollY == 0) {
-    //   selector && selector.classList
-    //     ? selector.classList.remove("transform", "scale-0")
-    //     : null;
-    // } else {
-    //   selector && selector.classList
-    //     ? selector.classList.add("transform", "scale-0")
-    //     : null;
-    // }
-
-    // selector.classList.add("custom-menu");
   };
 
   useEffect(() => {
@@ -99,8 +87,8 @@ const MegaMenu = () => {
         <div className="hidden lg:group lg:inline-block">
           {/* mega menu name  */}
           <button className="outline-none focus:outline-none py-0.5 rounded-sm flex items-center w-50">
-            <img src="/categorylogo.png" width="18" height="14" />
-            <h1 className=" font-semibold leading-4 pr-2 ml-2 mr-18 xl:text-base  lg:p-0 xl:p-0.5 font-sans">
+            <img src="/categorylogo.png" width="16" height="14" />
+            <h1 className="main-menu pr-2 ml-2 mr-18  xl:p-0.5">
               All Categories
             </h1>
 
@@ -114,8 +102,8 @@ const MegaMenu = () => {
           <ul
             className={
               router.pathname == "/"
-                ? "home custom-menu bg-white-100 z-10 rounded-sm group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-60 "
-                : "custom-menu transform scale-0 bg-white-100 z-10  max-h-100 rounded-sm group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-60"
+                ? "home custom-menu bg-white  md:mt-3 xl:mt-1  z-10 rounded-sm group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-56 "
+                : "custom-menu transform scale-0 bg-white md:mt-3 xl:mt-1 z-10  max-h-100 rounded-sm group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-56"
             }
           >
             {menus.map((menu) => {
@@ -124,31 +112,31 @@ const MegaMenu = () => {
                   key={menu.id}
                   className="rounded-sm relative px-0.5 md:px-1 "
                 >
-                  <button className="w-full text-left lg:text-sm-5 leading-150  pl-2 my-1.6 xl:my-2 2xl:my-4 font-sans font-normal flex items-center outline-none focus:outline-none">
-                    <span className="flex-1">{menu.name}</span>
-                    <span className="mr-auto  ">
-                      <svg className=" fill-current h-4 w-4  text-gray-111 transition duration-150 ease-in-out">
+                  <button className=" drop-menu text-left pl-2 my-0.5 xl:my-2 2xl:my-3  outline-none focus:outline-none">
+                    <span className=" flex-1">{menu.name}</span>
+                    <span className="mr-auto">
+                      <svg className=" fill-current h-4 w-4  text-gray-500 transition duration-150 ease-in-out">
                         <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                       </svg>
                     </span>
                   </button>
 
                   {/* submenu item  */}
-                  <ul className=" transform scale-0 bg-white-100 z-4 rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left w-52 h-48 ">
+                  <ul className=" transform scale-0 bg-white z-4 rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left w-52 h-48 ">
                     <li className="rounded-sm relative px-3 py-1">
-                      <button className="  font-sans w-full text-left lg:text-sm-5 leading-150  font-normal  flex items-center outline-none focus:outline-none">
+                      <button className="  drop-menu text-left outline-none focus:outline-none">
                         <span className="pr-1 flex-1">Kitchen</span>
                         <span className="mr-auto">
-                          <svg className="fill-current h-4 w-4 text-gray-111 transition duration-150 ease-in-out">
+                          <svg className="fill-current h-4 w-4 text-gray-500 transition duration-150 ease-in-out">
                             <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                           </svg>
                         </span>
                       </button>
                       {/* sub ko ni sub menu item  */}
-                      <ul className="bg-white-100 z-10 rounded-sm  absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left w-52 h-40">
+                      <ul className="bg-white z-10 rounded-sm  absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left w-52 h-40">
                         <Link href="/Selection">
                           <li className="px-3 py-1 hover:bg-gray-100">
-                            <button className="items-center lg:text-sm-5 leading-150  font-normal  outline-none focus:outline-none">
+                            <button className="drop-menu outline-none focus:outline-none">
                               Washing machine
                             </button>
                           </li>
@@ -165,28 +153,16 @@ const MegaMenu = () => {
         <div className="flex">
           <div className="hidden lg:flex sm:space-x-4 md:space-x-10 lg:space-x-16 items-center ">
             {/* nab bar items */}
-            <a
-              href="#"
-              className="hover:cursor-pointer text-black text-base leading-4 font-semibold font-sans"
-            >
+            <a href="#" className="hover:cursor-pointer main-menu">
               Flash Sale
             </a>
-            <a
-              href="#"
-              className="hover:cursor-pointer text-black text-base leading-4 font-semibold font-sans"
-            >
+            <a href="#" className="hover:cursor-pointer main-menu">
               Best Deal
             </a>
-            <a
-              href="#"
-              className="hover:cursor-pointer text-black text-base leading-4 font-semibold font-sans"
-            >
+            <a href="#" className="hover:cursor-pointer main-menu">
               Colection
             </a>
-            <a
-              href="#"
-              className="hover:cursor-pointer text-black text-base leading-6 font-semibold font-sans"
-            >
+            <a href="#" className="hover:cursor-pointer main-menu">
               Free Delivery
             </a>
           </div>
@@ -195,16 +171,16 @@ const MegaMenu = () => {
         <div className="block sm:ml-6">
           <div className="flex  space-x-0 sm:space-x-4 items-center my-1 text-xl">
             {/* fav/like icon */}
-            <h3 className="mx-4 text-xl-1 leading-6">
-              <GrFavorite />
+            <h3 className="mx-3">
+              <MdFavoriteBorder style={{width: "22px", height: "22  px"}} />
             </h3>
-            <div className="flex items-center space-x-2 text-xl-1 leading-6">
+            <div className="flex items-center space-x-3">
               {/* shopping cart icon  */}
               <h3>
-                <GrCart />
+                <GrCart style={{width: "20px", height: "20px"}} />
               </h3>
               {/* totol mony display */}
-              <h3 className="font-semibold text-xl-1 leading-6">Rs. 20000</h3>
+              <h3 className="main-menu  ">Rs. 20000</h3>
             </div>
           </div>
         </div>

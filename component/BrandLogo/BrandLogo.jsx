@@ -26,16 +26,20 @@ const BrandLogo = () => {
   ];
   return (
     <div>
-      <div className="flex justify-around items-center">
+      <div className="flex justify-between items-center">
         {/* top brand logo / image mapping  */}
         {logos.map((logo) => {
           return (
-            <div key={logo.id}>
-              <img
-                src={logo.img}
-                style={{maxWidth: "80", maxHeight: "40"}}
-                alt="brand logo"
-              />
+            <div
+              key={logo.id}
+              className="w-48 h-20"
+              style={{
+                display: "grid",
+                alignContent: "center",
+                justifyContent: "center",
+              }}
+            >
+              <img src={logo.img} alt="brand logo" />
             </div>
           );
         })}

@@ -64,9 +64,9 @@ const CardChanel = () => {
             return (
               <div
                 key={i}
-                className="block text-center md:flex  lg:w-44 xl:w-52  xl:h-11 2xl:w-60 lg:bg-white rounded-3xl items-center md:hover:bg-red-500 md:hover:text-white"
+                className="block text-center md:flex  lg:w-44 xl:w-52  xl:h-11 2xl:w-60 lg:bg-white rounded-3xl items-center md:hover:bg-red-500 md:hover:text-white cursor-pointer"
               >
-                <div className="mb-2 mx-2 sm:mx-1 lg:mx-2 md:m-2.5">
+                <div className="mb-2 mx-4 sm:mx-1 lg:mx-2.5 md:m-2.5">
                   {/* card Image */}
                   <img
                     src={item.img}

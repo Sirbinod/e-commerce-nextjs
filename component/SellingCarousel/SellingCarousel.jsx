@@ -2,6 +2,7 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const SellingCarousel = () => {
   const responsive = {
@@ -90,25 +91,30 @@ const SellingCarousel = () => {
       <Carousel responsive={responsive}>
         {array.map((item) => {
           return (
-            <div
-              key={item.id}
-              className="inline-block best-selling-card bg-white py-2 rounded-xl"
-            >
-              <div className="relative w-40 h-40 mx-4 rounded-xl">
-                <img
-                  src={item.img}
-                  style={{maxWidth: "150px", maxHeight: "150px"}}
-                  alt="product image"
-                />
+            <Link href="/ProductDetail">
+              <div
+                key={item.id}
+                className="inline-block best-selling-card bg-white py-2 rounded-xl"
+              >
+                <div className="relative w-40 h-40 mx-4 mb-5 rounded-xl">
+                  <Image
+                    src={item.img}
+                    layout="fill"
+                    objectFit="fill"
+                    quality="100"
+                    // style={{maxWidth: "150px", maxHeight: "150px"}}
+                    alt="product image"
+                  />
+                </div>
+                <div className="my-1">
+                  <h1 className="best-selling-title my-1 ">{item.title}</h1>
+                  <h3 className=" best-selling-price rounded-2xl py-1 my-2 mx-7">
+                    {item.price}
+                  </h3>
+                  <span className="best-selling-brand">{item.brand}</span>
+                </div>
               </div>
-              <div className="my-1">
-                <h1 className="best-selling-title my-1 ">{item.title}</h1>
-                <h3 className=" best-selling-price rounded-2xl py-1 mb-1 mx-6">
-                  {item.price}
-                </h3>
-                <span className="best-selling-brand">{item.brand}</span>
-              </div>
-            </div>
+            </Link>
           );
         })}
       </Carousel>

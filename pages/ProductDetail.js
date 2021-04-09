@@ -1,3 +1,4 @@
+import CarouselItem from "../component/CarouselItem/CarouselItem";
 import Footer from "../component/Footer/Footer";
 import Layout from "../component/Layout/Layout";
 // import Header from "../component/Header/Header";
@@ -6,6 +7,7 @@ import MegaMenu from "../component/MegaMenu/MegaMenu";
 // import MegaMenu from "../component/MegaMenu/MegaMenu";
 import Product from "../component/Product/Product";
 import RatingReview from "../component/RatingReview/RatingReview";
+import SellingCarousel from "../component/SellingCarousel/SellingCarousel";
 
 export default function ProductDetail() {
   return (
@@ -16,8 +18,9 @@ export default function ProductDetail() {
       <section>
         <div className="container mx-auto">
           <div className="flex space-x-3 items-center my-1.5">
-            <h3>Electric =</h3>
-            <h3>Computer</h3>
+            <h3 className="text-base text-gray-500">Electronic</h3>
+            <h3 className="arrow"></h3>
+            <h3 className="text-red-600">Computer</h3>
           </div>
           <Product />
           <RatingReview />
@@ -27,9 +30,11 @@ export default function ProductDetail() {
         <div className="mb-12">
           <div className="container mx-auto">
             <div className="my-5 pt-3">
-              <h1 className="text-2xl font-semibold">You might alo like</h1>
+              <h1 className="text-xl font-meduim">You might also like</h1>
             </div>
-            <MaybeLikeCarousel />
+            {/* <MaybeLikeCarousel />
+             */}
+            <CarouselItem />
           </div>
         </div>
       </section>

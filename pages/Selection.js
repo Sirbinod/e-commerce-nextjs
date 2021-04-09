@@ -4,8 +4,10 @@ import Footer from "../component/Footer/Footer";
 import ItemSelection from "../component/ItemSelection/ItemSelection";
 import Layout from "../component/Layout/Layout";
 import MegaMenu from "../component/MegaMenu/MegaMenu";
+import {useRouter} from "next/router";
 
 export default function Selection() {
+  const router = useRouter;
   const items = [
     {
       id: 1,
@@ -116,20 +118,19 @@ export default function Selection() {
   // }, []);
   return (
     <div className="bg-gray-100">
-      <section className="z-10 bg-white sticky top-24">
+      <section className="w-full bg-white sticky top-24 z-10">
         <MegaMenu />
       </section>
-
       <section>
         <div className="my-5">
           <div className="container mx-auto">
-            <div className="flex space-x-2 mb-2">
-              <h3 className="text-base text-gray-500 mr-1">Electric </h3>
-              &#62;
-              <h3 className="text-base">Computer</h3>
+            <div className=" hidden lg:flex sm:space-x-2 mb-2 items-center ">
+              <h3 className="text-base text-gray-500 mr-1 ">Electric </h3>
+              <h3 className="text-base text-gray-500">&#62;</h3>
+              <h3 className="text-base ">Computer</h3>
             </div>
-            <div className="flex space-x-7">
-              <div className="w-56">
+            <div className="flex space-x-0 lg:space-x-7">
+              <div className=" hidden lg:block lg:w-56">
                 <ul>
                   <FilterBar items={items} />
                 </ul>

@@ -1,25 +1,25 @@
-import react, {useState} from "react";
+// import react, {useState} from "react";
 import Link from "next/link";
 import {BiSearch} from "react-icons/bi";
 import BrandLogo from "../BrandLogo/BrandLogo";
 
-const FilterBar = ({items}) => {
-  const [chacked, setChacked] = useState([]);
-  const handleToggle = (it) => {
-    // return the first index or -1
-    const curBarandId = chacked.indexOf(it);
-    const newCheckedBrandId = [...chacked];
+const FilterBar = () => {
+  // const [chacked, setChacked] = useState([]);
+  // const handleToggle = (it) => {
+  //   // return the first index or -1
+  //   const curBarandId = chacked.indexOf(it);
+  //   const newCheckedBrandId = [...chacked];
 
-    // if currently chacked was not already in checked state the push
-    // else pull/take off
-    if (curBarandId === -1) {
-      newCheckedBrandId.push(it);
-    } else {
-      newCheckedBrandId.splice(curBarandId, 1);
-    }
-    console.log(newCheckedBrandId);
-    // setChacked(newCheckedBrandId);
-  };
+  //   // if currently chacked was not already in checked state the push
+  //   // else pull/take off
+  //   if (curBarandId === -1) {
+  //     newCheckedBrandId.push(it);
+  //   } else {
+  //     newCheckedBrandId.splice(curBarandId, 1);
+  //   }
+  //   console.log(newCheckedBrandId);
+  //   // setChacked(newCheckedBrandId);
+  // };
 
   return (
     <div>
@@ -30,20 +30,19 @@ const FilterBar = ({items}) => {
           <h1 className="filter-brand">brand</h1>
           <div className="my-2">
             {/* first checkbox with brand name  */}
-
-            {items.map((it, i) => {
-              return (
-                <div className="items-center flex space-x-2 my-2" key={i}>
-                  <input
-                    type="checkbox"
-                    onChange={handleToggle(it.id)}
-                    value={chacked.indexOf(it.id === -1)}
-                    className="form-checkbox h-4 w-4"
-                  />
-                  <h1 className="filter-brand-name">{it.brand.name}</h1>
-                </div>
-              );
-            })}
+            {/* {items.map((it, i) => { */}
+            {/* return ( */}
+            <div className="items-center flex space-x-3 my-2">
+              <input
+                type="checkbox"
+                // onChange={handleToggle(it.id)}
+                // value={chacked.indexOf(it.id === -1)}
+                className="form-checkbox h-4 w-4 cursor-pointer"
+              />
+              <h1 className="filter-brand-name cursor-pointer">IPhone</h1>
+            </div>
+            {/* ); */}
+            {/* })} */}
             {/* end first checkbox  */}
           </div>
           {/* end brand section  */}
@@ -56,10 +55,10 @@ const FilterBar = ({items}) => {
         {/* price section  */}
         <div className=" mt-3 border-b border-gray-300">
           <h1 className="filter-brand">Price</h1>
-          <div className=" my-3   flex items-center space-x-2 ">
+          <div className=" my-3   flex items-center space-x-2 cursor-pointer">
             {/* min range input box */}
             <input
-              className=" w-16 h-7 border text-sm border-gray-400 rounded-sm px-1 text-gray-700  focus:outline-none"
+              className=" w-14 h-7 border text-sm border-gray-400 rounded-sm px-1 text-gray-700  focus:outline-none"
               id="search"
               type="text"
               placeholder="Min"
@@ -67,13 +66,13 @@ const FilterBar = ({items}) => {
             <h5>-</h5>
             {/* max range input box */}
             <input
-              className=" w-16 h-7 border text-sm border-gray-400 rounded-sm px-1 text-gray-700  focus:outline-none"
+              className=" w-14 h-7 border text-sm border-gray-400 rounded-sm px-1 text-gray-700  focus:outline-none"
               id="search"
               type="text"
               placeholder="Max"
             />
             {/* search button  */}
-            <button className="w-7 h-7 rounded-sm py-1.5 px-1.5 bg-blue-600 items-center">
+            <button className="w-9 h-7 text-white text-xl rounded-sm py-1 px-2 bg-blue-600 items-center">
               <BiSearch />
             </button>
           </div>
@@ -88,10 +87,10 @@ const FilterBar = ({items}) => {
             <Link href="/ProductGrid">
               <input
                 type="checkbox"
-                className="form-checkbox h-4 w-4 text-gray-600"
+                className="form-checkbox h-4 w-4 text-gray-600 cursor-pointer"
               />
             </Link>
-            <h1 className="filter-brand-name">intel</h1>
+            <h1 className="filter-brand-name cursor-pointer">intel</h1>
           </div>
         </div>
         {/* end Processer section  */}
@@ -103,9 +102,9 @@ const FilterBar = ({items}) => {
           <div className="flex items-center space-x-2 my-2">
             <input
               type="checkbox"
-              className="form-checkbox h-4 w-4 text-gray-600"
+              className="form-checkbox h-4 w-4 text-gray-600 cursor-pointer"
             />
-            <h1 className="filter-brand-name">15 inch</h1>
+            <h1 className="filter-brand-name cursor-pointer ">15 inch</h1>
           </div>
         </div>
         {/* end section  */}
@@ -117,9 +116,9 @@ const FilterBar = ({items}) => {
           <div className="flex items-center space-x-2 my-2">
             <input
               type="checkbox"
-              className="form-checkbox h-4 w-4 text-gray-600"
+              className="form-checkbox h-4 w-4 text-gray-600 cursor-pointer"
             />
-            <h1 className="filter-brand-name">yes</h1>
+            <h1 className="filter-brand-name cursor-pointer">yes</h1>
           </div>
         </div>
       </div>

@@ -23,7 +23,7 @@ const Info = () => {
     },
   ];
   return (
-    <div className="border-b border-gray-300 py-3">
+    <div className=" py-5">
       <div className="flex pb-3 justify-between items-center">
         {infos.map((info) => {
           return (

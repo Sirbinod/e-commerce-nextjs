@@ -154,7 +154,7 @@ export default function Home() {
       </section>
       <section>
         <div className="container my-7 mx-auto">
-          <div className="flex  justify-between ">
+          <div className="hidden lg:flex  justify-between ">
             {/* middle pard banar using map method */}
             {images.map((ad) => {
               return (
@@ -170,6 +170,30 @@ export default function Home() {
                 </div>
               );
             })}
+          </div>
+          <div className="block lg:hidden">
+            <Carousel
+              responsive={responsive}
+              infinite={true}
+              autoPlay={true}
+              autoPlaySpeed={10000}
+              removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
+            >
+              {images.map((ad) => {
+                return (
+                  <div key={ad.id} className="w-full h-60 sm:h-96">
+                    <Image
+                      src={ad.img}
+                      layout="fill"
+                      objectFit="fill"
+                      quality="100"
+                      // style={{maxWidth: "440px", maxHeight: "239px"}}
+                      alt="ad banar"
+                    />
+                  </div>
+                );
+              })}
+            </Carousel>
           </div>
         </div>
       </section>
@@ -283,7 +307,7 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div className="pt-5 bgc">
+        <div className="pt-5 bg-info border-b border-gray-300">
           <div className="container mx-auto">
             <Info />
           </div>

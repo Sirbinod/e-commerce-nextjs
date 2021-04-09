@@ -67,20 +67,27 @@ const CollectionCard = () => {
   return (
     <div>
       {/* create 5 column  */}
-      <div className="grid grid-cols-5 gap-3 lg:gap-9">
+      <div className="grid grid-cols-5 gap-3 sm:gap-8 lg:gap-9">
         {collection.map((item) => {
           return (
             // collection card
-            <div className=" flex md:w-56 md:h-16 items-center">
-              <div className="collection-logo rounded-2xl md:rounded-full md:mr-3">
-                <div className=" relative   rounded-full my-2 mx-2 lg:mx-4">
-                  {/* collection product image  */}
-                  <img
-                    src={item.img}
-                    style={{width: "50px", height: "60px"}}
-                    alt="collection image"
-                  />
-                </div>
+            <div className=" flex md:w-56 md:h-16 items-center cu">
+              <div
+                className=" flex collection-logo rounded-2xl lg:rounded-full md:mr-3"
+                style={{textAlign: "center"}}
+              >
+                <img
+                  className=""
+                  src={item.img}
+                  style={{
+                    maxWidth: "100%",
+                    maxHeight: "100%",
+                    display: "inline",
+                    padding: "10%",
+                    margin: "0 auto",
+                  }}
+                  alt="collection image"
+                />
               </div>
               <div>
                 {/* collection product title  */}

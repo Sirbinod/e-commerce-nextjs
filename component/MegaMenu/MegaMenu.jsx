@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useState, useEffect} from "react";
 import Head from "next/head";
 import {GrCart} from "react-icons/gr";
 import {MdFavoriteBorder} from "react-icons/md";
@@ -8,6 +8,7 @@ import {useRouter} from "next/router";
 import Image from "next/image";
 
 const MegaMenu = () => {
+  const [hoverColor, setHoverColor] = useState("");
   const router = useRouter();
   const handleScroll = () => {
     const selector = document.querySelector(".home .custom-menu");
@@ -84,61 +85,62 @@ const MegaMenu = () => {
     <div className="h-10">
       <div className="container mx-auto py-1.5 items-center flex space-x-7 justify-between">
         {/* megamenu start */}
-        <div className="hidden lg:group lg:inline-block">
-          {/* mega menu name  */}
-          <button className="outline-none focus:outline-none py-0.5 rounded-sm flex items-center w-50">
+        <div className="hidden group lg:inline-block">
+          <button className="outline-none focus:outline-none py-1 bg-white rounded-sm flex items-center">
             <img src="/categorylogo.png" width="16" height="14" />
-            <h1 className="main-menu pr-2 ml-2 mr-18  xl:p-0.5">
-              All Categories
-            </h1>
-
-            <span className="text-xs font-normal">
+            <span className="pr-1 main-menu flex-1 ml-2 mr-20">
+              All Category
+            </span>
+            <span>
               <svg className="fill-current h-4 w-4 transform group-hover:-rotate-180 transition duration-150 ease-in-out">
                 <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
               </svg>
             </span>
           </button>
-          {/* menu item  */}
           <ul
             className={
               router.pathname == "/"
-                ? "home custom-menu bg-white  md:mt-3 xl:mt-1  z-10 rounded-sm group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-56 "
-                : "custom-menu transform scale-0 bg-white md:mt-3 xl:mt-1 z-10  max-h-100 rounded-sm group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-56"
+                ? "home custom-menu bg-white border rounded-sm  group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-56"
+                : "bg-white border rounded-sm transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-56"
             }
           >
-            {menus.map((menu) => {
+            {menus.map((menu, index) => {
               return (
                 <li
+                  onMouseEnter={() => {
+                    setHoverColor(index);
+                  }}
+                  onMouseOut={() => {
+                    setHoverColor(-100000);
+                  }}
                   key={menu.id}
-                  className="rounded-sm relative px-0.5 md:px-1 "
+                  className={
+                    "rounded-sm relative px-3 " +
+                    " hover:bg-gray-300 hover:text-red-600"
+                  } //hover:bg-gray-300 hover:text-red-600
                 >
-                  <button className=" drop-menu text-left pl-2 my-0.5 xl:my-2 2xl:my-3  outline-none focus:outline-none">
-                    <span className=" flex-1">{menu.name}</span>
+                  <button className="  w-full drop-menu  text-left  flex items-center outline-none focus:outline-none">
+                    <span className="pr-1 flex-1 ">{menu.name}</span>
                     <span className="mr-auto">
-                      <svg className=" fill-current h-4 w-4  text-gray-500 transition duration-150 ease-in-out">
+                      <svg className="fill-current h-4 w-4 transition duration-150 ease-in-out">
                         <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                       </svg>
                     </span>
                   </button>
-
-                  {/* submenu item  */}
-                  <ul className=" transform scale-0 bg-white z-4 rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left w-52 h-48 ">
-                    <li className="rounded-sm relative px-3 py-1">
-                      <button className="  drop-menu text-left outline-none focus:outline-none">
-                        <span className="pr-1 flex-1">Kitchen</span>
+                  <ul className="bg-white border rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left w-56 h-40">
+                    <li className="rounded-sm relative px-3 py-0.5 hover:bg-gray-300  ">
+                      <button className="w-full text-left drop-menu hover:text-red-500 flex items-center outline-none focus:outline-none">
+                        <span className="pr-1 flex-1">Laptop</span>
                         <span className="mr-auto">
-                          <svg className="fill-current h-4 w-4 text-gray-500 transition duration-150 ease-in-out">
+                          <svg className="fill-current h-4 w-4 transition duration-150 ease-in-out">
                             <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                           </svg>
                         </span>
                       </button>
-                      {/* sub ko ni sub menu item  */}
-                      <ul className="bg-white z-10 rounded-sm  absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left w-52 h-40">
+                      <ul className="bg-white  rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left w-56">
                         <Link href="/Selection">
-                          <li className="px-3 py-1 hover:bg-gray-100">
-                            <button className="drop-menu outline-none focus:outline-none">
-                              Washing machine
-                            </button>
+                          <li className="drop-menu relative px-3 py-1 hover:bg-gray-300 hover:text-red-500">
+                            <a className="mx-3">IPhone</a>
                           </li>
                         </Link>
                       </ul>
@@ -149,6 +151,7 @@ const MegaMenu = () => {
             })}
           </ul>
         </div>
+
         {/* nab bar */}
         <div className="flex">
           <div className="hidden lg:flex sm:space-x-4 md:space-x-10 lg:space-x-16 items-center ">
@@ -168,19 +171,19 @@ const MegaMenu = () => {
           </div>
         </div>
 
-        <div className="block sm:ml-6">
+        <div className="block sm:ml-6 ">
           <div className="flex  space-x-0 sm:space-x-4 items-center my-1 text-xl">
             {/* fav/like icon */}
-            <h3 className="mx-3">
+            <h3 className="mx-3 cursor-pointer">
               <MdFavoriteBorder style={{width: "22px", height: "22  px"}} />
             </h3>
             <div className="flex items-center space-x-3">
               {/* shopping cart icon  */}
-              <h3>
+              <h3 className="cursor-pointer">
                 <GrCart style={{width: "20px", height: "20px"}} />
               </h3>
               {/* totol mony display */}
-              <h3 className="main-menu  ">Rs. 20000</h3>
+              <h3 className="main-menu cursor-pointer">Rs. 20000</h3>
             </div>
           </div>
         </div>

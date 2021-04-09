@@ -17,11 +17,11 @@ const CarouselItem = () => {
     },
     tablet: {
       breakpoint: {max: 1024, min: 500},
-      items: 4,
+      items: 2,
     },
     min: {
       breakpoint: {max: 500, min: 200},
-      items: 2,
+      items: 1,
     },
   };
   const items = [
@@ -98,7 +98,7 @@ const CarouselItem = () => {
                 {/* item title */}
                 <h3 className="card-item-title">{item.title}</h3>
                 {/* item Price */}
-                <h3 className="card-item-price">Rs. {item.price}</h3>
+                <h3 className="card-item-price py-2">Rs. {item.price}</h3>
                 {/* rating star */}
                 <div className="flex mx-16 space-x-0.5">
                   <AiFillStar

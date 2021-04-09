@@ -1,3 +1,6 @@
+.footer-bg {
+  background: #eceaea;
+}
 .footer-item {
   font-size: 1.3rem;
   line-height: 1.9rem;
@@ -10,7 +13,7 @@
 }
 .search {
   background-color: white;
-  width: 29rem;
+  width: 24rem;
   height: 2.5rem;
   display: flex;
   align-items: center;
@@ -32,10 +35,11 @@
   color: #535353;
 }
 .download-card {
-  width: 12rem;
+  width: 40rem;
   height: 3rem;
   background-color: #ff6253;
   display: flex;
+  // border: 1px solid black;
 }
 .download-card-title-1 {
   font-size: 0.7rem;
@@ -61,4 +65,13 @@
   color: #535353;
   font-size: 0.9rem;
   line-height: 2rem;
+}
+
+@media only screen and (min-width: 1532px) {
+  .download-card {
+    width: 11.5rem;
+    height: 3rem;
+    background-color: #ff6253;
+    display: flex;
+  }
 }

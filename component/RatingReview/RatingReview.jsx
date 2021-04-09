@@ -9,7 +9,7 @@ const RatingReview = () => {
       <div className="mx-5 py-4">
         <h1>Rating & Reviews</h1>
       </div>
-      <div className="mx-5 flex space-x-40 items-center border-b border-gray-300 pb-5">
+      <div className="mx-5 block sm:flex sm:space-x-40 items-center border-b border-gray-300 pb-5">
         <div>
           <div className="flex space-x-5 my-1">
             <div className="flex">
@@ -77,9 +77,9 @@ const RatingReview = () => {
             <h3>4%</h3>
           </div>
         </div>
-        <div className="text-center">
+        <div className="text-center mt-6 ">
           <h1 className="text-xl font-semibold">3 / 5</h1>
-          <div className="flex">
+          <div className="flex mx-32 sm:mx-0">
             <AiFillStar style={{color: "yellow"}} />
             <AiFillStar style={{color: "yellow"}} />
             <AiFillStar style={{color: "yellow"}} />
@@ -99,7 +99,7 @@ const RatingReview = () => {
         </div>
         <h3 className=" text-gray-600 text-base">Rewon Jecker</h3>
         <h3 className=" text-gray-600 text-base">19 Mar 2020</h3>
-        <h2 className="w-96 my-3">
+        <h2 className=" w-80sm:w-96 my-3">
           To anyone that's scrolling rn, you did a great job in hangin on. Let's
           do it for a few more moment, few more days, and few more years. Hang
           on there, you're stronger than you think you are.

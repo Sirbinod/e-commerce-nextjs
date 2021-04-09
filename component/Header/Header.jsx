@@ -39,7 +39,7 @@ const Header = () => {
 
         <div className="menu-bar lg:space-x-20 xl:space-x-32 lg:pb-2 ">
           {/* logo */}
-          <div className="hidden lg:block mb-3">
+          <div className="hidden lg:block mb-3  cursor-pointer">
             <Link href="/#  ">
               <img className="hover:cursor-pointer logo" src="/logo.png" />
             </Link>

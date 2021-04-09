@@ -58,9 +58,9 @@ const Footer = (props) => {
     },
   ];
   return (
-    <div className="">
+    <div className="footer-bg">
       <div className="pt-5 container mx-auto">
-        <div className="flex justify-between border-b border-gray-300">
+        <div className="flex py-5 justify-between border-b border-gray-300">
           <div className="w-1/2">
             <div className="flex justify-between items-center">
               {array.map((item, i) => {
@@ -69,9 +69,7 @@ const Footer = (props) => {
                     <h1 className="footer-item">{item.title}</h1>
                     {subarr.map((arr) => {
                       return (
-                        <div>
-                          <h3 className="footer-subitem">{arr.name}</h3>
-                        </div>
+                        <h3 className="footer-subitem my-2">{arr.name}</h3>
                       );
                     })}
                   </div>
@@ -79,13 +77,13 @@ const Footer = (props) => {
               })}
             </div>
           </div>
-          <div className="w-1/2 ml-32 h-auto">
+          <div className="w-1/2 px-40 h-auto">
             <div className="w-90">
               <div className="footer-item">Subscribe</div>
 
-              <div className=" search rounded-full my-2 ">
+              <div className=" search rounded-full my-4  ">
                 <input
-                  className="rounded-full w-96 h-8 py-4 px-4 text-gray-500 focus:outline-none"
+                  className="rounded-full w-72 h-8 py-4 px-4 text-gray-500 focus:outline-none"
                   id="search"
                   type="text"
                   placeholder="Search"
@@ -95,16 +93,16 @@ const Footer = (props) => {
                   <a className=" search-button-text">Subscribe</a>
                 </button>
               </div>
-              <p className="footer-info">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Commodi, consectetur.
+              <p className="footer-info py-2 w-96">
+                Lorem ipsum dolor sit amet, consectetur adipis elit. Commodi,
+                consectetur.
               </p>
             </div>
-            <div className="my-2">
+            <div className="my-2 py-2">
               <h1 className="footer-item">Download App</h1>
-              <div className="flex my-2 space-x-3 ">
+              <div className="flex my-2 space-x-3 py-1 w-96">
                 <div className="download-card rounded-full items-center">
-                  <div className="text-white my-1.5 mx-2">
+                  <div className="text-white my-1.5 mx-4">
                     <img
                       src="/apple.png"
                       style={{maxWidth: "25px", maxHeight: "30px"}}
@@ -115,8 +113,8 @@ const Footer = (props) => {
                     <h4 className="download-card-title-2">Apple store</h4>
                   </div>
                 </div>
-                <div className="download-card rounded-3xl">
-                  <div className=" my-2.5 ml-3 mr-2">
+                <div className="download-card rounded-full items-center">
+                  <div className="text-white my-1.5 mx-4">
                     <img
                       src="/plyastore.png"
                       style={{maxWidth: "25px", maxHeight: "30px"}}
@@ -131,7 +129,7 @@ const Footer = (props) => {
             </div>
           </div>
         </div>
-        <div className="flex justify-around border-gray-111 border-b py-2">
+        <div className="flex justify-around border-gray-300 border-b py-4">
           <div className="w-1/2">
             <h2 className="method">Payment Methods</h2>
             <div className="flex  space-x-7 items-center my-3">
@@ -163,7 +161,7 @@ const Footer = (props) => {
             </div>
           </div>
         </div>
-        <div className=" border-b border-gray-111 py-2">
+        <div className=" border-b border-gray-300 py-2">
           <h2 className="method"> Popular Series</h2>
           <div className="flex justify-between items-center space-x-2">
             <h4 className="series">hello |</h4>

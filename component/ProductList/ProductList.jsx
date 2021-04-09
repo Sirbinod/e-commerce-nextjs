@@ -52,31 +52,32 @@ const ProductList = () => {
             <Link href="/ProductDetail">
               <div
                 key={item.id}
-                className="w-111 h-48 flex bg-white border-b border-gray-200 justify-between"
+                className=" product-list border flex bg-white border-b border-gray-200 justify-between"
               >
-                <div className="flex space-x-3 items-center">
-                  <div className="w-44 h-40  relative mx-6 mt-1.5">
+                <div className="flex space-x-2 items-center">
+                  <div className="product-list-img  relative mx-6 mt-1.5">
                     <Image
                       src={item.img}
                       layout="fill"
                       objectFit="fill"
+                      quality="100"
                       alt="product Image"
                     />
                   </div>
                   <div className=" my-4 pl-10">
-                    <h2 className="text-sm  font-semibold">{item.title}</h2>
-                    <h2 className="text-base font-bold text-red-500">
+                    <h2 className="product-list-name my-1">{item.title}</h2>
+                    <h2 className="product-list-price my-1">
                       Rs. {item.price}
                     </h2>
-                    <h3 className=" text-sm text-gray-400 line-through">
+                    <h3 className=" product-list-cut my-1">
                       Rs. {item.catagory}
                     </h3>
-                    <h2 className=" my-1 w-20 py-0.5 text-sm font-semibold text-green-600 text-center border rounded-2xl border-green-600">
+                    <h2 className=" product-list-disc py-1.5 my-2.5 rounded-2xl text-center">
                       {item.cut_proce}
                     </h2>
                   </div>
                 </div>
-                <div className="flex mt-7 mr-5">
+                <div className="flex lg:mt-14 2xl:mt-20 mr-5">
                   <AiFillStar style={{color: "yellow"}} />
                   <AiFillStar style={{color: "yellow"}} />
                   <AiFillStar style={{color: "yellow"}} />

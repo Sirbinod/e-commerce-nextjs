@@ -1,0 +1,45 @@
+.select-item {
+  font-size: 1rem;
+  line-height: 1.05rem;
+}
+.select-item-tit {
+  font-size: 1rem;
+  line-height: 1.55rem;
+}
+.select-item-price {
+  font-size: 1.25rem;
+  line-height: 1.65rem;
+  font-weight: 500;
+  color: red;
+}
+.select-item-dis {
+  font-size: 0.83rem;
+  line-height: 0.88rem;
+  font-weight: 500;
+  width: 5rem;
+  border: 1px solid #83b735;
+  color: #83b735;
+}
+.shopp-bill-card {
+  background-color: white;
+  width: 48rem;
+}
+
+.select-item-titl {
+  font-size: 1rem;
+  line-height: 1.55rem;
+  width: 31rem;
+}
+
+@media only screen and (min-width: 1532px) {
+  .shopp-bill-card {
+    background-color: white;
+    width: 58rem;
+  }
+
+  .select-item-titl {
+    font-size: 1rem;
+    line-height: 1.55rem;
+    width: 33rem;
+  }
+}

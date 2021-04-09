@@ -6,9 +6,6 @@ export default function Success() {
   return (
     <>
       <section>
-        <Header />
-      </section>
-      <section>
         <div className="container mx-auto">
           <div className="my-36 text-center">
             <div className="mx-99 my-5 w-40 h-40 relative">
@@ -23,13 +20,6 @@ export default function Success() {
             <button className=" bg-yellow-800 text-center w-64 h-10 rounded-3xl text-white my-2">
               Procced to chackout
             </button>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div className="bg-gray-300">
-          <div className="container mx-auto">
-            <Footer />
           </div>
         </div>
       </section>

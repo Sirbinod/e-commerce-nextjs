@@ -10,7 +10,7 @@ const CountdownHeading = () => {
           <h1 className="countdown-title">Deal of the day</h1>
           {/* date countdown */}
           <div className="flex">
-            <h4 className="text-b md:text-sm">
+            <h4 className="text-b md:text-xs">
               Ends in
               <span className=" countdown-item px-1.5 py-1.5 rounded-lg  text-white mx-1.5">
                 01

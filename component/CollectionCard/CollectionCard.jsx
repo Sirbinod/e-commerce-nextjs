@@ -95,7 +95,7 @@ const CollectionCard = () => {
                   {item.title}
                 </h1>
                 {/* collection product quantity */}
-                <h5 className="hidden lg:block md:text-gray-400  md:text-sm">
+                <h5 className="hidden lg:block md:text-gray-400  md:text-xs">
                   {item.totle}
                 </h5>
               </div>

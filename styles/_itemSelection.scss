@@ -6,11 +6,11 @@
   // transition: box-shadow 0.1s ease-in-out;
 }
 .products-name {
-  font-size: 1rem;
-  line-height: 133%;
+  font-size: 0.9rem;
+  line-height: 130%;
 }
 .products-price {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 105%;
   font-weight: 500;
   color: #f42c2c;
@@ -18,14 +18,14 @@
 
 .product-cut-price {
   color: #d4d4d4;
-  font-size: 1rem;
+  font-size: 0.9rem;
   text-decoration: line-through;
 }
 .product-discount {
   color: #83b735;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   border: 1px solid #83b735;
-  width: 4rem;
+  width: 4.5rem;
 }
 
 @media only screen and (min-width: 1532px) {

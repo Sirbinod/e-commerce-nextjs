@@ -13,7 +13,7 @@ const MegaMenu = () => {
   const handleScroll = () => {
     const selector = document.querySelector(".home .custom-menu");
 
-    if (window.scrollY > 25) {
+    if (window.scrollY > 320) {
       selector && selector.classList
         ? selector.classList.add("transform", "scale-0")
         : null;
@@ -128,7 +128,7 @@ const MegaMenu = () => {
                     </span>
                   </button>
                   <ul className="bg-white border rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left w-56 h-40">
-                    <li className="rounded-sm relative px-3 py-0.5 hover:bg-gray-300  ">
+                    <li className="rounded-sm relative px-3  hover:bg-gray-300  ">
                       <button className="w-full text-left drop-menu hover:text-red-500 flex items-center outline-none focus:outline-none">
                         <span className="pr-1 flex-1">Laptop</span>
                         <span className="mr-auto">

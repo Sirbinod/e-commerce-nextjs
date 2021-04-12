@@ -146,7 +146,7 @@ export default function Home() {
         <div className="my-7">
           <div className="container mx-auto">
             <div className="flex items-center py-4">
-              <h1 className="category">Categores</h1>
+              <h1 className="category">Categories</h1>
             </div>
             <CatagoryGrid />
           </div>

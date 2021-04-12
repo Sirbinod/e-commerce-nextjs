@@ -60,8 +60,8 @@ const Footer = (props) => {
   return (
     <div className="footer-bg">
       <div className="pt-5 container mx-auto">
-        <div className="flex py-5 justify-between border-b border-gray-300">
-          <div className="w-1/2">
+        <div className="block lg:flex py-5 justify-between border-b border-gray-300">
+          <div className=" w-full lg:w-1/2">
             <div className="flex justify-between items-center">
               {array.map((item, i) => {
                 return (
@@ -69,7 +69,7 @@ const Footer = (props) => {
                     <h1 className="footer-item">{item.title}</h1>
                     {subarr.map((arr) => {
                       return (
-                        <h3 className="footer-subitem my-2">{arr.name}</h3>
+                        <h3 className="footer-subitem my-1">{arr.name}</h3>
                       );
                     })}
                   </div>
@@ -77,52 +77,52 @@ const Footer = (props) => {
               })}
             </div>
           </div>
-          <div className="w-1/2 px-40 h-auto">
-            <div className="w-90">
+          <div className="w-full lg:w-1/2 px-0 lg:px-40 h-auto">
+            <div className="">
               <div className="footer-item">Subscribe</div>
 
-              <div className=" search rounded-full my-4  ">
+              <div className=" search rounded-full my-1  ">
                 <input
-                  className="rounded-full w-72 h-8 py-4 px-4 text-gray-500 focus:outline-none"
+                  className="rounded-full w-60 h-8 py-4 px-4 text-gray-500 focus:outline-none"
                   id="search"
                   type="text"
                   placeholder="Search"
                 />
 
-                <button className="search-button rounded-full px-2.5 py-1 mr-1 hover:bg-gray-400 focus:outline-none flex items-center ">
+                <button className="search-button rounded-full px-2.5 hover:bg-gray-400 focus:outline-none flex items-center ">
                   <a className=" search-button-text">Subscribe</a>
                 </button>
               </div>
-              <p className="footer-info py-2 w-96">
+              <p className="footer-info py-1 w-96">
                 Lorem ipsum dolor sit amet, consectetur adipis elit. Commodi,
                 consectetur.
               </p>
             </div>
-            <div className="my-2 py-2">
+            <div className=" py-1 mt-1">
               <h1 className="footer-item">Download App</h1>
-              <div className="flex my-2 space-x-3 py-1 w-96">
+              <div className="flex my-1 space-x-3 py-1 w-96">
                 <div className="download-card rounded-full items-center">
-                  <div className="text-white my-1.5 mx-4">
+                  <div className="text-white my-1.5 mx-3">
                     <img
                       src="/apple.png"
                       style={{maxWidth: "25px", maxHeight: "30px"}}
                     />
                   </div>
-                  <div className="my-3 mx-2">
+                  <div className="my-3">
                     <h5 className="download-card-title-1">Available on</h5>
                     <h4 className="download-card-title-2">Apple store</h4>
                   </div>
                 </div>
                 <div className="download-card rounded-full items-center">
-                  <div className="text-white my-1.5 mx-4">
+                  <div className="text-white my-1.5 mx-3">
                     <img
                       src="/plyastore.png"
                       style={{maxWidth: "25px", maxHeight: "30px"}}
                     />
                   </div>
-                  <div className="my-3 mx-2">
+                  <div className="my-3 ">
                     <h5 className="download-card-title-1">Available on</h5>
-                    <h4 className="download-card-title-2">Apple store</h4>
+                    <h4 className="download-card-title-2">Play store</h4>
                   </div>
                 </div>
               </div>

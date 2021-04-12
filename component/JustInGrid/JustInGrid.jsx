@@ -103,13 +103,13 @@ const JustInGrid = () => {
   ];
   return (
     <div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-2 lg:gap-3 2xl:grid-cols-7">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-2 lg:gap-2 2xl:grid-cols-7">
         {items.map((item) => {
           return (
             <Link href="/ProductDetail">
               <div
                 key={item.id}
-                className="inline-block justin-card md:py-4 rounded-xl cursor-pointer"
+                className="inline-block justin-card md:py-4  cursor-pointer"
               >
                 <div className="relative w-40 h-40 mx-6 mb-4 sm:mx-9 lg:mx-4 my-2">
                   <img
@@ -120,7 +120,6 @@ const JustInGrid = () => {
                 </div>
                 <div className="mt-2">
                   <h1 className="justin-title">{item.title}</h1>
-                  <h1 className="justin-category">{item.catagory}</h1>
                   <h3 className="justin-price py-1">Rs. {item.price}</h3>
                   <div className="flex justify-around my-1 md:my-2 items-center">
                     <span className="cut-price">Rs.{item.cut_proce}</span>

@@ -32,7 +32,7 @@ const OrderSummery = () => {
         </div>
         <Link href="/ShoppingBilling">
           <button className=" pro-button text-center w-64 h-10 rounded-3xl  my-2">
-            Procced to chackout
+            Procced to checkout
           </button>
         </Link>
       </div>

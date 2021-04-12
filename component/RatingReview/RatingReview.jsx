@@ -7,7 +7,7 @@ const RatingReview = () => {
   return (
     <div className="bg-white">
       <div className="mx-5 py-4">
-        <h1>Rating & Reviews</h1>
+        <h1 className="text-sm text-meduim">Rating & Reviews</h1>
       </div>
       <div className="mx-5 block sm:flex sm:space-x-40 items-center border-b border-gray-300 pb-5">
         <div>
@@ -78,7 +78,7 @@ const RatingReview = () => {
           </div>
         </div>
         <div className="text-center mt-6 ">
-          <h1 className="text-xl font-semibold">3 / 5</h1>
+          <h1 className="text-base font-meduim">3 / 5</h1>
           <div className="flex mx-32 sm:mx-0">
             <AiFillStar style={{color: "yellow"}} />
             <AiFillStar style={{color: "yellow"}} />
@@ -86,7 +86,7 @@ const RatingReview = () => {
             <AiFillStar />
             <AiFillStar />
           </div>
-          <h4 className="text-base text-gray-400">100 ratings</h4>
+          <h4 className="text-sm text-gray-400">100 ratings</h4>
         </div>
       </div>
       <div className="my-5 mx-5 border-b border-gray-300">
@@ -97,9 +97,9 @@ const RatingReview = () => {
           <AiFillStar />
           <AiFillStar />
         </div>
-        <h3 className=" text-gray-600 text-base">Rewon Jecker</h3>
-        <h3 className=" text-gray-600 text-base">19 Mar 2020</h3>
-        <h2 className=" w-80sm:w-96 my-3">
+        <h3 className=" text-gray-600 text-sm">Rewon Jecker</h3>
+        <h3 className=" text-gray-600 text-sm">19 Mar 2020</h3>
+        <h2 className=" w-80sm:w-96 my-3 text-sm">
           To anyone that's scrolling rn, you did a great job in hangin on. Let's
           do it for a few more moment, few more days, and few more years. Hang
           on there, you're stronger than you think you are.
@@ -107,11 +107,11 @@ const RatingReview = () => {
         <div className="flex space-x-3 items-center mb-2">
           <div className="flex space-x-1 items-center">
             <AiFillLike />
-            <h3>23</h3>
+            <h3 className="text-sm">23</h3>
           </div>
           <div className="flex space-x-1 items-center">
             <AiFillDislike />
-            <h3>23</h3>
+            <h3 className="text-sm"> 23</h3>
           </div>
         </div>
       </div>

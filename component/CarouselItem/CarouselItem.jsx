@@ -2,7 +2,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import React from "react";
 import Image from "next/image";
-import {AiFillStar} from "react-icons/ai";
+import {BsFillStarFill} from "react-icons/bs";
 import Link from "next/link";
 
 const CarouselItem = () => {
@@ -98,20 +98,18 @@ const CarouselItem = () => {
                 {/* item title */}
                 <h3 className="card-item-title">{item.title}</h3>
                 {/* item Price */}
-                <h3 className="card-item-price py-2">Rs. {item.price}</h3>
+                <h3 className="card-item-price py-1">Rs. {item.price}</h3>
                 {/* rating star */}
-                <div className="flex mx-16 space-x-0.5">
-                  <AiFillStar
-                    style={{width: "23px", height: "25px", color: "yellow"}}
+                <div className="flex mx-16 space-x-0.5 ">
+                  <BsFillStarFill
+                    style={{
+                      color: "yellow",
+                    }}
                   />
-                  <AiFillStar
-                    style={{width: "23px", height: "25px", color: "yellow"}}
-                  />
-                  <AiFillStar
-                    style={{width: "23px", height: "25px", color: "yellow"}}
-                  />
-                  <AiFillStar style={{width: "23px", height: "25px"}} />
-                  <AiFillStar style={{width: "23px", height: "25px"}} />
+                  <BsFillStarFill style={{color: "yellow"}} />
+                  <BsFillStarFill style={{color: "yellow"}} />
+                  <BsFillStarFill style={{color: "gray"}} />
+                  <BsFillStarFill />
                 </div>
               </div>
             </div>

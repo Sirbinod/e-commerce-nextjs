@@ -12,9 +12,9 @@ const ItemSelection = ({items}) => {
         <div className="flex items-center mb-3 justify-between">
           <h1 className="text-lg hidden lg:flex">Computers</h1>
           <div className="flex items-center sm:space-x-80 lg:space-x-0">
-            <div className="flex items-center">
+            <div className="flex items-center mr-3">
               <h3 className=" text-sm">Sort by</h3>
-              <select className="w-30 bg-white px-2 h-9 mx-5  lg:mr-0 border-gray-500 border">
+              <select className="w-28 bg-white px-2 h-9 mx-5 text-sm  lg:mr-0 border-gray-500 border">
                 <option>Best Match</option>
                 <option>Price low to high</option>
                 <option>Price high to low</option>
@@ -35,7 +35,7 @@ const ItemSelection = ({items}) => {
                   key={item.id}
                   className="inline-block product-grid-card text-center bg-white py-4 rounded-xl cursor-pointer "
                 >
-                  <div className="relative w-32 h-28 lg:w-44 lg:h-40 mx-4  my-3">
+                  <div className="relative w-32 h-28 lg:w-40 lg:h-36 mx-7  my-3">
                     <Image
                       src={item.img}
                       // style={{maxHeight: "180px", maxWidth: "160px"}}

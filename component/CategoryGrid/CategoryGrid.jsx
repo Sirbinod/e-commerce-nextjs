@@ -95,11 +95,11 @@ const CatagoryGrid = () => {
               key={item.id}
               className="inline-block text-center w-30 md:w-34 xl:w-35  2xl:w-41 bg-white hover:shadow-3xl cursor-pointer"
             >
-              <div className=" md:mx-4 mt-4 2xl:w-24 2xl:h-24 2xl:mx-8 2xl:mt-6">
+              <div className=" md:mx-4 mt-4 lg:w-24 lg:h-24 2xl:mx-8 2xl:mt-6">
                 {/* catagory image  */}
                 <img
                   src={item.img}
-                  style={{maxHeight: "90px", maxHeight: "100px"}}
+                  style={{maxHeight: "100%", maxHeight: "100%"}}
                   alt="category image"
                 />
               </div>

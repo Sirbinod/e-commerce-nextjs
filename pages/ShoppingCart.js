@@ -1,6 +1,6 @@
-import MaybeLikeCarousel from "../component/MayBeLikeCarousel/MaybeLikeCarousel";
-import MyCard from "../component/MyCard/MyCard";
-import OrderSummery from "../component/OrderSummery/OrderSummery";
+import MaybeLikeCarousel from "../component/Carousel/MayBeLikeCarousel/MaybeLikeCarousel";
+import MyCard from "../component/Card/MyCard/MyCard";
+import OrderSummery from "../component/Card/OrderSummery/OrderSummery";
 
 export default function ShoppingCart() {
   return (

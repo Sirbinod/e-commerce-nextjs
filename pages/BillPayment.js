@@ -1,5 +1,5 @@
-import PaymentMethod from "../component/PaymentMethod/PaymentMethod";
-import ShoppingBillingCard from "../component/ShoppingBillingCard/ShoppingBillingCard";
+import PaymentMethod from "../component/Card/PaymentMethod/PaymentMethod";
+import ShoppingBillingCard from "../component/Card/ShoppingBillingCard/ShoppingBillingCard";
 
 export default function ShoppingCart() {
   return (

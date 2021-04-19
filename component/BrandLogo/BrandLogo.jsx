@@ -5,39 +5,39 @@ const BrandLogo = () => {
   const logos = [
     {
       id: 1,
-      img: "/brand1.png",
+      img: "/Brands/brand1.png",
     },
     {
       id: 2,
-      img: "/brand2.png",
+      img: "/Brands/brand2.png",
     },
     {
       id: 3,
-      img: "/brand3.png",
+      img: "/Brands/brand3.png",
     },
     {
       id: 4,
-      img: "/brand4.png",
+      img: "/Brands/brand4.png",
     },
     {
       id: 5,
-      img: "/brand5.png",
+      img: "/Brands/brand5.png",
     },
   ];
   return (
     <div>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center pb-6">
         {/* top brand logo / image mapping  */}
         {logos.map((logo) => {
           return (
             <div
               key={logo.id}
-              className="w-48 h-20"
-              style={{
-                display: "grid",
-                alignContent: "center",
-                justifyContent: "center",
-              }}
+              className="w-48 2xl:w-56 h-20 2xl:h-24 "
+              // style={{
+              //   display: "grid",
+              //   alignContent: "center",
+              //   justifyContent: "center",
+              // }}
             >
               <img src={logo.img} alt="brand logo" />
             </div>

@@ -1,7 +1,7 @@
 import FilterBar from "../component/FilterBar/FilterBar";
 import MegaMenu from "../component/MegaMenu/MegaMenu";
-import ProductList from "../component/ProductList/ProductList";
-
+import ProductList from "../component/GridCard/ProductList/ProductList";
+import ProductSelectionHeader from "../component/ProductSelectionHeader/ProductSelectionHeader";
 export default function ProductGrid() {
   return (
     <>
@@ -11,12 +11,9 @@ export default function ProductGrid() {
       <section>
         <div className="my-5">
           <div className="container mx-auto">
-            <div className="flex space-x-2">
-              <h3>Electric </h3>
-              <h3>Computer</h3>
-            </div>
-            <div className="flex space-x-7">
-              <div className="w-56">
+            <ProductSelectionHeader />
+            <div className="flex lg:space-x-7">
+              <div className="hidden lg:block w-56">
                 <FilterBar />
               </div>
               <ProductList />

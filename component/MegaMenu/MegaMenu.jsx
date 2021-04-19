@@ -82,13 +82,13 @@ const MegaMenu = () => {
   ];
 
   return (
-    <div className="h-10">
-      <div className="container mx-auto py-1.5 items-center flex space-x-7 justify-between">
+    <div className="h-12">
+      <div className="container mx-auto py-1.5  items-center flex space-x-7 justify-between">
         {/* megamenu start */}
         <div className="hidden group lg:inline-block">
-          <button className="outline-none focus:outline-none py-1 bg-white rounded-sm flex items-center">
+          <button className="outline-none focus:outline-none py-2 xl:py-1  bg-white rounded-sm flex items-center">
             <img src="/categorylogo.png" width="16" height="14" />
-            <span className="pr-1 main-menu flex-1 ml-2 mr-20">
+            <span className="pr-1 main-menu flex-1 ml-2 mr-20 ">
               All Category
             </span>
             <span>
@@ -100,29 +100,30 @@ const MegaMenu = () => {
           <ul
             className={
               router.pathname == "/"
-                ? "home custom-menu bg-white border rounded-sm  group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-56"
-                : "bg-white border rounded-sm transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-56"
+                ? "home mt-2 custom-menu bg-white border rounded-sm  group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-56"
+                : "bg-white mt-2 border rounded-sm transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top w-56"
             }
           >
             {menus.map((menu, index) => {
               return (
                 <li
-                  onMouseEnter={() => {
-                    setHoverColor(index);
-                  }}
-                  onMouseOut={() => {
-                    setHoverColor(-100000);
-                  }}
                   key={menu.id}
                   className={
-                    "rounded-sm relative px-3 " +
-                    " hover:bg-gray-300 hover:text-red-600"
+                    "rounded-sm relative px-3 " + " hover:bg-gray-300 "
                   } //hover:bg-gray-300 hover:text-red-600
                 >
-                  <button className="  w-full drop-menu  text-left  flex items-center outline-none focus:outline-none">
+                  <button
+                    onMouseEnter={() => {
+                      setHoverColor(index);
+                    }}
+                    onMouseOut={() => {
+                      setHoverColor(-100000);
+                    }}
+                    className="w-full drop-menu  text-left  flex items-center outline-none focus:outline-none"
+                  >
                     <span className="pr-1 flex-1 ">{menu.name}</span>
                     <span className="mr-auto">
-                      <svg className="fill-current h-4 w-4 transition duration-150 ease-in-out">
+                      <svg className="fill-current h-4 w-4 transition duration-150 ease-in-out text-gray-400">
                         <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                       </svg>
                     </span>
@@ -175,12 +176,20 @@ const MegaMenu = () => {
           <div className="flex  space-x-0 sm:space-x-4 items-center my-1 text-xl">
             {/* fav/like icon */}
             <h3 className="mx-3 cursor-pointer">
-              <MdFavoriteBorder style={{width: "22px", height: "22  px"}} />
+              <img
+                src="/Fav.png"
+                alt="fav-icon"
+                style={{maxHeight: "90%", maxWidth: "90%"}}
+              />
             </h3>
             <div className="flex items-center space-x-3">
               {/* shopping cart icon  */}
               <h3 className="cursor-pointer">
-                <GrCart style={{width: "20px", height: "20px"}} />
+                <img
+                  src="/ShoppingCart.png"
+                  alt="fav-icon"
+                  style={{maxHeight: "90%", maxWidth: "90%"}}
+                />
               </h3>
               {/* totol mony display */}
               <h3 className="main-menu cursor-pointer">Rs. 20000</h3>

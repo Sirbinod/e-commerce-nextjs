@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from "react";
 import FilterBar from "../component/FilterBar/FilterBar";
-import Footer from "../component/Footer/Footer";
-import ItemSelection from "../component/ItemSelection/ItemSelection";
-import Layout from "../component/Layout/Layout";
+
 import MegaMenu from "../component/MegaMenu/MegaMenu";
 import {useRouter} from "next/router";
+import ProductSelectionHeader from "../component/ProductSelectionHeader/ProductSelectionHeader";
+import ItemSelection from "../component/GridCard/ItemSelection/ItemSelection";
 
 export default function Selection() {
   const router = useRouter;
@@ -124,11 +124,7 @@ export default function Selection() {
       <section>
         <div className="my-5">
           <div className="container mx-auto">
-            <div className=" hidden lg:flex sm:space-x-2 mb-2 items-center ">
-              <h3 className="text-base text-gray-500 mr-1 ">Electric </h3>
-              <h3 className="text-base text-gray-500">&#62;</h3>
-              <h3 className="text-base ">Computer</h3>
-            </div>
+            <ProductSelectionHeader />
             <div className="flex space-x-0 lg:space-x-7">
               <div className=" hidden lg:block lg:w-56">
                 <ul>

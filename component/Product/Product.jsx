@@ -8,7 +8,13 @@ const Product = () => {
   const [count, setCount] = useState(0);
   const image = {
     id: 1,
-    img: ["/lap1.png", "/lap2.png", "/lap3.png", "/lap4.png", "/lap4.png"],
+    img: [
+      "/selec1.png",
+      "/selec2.png",
+      "/selec3.png",
+      "/selec4.png",
+      "/selec5.png",
+    ],
   };
 
   const [thump, setThump] = useState("/lap1.png");
@@ -17,21 +23,19 @@ const Product = () => {
     <div className="block space-y-3 lg:space-y-0 lg:flex mb-1">
       <div className="w-full text-center py-3 lg:w-1/2 items-center pb-2 bg-white">
         <div className=" w-72 h-52 sm:w-96 sm:h-72  relative mx-10 sm:mx-40 lg:mx-24 my-5 ">
-          <Image
+          <img
             //src={imge.img[index]}
             src={thump}
-            layout="fill"
-            objectFit="fill"
-            quality="100"
+            style={{maxWidth: "100%", maxHeight: "100%"}}
             alt="product image"
           />
         </div>
 
-        <div className="hidden sm:flex space-x-7 mx-32 lg:mx-16 mb-4 ">
+        <div className="hidden sm:flex space-x-4 mx-32 lg:mx-16 mb-4 ">
           {image.img.map((imge) => {
             return (
-              <div className="w-18 h-16 border-gray-300 border px-1.5 py-1.5 hover:border-red-500">
-                <div className="w-14 h-14 relative ">
+              <div className="w-16 h-14 border-gray-300 border px-1.5 py-1.5 hover:border-red-500">
+                <div className="w-11 h-11 relative ">
                   <img
                     src={imge}
                     onClick={() => {
@@ -39,7 +43,7 @@ const Product = () => {
                     }}
                     // layout="fill"
                     // objectFit="fill"
-                    style={{maxWidth: "60px", maxHeight: "60px"}}
+                    style={{maxWidth: "46px", maxHeight: "46px"}}
                     alt="product image"
                   />
                 </div>
@@ -68,38 +72,39 @@ const Product = () => {
               <AiOutlineStar />
               <AiOutlineStar />
             </div>
-            <h3 className="text-xs text-blue-700">0.01 ratings | 10 Reviews</h3>
+            <h3 className="ret-rev text-blue-700">0.01 ratings | 10 Reviews</h3>
           </div>
           <div className="flex my-2">
             <h2 className="text-xs text-gray-400">
-              brand: <span className="text-blue-700">HP | More from HP</span>
+              brand:{" "}
+              <span className="ret-rev text-blue-700">HP | More from HP</span>
             </h2>
           </div>
         </div>
-        <div className="mx-5 my-3 border-b border-gray-300">
+        <div className="mx-5 my-2 border-b border-gray-300">
           <div className=" flex  space-x-6 mb-3 items-center">
             <h1 className="product-del-price"> Rs. 65000</h1>
-            <h3 className="product-del-cut"> Rs 72000</h3>
-            <h4 className=" py-1 text-center rounded-2xl product-del-dis">
+            <h3 className="product-del-cut "> Rs 72000</h3>
+            <h4 className="px-4 pt-0.5 text-center rounded-2xl product-del-dis">
               20% OFF
             </h4>
           </div>
         </div>
         <div className="mx-5 my-3 border-b border-gray-300">
           <div className="flex space-x-2 items-center mb-3">
-            <h2 className="text-gray-400 text-sm">Quantity:</h2>
+            <h2 className="text-gray-400 text-xs">Quantity:</h2>
             <div className="flex items-center space-x-1">
               <button
-                className="w-7 h-7  bg-gray-400 focus:outline-none"
+                className="w-6 h-6  bg-gray-400 focus:outline-none"
                 onClick={() => setCount(count - 1)}
               >
                 -
               </button>
-              <h2 className=" text-sm text-center py-1 w-8 h-7 border border-gray-400">
+              <h2 className=" text-sm text-center py-0.5 w-7 h-6 border border-gray-400">
                 {count}
               </h2>
               <button
-                className="w-7 h-7 bg-gray-400 focus:outline-none"
+                className="w-6 h-6 bg-gray-400 focus:outline-none"
                 onClick={() => setCount(count + 1)}
               >
                 +
@@ -110,11 +115,11 @@ const Product = () => {
         <div className="mx-5 my-4 border-b border-gray-300">
           <div className="flex space-x-3 items-center mb-5">
             <Link href="/ShoppingCart">
-              <button className="w-32 h-9 addcart-button rounded-3xl focus:outline-none">
+              <button className="w-32 h-8 addcart-button rounded-3xl focus:outline-none">
                 Add to Cart
               </button>
             </Link>
-            <button className="w-32 h-9 rounded-3xl buynow-button focus:outline-none">
+            <button className="w-32 h-8 rounded-3xl buynow-button focus:outline-none">
               Buy Now
             </button>
           </div>
@@ -132,7 +137,7 @@ const Product = () => {
             </div>
             <div>
               <h1 className="text-sm text-red-600">Rs. 100</h1>
-              <h2 className="text-xs">Kathmandu valley</h2>
+              <h2 className=" text-xs">Kathmandu valley</h2>
             </div>
           </div>
         </div>
@@ -148,7 +153,7 @@ const Product = () => {
               </div>
             </div>
             <div>
-              <h2 className="text-sm text-blue-700">
+              <h2 className="text-xs text-blue-700">
                 View other from this seller{" "}
               </h2>
             </div>

@@ -1,23 +1,26 @@
 .product-det-tit {
-  font-size: 1rem;
+  font-size: 0.9rem;
   width: 32rem;
 }
+.ret-rev {
+  font-size: 0.7rem;
+}
 .product-del-price {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   line-height: 3rem;
   font-weight: 500;
   color: #d30005;
 }
 .product-del-cut {
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.7rem;
   color: #d4d4d4;
+  text-decoration: line-through;
 }
 .product-del-dis {
   font-size: 0.8rem;
-  line-height: 1.2rem;
+  line-height: 1rem;
   font-weight: 500;
-  width: 5rem;
   border: 1px solid #83b735;
   color: #83b735;
 }
@@ -25,12 +28,12 @@
   height: 36rem;
 }
 .addcart-button {
-  font-size: 1rem;
+  font-size: 0.9rem;
   border: 1px solid #e25b0f;
   color: #e25b0f;
 }
 .buynow-button {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: white;
   background-color: #e25b0f;
 }

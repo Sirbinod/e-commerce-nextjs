@@ -1,5 +1,5 @@
-import ShoppingBillingCard from "../component/ShoppingBillingCard/ShoppingBillingCard";
-import ShoppBillInfo from "../component/ShopBillInfo/ShopBillInfo";
+import ShoppingBillingCard from "../component/Card/ShoppingBillingCard/ShoppingBillingCard";
+import ShoppBillInfo from "../component/Card/ShopBillInfo/ShopBillInfo";
 export default function ShoppingCart() {
   return (
     <div className="my-3">

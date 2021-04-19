@@ -1,17 +1,17 @@
 .main-menu {
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.6rem;
   font-weight: 500;
 }
 .drop-menu {
-  font-size: 0.7rem;
-  line-height: 1.6rem;
+  font-size: 0.76rem;
+  line-height: 1.5rem;
+  margin: 0.08rem 0;
   font-weight: 500;
   width: 100%;
   display: flex;
   align-items: center;
-  color: #757575;
-  padding: 0.28rem 0;
+  padding: 0.19rem 0;
 }
 li > ul {
   transform: translatex(100%) scale(0);
@@ -40,7 +40,7 @@ li:hover > button svg {
 }
 @media only screen and (min-width: 1580px) {
   .drop-menu {
-    padding: 0.41rem 0;
+    padding: 0.325rem 0;
   }
 }
 @media only screen and (max-width: 1279px) {
@@ -48,5 +48,8 @@ li:hover > button svg {
     font-size: 1rem;
     line-height: 1rem;
     font-weight: 500;
+  }
+  .drop-menu {
+    line-height: 1.45rem;
   }
 }

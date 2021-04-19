@@ -2,9 +2,9 @@
   background: #eceaea;
 }
 .footer-item {
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.7rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 .footer-subitem {
   font-size: 0.8rem;
@@ -54,12 +54,14 @@
 }
 .method {
   line-height: 150%;
-  font-size: 1.3rem;
+  font-size: 1rem;
+  font-weight: 500;
 }
 .series {
-  color: #535353;
-  font-size: 0.9rem;
-  line-height: 2.3rem;
+  line-height: 150%;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgb(80, 82, 82);
 }
 .copyright {
   color: #535353;

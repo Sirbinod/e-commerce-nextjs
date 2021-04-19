@@ -99,7 +99,7 @@ const RatingReview = () => {
         </div>
         <h3 className=" text-gray-600 text-sm">Rewon Jecker</h3>
         <h3 className=" text-gray-600 text-sm">19 Mar 2020</h3>
-        <h2 className=" w-80sm:w-96 my-3 text-sm">
+        <h2 className=" w-80sm:w-96 my-3 text-xs">
           To anyone that's scrolling rn, you did a great job in hangin on. Let's
           do it for a few more moment, few more days, and few more years. Hang
           on there, you're stronger than you think you are.

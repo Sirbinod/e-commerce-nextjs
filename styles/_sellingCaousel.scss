@@ -1,11 +1,16 @@
 .best-selling-card {
-  width: 11.5rem;
+  width: 10.8rem;
   cursor: pointer;
   text-align: center;
 }
+.best-selling-card:hover {
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+  transition: box-shadow ease-in-out;
+}
 .best-selling-title {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   line-height: 1.5rem;
+  font-weight: 400;
 }
 .best-selling-price {
   border: 1px solid #83b735;
@@ -20,4 +25,9 @@
   line-height: 1.25rem;
   color: #d4d4d4;
   display: block;
+}
+@media only screen and (min-width: 1532px) {
+  .best-selling-card {
+    width: 12rem;
+  }
 }

@@ -28,11 +28,11 @@ const FilterBar = () => {
         <div className="flex flex-col border-b py-2 border-gray-300">
           {/* brand section  */}
           <h1 className="filter-brand">brand</h1>
-          <div className="my-2">
+          <div className="my-1">
             {/* first checkbox with brand name  */}
             {/* {items.map((it, i) => { */}
             {/* return ( */}
-            <div className="items-center flex space-x-3 my-2">
+            <div className="items-center flex space-x-3">
               <input
                 type="checkbox"
                 // onChange={handleToggle(it.id)}
@@ -41,8 +41,7 @@ const FilterBar = () => {
               />
               <h1 className="filter-brand-name cursor-pointer">IPhone</h1>
             </div>
-            {/* ); */}
-            {/* })} */}
+
             {/* end first checkbox  */}
           </div>
           {/* end brand section  */}
@@ -55,10 +54,10 @@ const FilterBar = () => {
         {/* price section  */}
         <div className=" mt-3 border-b border-gray-300">
           <h1 className="filter-brand">Price</h1>
-          <div className=" my-3   flex items-center space-x-2 cursor-pointer">
+          <div className=" my-1 mb-4   flex items-center space-x-2 cursor-pointer">
             {/* min range input box */}
             <input
-              className=" w-14 h-7 border text-sm border-gray-400 rounded-sm px-1 text-gray-700  focus:outline-none"
+              className=" w-14 h-6 border text-xs border-gray-400 rounded-sm px-1 text-gray-700  focus:outline-none"
               id="search"
               type="text"
               placeholder="Min"
@@ -66,13 +65,13 @@ const FilterBar = () => {
             <h5>-</h5>
             {/* max range input box */}
             <input
-              className=" w-14 h-7 border text-sm border-gray-400 rounded-sm px-1 text-gray-700  focus:outline-none"
+              className=" w-14 h-6 border text-xs border-gray-400 rounded-sm px-1 text-gray-700  focus:outline-none"
               id="search"
               type="text"
               placeholder="Max"
             />
             {/* search button  */}
-            <button className="w-9 h-7 text-white text-xl rounded-sm py-1 px-2 bg-blue-600 items-center">
+            <button className="w-6 h-6 text-white text-base rounded-sm px-1 bg-blue-600 items-center">
               <BiSearch />
             </button>
           </div>
@@ -83,7 +82,7 @@ const FilterBar = () => {
         <div className="flex flex-col border-b py-2 border-gray-300">
           <h1 className="filter-brand">Processer</h1>
           {/* chack box and Processer name  */}
-          <div className="flex items-center my-2 space-x-2">
+          <div className="flex items-center my-1 space-x-2">
             <Link href="/ProductGrid">
               <input
                 type="checkbox"
@@ -99,7 +98,7 @@ const FilterBar = () => {
         <div className="flex flex-col border-b py-2 border-gray-300">
           <h3 className="filter-brand">Screen Size</h3>
           {/* checkbox with name  */}
-          <div className="flex items-center space-x-2 my-2">
+          <div className="flex items-center space-x-2 my-1">
             <input
               type="checkbox"
               className="form-checkbox h-4 w-4 text-gray-600 cursor-pointer"
@@ -113,7 +112,7 @@ const FilterBar = () => {
         <div className="flex flex-col border-b py-2 border-gray-300">
           <h3 className="filter-brand">Warrenty Period</h3>
           {/* checkbox with name  */}
-          <div className="flex items-center space-x-2 my-2">
+          <div className="flex items-center space-x-2 my-1">
             <input
               type="checkbox"
               className="form-checkbox h-4 w-4 text-gray-600 cursor-pointer"

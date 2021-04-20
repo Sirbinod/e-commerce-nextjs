@@ -41,7 +41,6 @@ const ProductList = () => {
   ];
   return (
     <div className="mb-4 ">
-      <FilterHeader />
       <div className="grid grid-cols-1">
         {items.map((item) => {
           return (

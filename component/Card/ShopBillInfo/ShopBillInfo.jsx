@@ -45,16 +45,6 @@ const ShopBillInfo = () => {
             <a className="text-white">Apply</a>
           </button>
         </div>
-
-        <div className="flex justify-between mt-5 ">
-          <h2 className="subtotle">Total</h2>
-          <h2 className="total">Rs 15100 </h2>
-        </div>
-        <Link href="/BillPayment">
-          <button className=" pro-button text-center w-80 h-11 rounded-3xl  my-3">
-            Procced to checkout
-          </button>
-        </Link>
       </div>
     </div>
   );

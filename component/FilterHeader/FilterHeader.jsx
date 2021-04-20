@@ -1,9 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import {BsFillGridFill} from "react-icons/bs";
 import {FaList} from "react-icons/fa";
 import Link from "next/link";
+import ItemSelection from "../GridCard/ItemSelection/ItemSelection";
+import ProductList from "../GridCard/ProductList/ProductList";
 
-const FilterHeader = () => {
+const FilterHeader = ({onItemsDetail, offItemsDetail}) => {
+  const [show, setShow] = useState(false);
   return (
     <div>
       <div className="flex items-center mb-3 justify-between">
@@ -19,12 +22,20 @@ const FilterHeader = () => {
           </div>
           <div className="flex items-center">
             <h3 className="text-xs mx-2">View</h3>
-            <Link href="/Selection">
-              <BsFillGridFill className="w-6 h-6 text-gray-500 mx-2 " />
-            </Link>
-            <Link href="/ProductGrid">
+
+            <BsFillGridFill
+              onClick={() => onItemsDetail()}
+              className="w-6 h-6 text-gray-500 mx-2 "
+            />
+            <FaList
+              className="w-6 h-6 text-gray-500 "
+              onClick={() => offItemsDetail()}
+            />
+            {/* {show ? <div> This is first COmponent </div> : <ProductList />} */}
+
+            {/* <Link href="/ProductGrid">
               <FaList className="w-6 h-6 text-gray-500 " />
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

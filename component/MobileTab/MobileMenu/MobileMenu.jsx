@@ -19,17 +19,10 @@ const MobileMenu = () => {
           <h2 className="text-sm font-bold my-1 text-white">Home</h2>
         </div>
         <div className="my-2  w-20 text-white text-center dropup">
-          <button className="dropbtn">
-            <div className="text-3xl sm:text-4xl  mx-6 text-center  relative">
-              <CgMenuGridR />
-            </div>
-            <h2 className="text-sm font-bold my-1">Category</h2>
-          </button>
-          <div class="dropup-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+          <div className="text-3xl sm:text-4xl  mx-6 text-center  relative">
+            <CgMenuGridR />
           </div>
+          <h2 className="text-sm font-bold my-1">Category</h2>
         </div>
 
         <div className="my-2  w-20 text-white text-center ">

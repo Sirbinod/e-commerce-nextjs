@@ -19,7 +19,7 @@ const PaymentMethod = () => {
   ];
   return (
     <div>
-      <div className="card-w px-6 py-4 rounded">
+      <div className="card-w px-8 py-4 rounded">
         <h1 className="payment-cart-tit">Shopping & Billing Information</h1>
         <div className="flex py-4 mt-2 justify-between items-center">
           {paym.map((pimg) => {

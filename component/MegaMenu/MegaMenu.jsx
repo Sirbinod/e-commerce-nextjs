@@ -140,7 +140,7 @@ const MegaMenu = () => {
                       </button>
                       <ul className="bg-white  rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left w-56">
                         <Link href="/Selection">
-                          <li className="drop-menu relative px-3 py-1 hover:bg-gray-300 hover:text-red-500">
+                          <li className="drop-menu relative px-3 py-1 hover:bg-gray-300 hover:text-red-500 cursor-pointer">
                             <a className="mx-3">IPhone</a>
                           </li>
                         </Link>

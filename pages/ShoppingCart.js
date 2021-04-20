@@ -8,7 +8,7 @@ export default function ShoppingCart() {
       <section>
         <div className="my-3">
           <div className="container mx-auto">
-            <div className="flex  items-center space-x-2">
+            <div className="flex  items-center space-x-2 mt-4">
               <h2 className="text-sm text-gray-500">Electric </h2>
               <h2 className="arrow"></h2>
               <h2 className="text-sm text-gray-500">Computer</h2>

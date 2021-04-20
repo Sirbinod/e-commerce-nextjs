@@ -8,7 +8,7 @@ import Link from "next/link";
 const MyCard = () => {
   return (
     <div>
-      <div className=" w-110 bg-white rounded">
+      <div className=" bg-white rounded">
         <div className="flex justify-between mx-3 py-1 border-b items-center">
           <div className="flex items-center space-x-4  py-3">
             <input
@@ -21,13 +21,13 @@ const MyCard = () => {
             Delete
           </button>
         </div>
-        <div className="my-5 border-b mx-3 pb-2 flex">
+        <div className="my-5 border-b mx-3 pb-3 flex">
           <input
             type="checkbox"
             className="form-checkbox h-4 w-4 text-gray-600"
           />
           <div className="flex">
-            <div className="mx-5 w-36 h-28 relative">
+            <div className="mx-5 w-40 h-32 relative">
               <Image
                 src="/selec2.png"
                 layout="fill"
@@ -40,7 +40,7 @@ const MyCard = () => {
                 Laptop 10.1 Inch Windows 10 Tablet 2-in-1 Mini Laptop 4G RAM
                 Gamer With Detachable Keyboard Laptop
               </h1>
-              <div className="flex space-x-8 items-center my-1">
+              <div className="flex space-x-10 items-center my-3">
                 <h2 className="select-item-price">Rs. 15000</h2>
                 <h3 className="text-gray-400 line-through text-base font-medium">
                   Rs. 20000
@@ -52,7 +52,7 @@ const MyCard = () => {
                   Sold by Golden Store
                 </h3>
               </div>
-              <div className="flex space-x-5 my-4    items-center">
+              <div className="flex space-x-5 my-3    items-center">
                 <div className="flex">
                   <button className="w-5 h-5 border border-gray-100 bg-gray-200">
                     -
@@ -74,13 +74,13 @@ const MyCard = () => {
             </div>
           </div>
         </div>
-        <div className="my-5 border-b mx-3 pb-2 flex">
+        <div className="my-5 border-b mx-3 pb-3 flex">
           <input
             type="checkbox"
             className="form-checkbox h-4 w-4 text-gray-600"
           />
           <div className="flex">
-            <div className="mx-5 w-36 h-28 relative">
+            <div className="mx-5 w-40 h-32 relative">
               <Image
                 src="/selec4.png"
                 layout="fill"
@@ -93,7 +93,7 @@ const MyCard = () => {
                 Laptop 10.1 Inch Windows 10 Tablet 2-in-1 Mini Laptop 4G RAM
                 Gamer With Detachable Keyboard Laptop
               </h1>
-              <div className="flex space-x-8 items-center my-1">
+              <div className="flex space-x-10 items-center my-3">
                 <h2 className="select-item-price">Rs. 15000</h2>
                 <h3 className="text-gray-400 line-through text-base font-medium">
                   Rs. 20000
@@ -105,7 +105,7 @@ const MyCard = () => {
                   Sold by Golden Store
                 </h3>
               </div>
-              <div className="flex space-x-5 my-4    items-center">
+              <div className="flex space-x-5 my-3    items-center">
                 <div className="flex">
                   <button className="w-5 h-5 border border-gray-100 bg-gray-200">
                     -

@@ -4,8 +4,6 @@ import {FcLike} from "react-icons/fc";
 import {AiOutlineStar} from "react-icons/ai";
 import Link from "next/link";
 
-import ReactImageZoom from "react-image-zoom";
-
 const Product = () => {
   const [count, setCount] = useState(1);
 

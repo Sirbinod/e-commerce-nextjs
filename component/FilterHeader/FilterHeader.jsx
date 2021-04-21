@@ -9,7 +9,7 @@ const FilterHeader = ({onItemsDetail, offItemsDetail}) => {
   const [show, setShow] = useState(false);
   return (
     <div>
-      <div className="flex items-center mb-3 justify-between">
+      <div className="flex items-center fiter-header mb-3 justify-between">
         <h1 className="text-base hidden lg:flex">Computers</h1>
         <div className="flex items-center space-x-8 sm:space-x-96 lg:space-x-0">
           <div className="flex items-center mr-3">

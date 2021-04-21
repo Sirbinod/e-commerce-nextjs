@@ -1,5 +1,5 @@
 .product-grid-card {
-  width: 12.35rem;
+  width: 12.45rem;
 }
 .product-grid-card:hover {
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
@@ -36,20 +36,32 @@
   width: 52rem;
   height: 13rem;
 }
+.product-list-len {
+  width: 37rem;
+}
 .product-list-img {
   width: 11rem;
   height: 9.2rem;
   max-width: 13rem;
   max-height: 11.2rem;
 }
+.fiter-header {
+  width: 52rem;
+}
 
 @media only screen and (min-width: 1532px) {
   .product-grid-card {
-    width: 14.4rem;
+    width: 14.5rem;
   }
   .product-list {
     width: 60.5rem;
     height: 15rem;
+  }
+  .product-list-len {
+    width: 44rem;
+  }
+  .fiter-header {
+    width: 60.5rem;
   }
 }
 @media only screen and (max-width: 1279px) {
@@ -60,16 +72,26 @@
     width: 44rem;
     height: 13rem;
   }
+  .product-list-len {
+    width: 29.5rem;
+  }
+  .fiter-header {
+    width: 44rem;
+  }
 }
 @media only screen and (max-width: 770px) {
   .product-grid-card {
     width: 11rem;
-    border: 1px solid red;
   }
   .product-list {
     width: 46rem;
     height: 13rem;
-    border: 1px solid red;
+  }
+  .product-list-len {
+    width: 30rem;
+  }
+  .fiter-header {
+    width: 46rem;
   }
   .product-list-img {
     width: 8rem;
@@ -81,9 +103,11 @@
     width: 11.1rem;
   }
   .product-list {
-    width: 100%;
-    height: 13rem;
-    border: 1px solid red;
+    width: 22.7rem;
+    height: 11rem;
+  }
+  .fiter-header {
+    width: 22.7rem;
   }
   .product-list-img {
     width: 9rem;

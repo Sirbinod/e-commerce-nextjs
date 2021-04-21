@@ -1,11 +1,10 @@
 import React, {useState} from "react";
-import Image from "next/image";
-import Link from "next/link";
-import {IoIosStar} from "react-icons/io";
+
 import FilterHeader from "../../FilterHeader/FilterHeader";
 import ProductList from "../ProductList/ProductList";
+import ProductGrid from "../ProductGrid/ProductGrid";
 
-const ItemSelection = ({items}) => {
+const ItemSelection = () => {
   const [itemDetails, setitemDetails] = useState(false);
   const onItemDetails = () => {
     setitemDetails(false);
@@ -13,6 +12,104 @@ const ItemSelection = ({items}) => {
   const offItemDetails = () => {
     setitemDetails(true);
   };
+  const items = [
+    {
+      id: 1,
+      img: "/selec1.png",
+      title: "Dell Inspiron 15",
+      price: "200",
+      catagory: "phone",
+      cut_proce: "222 ",
+      brand: {
+        id: 1,
+        name: "apple",
+      },
+    },
+    {
+      id: 2,
+      img: "/selec2.png",
+      title: "ACER ASPIRE 5",
+      price: "200",
+      catagory: "phone",
+      cut_proce: "222",
+      brand: {
+        id: 2,
+        name: "dell",
+      },
+    },
+    {
+      id: 3,
+      img: "/selec3.png",
+      title: "Lenovo IdeaPad 3",
+      price: "200",
+      catagory: "phone",
+      cut_proce: "222",
+      brand: {
+        id: 1,
+        name: "apple",
+      },
+    },
+    {
+      id: 4,
+      img: "/selec4.png",
+      title: "ACER ASPIRE 5",
+      price: "200",
+      catagory: "phone",
+      cut_proce: "222",
+      brand: {
+        id: 2,
+        name: "dell",
+      },
+    },
+    {
+      id: 5,
+      img: "/selec5.png",
+      title: "Dell Inspiron 15",
+      price: "200",
+      catagory: "phone",
+      cut_proce: "20",
+      brand: {
+        id: 1,
+        name: "apple",
+      },
+    },
+    {
+      id: 6,
+      img: "/selec6.png",
+      title: "ACER ASPIRE 5",
+      price: "200",
+      catagory: "phone",
+      cut_proce: "222",
+      brand: {
+        id: 2,
+        name: "dell",
+      },
+    },
+    {
+      id: 7,
+      img: "/selec1.png",
+      title: "Lenovo IdeaPad 3",
+      price: "200",
+      catagory: "phone",
+      cut_proce: "222",
+      brand: {
+        id: 2,
+        name: "dell",
+      },
+    },
+    {
+      id: 8,
+      img: "/selec2.png",
+      title: "ACER ASPIRE 5",
+      price: "200",
+      catagory: "phone",
+      cut_proce: "222",
+      brand: {
+        id: 1,
+        name: "apple",
+      },
+    },
+  ];
   return (
     <div>
       <div className="mb-4 ">
@@ -21,54 +118,9 @@ const ItemSelection = ({items}) => {
           offItemsDetail={offItemDetails}
         />
         {!itemDetails ? (
-          <div>
-            <div className="grid grid-cols-2 sm:grid-cols-4  gap-2 sm:gap-3">
-              {items.map((item) => {
-                return (
-                  <Link href="/ProductDetail">
-                    <div
-                      key={item.id}
-                      className="inline-block product-grid-card text-center bg-white py-4 cursor-pointer "
-                    >
-                      <div className="relative w-32 h-28 lg:w-36 lg:h-32 xl:w-40 2xl:w-44 2xl:h-40 xl:h-36 mx-6 lg:mx-3 xl:mx-4 2xl:mx-7  my-3 mb-6">
-                        <Image
-                          src={item.img}
-                          // style={{maxHeight: "180px", maxWidth: "160px"}}
-                          layout="fill"
-                          objectFit="fill"
-                          quality="100"
-                          alt="product image"
-                        />
-                      </div>
-                      <div className="mt-2 text-center">
-                        <h3 className="products-name">{item.title}</h3>
-                        <h3 className="products-price py-2">
-                          Rs. {item.price}
-                        </h3>
-                        <div className="flex justify-around  items-center">
-                          <span className="block product-cut-price">
-                            Rs.{item.cut_proce}
-                          </span>
-                          <span className="product-discount px-4 rounded-full">
-                            20% off
-                          </span>
-                        </div>
-                        <div className="items-center flex px-16 2xl:px-20 mt-2">
-                          <IoIosStar size="14" className="star-color" />
-                          <IoIosStar size="14" className="star-color" />
-                          <IoIosStar size="14" className="star-color" />
-                          <IoIosStar size="14" className="star-color-g" />
-                          <IoIosStar size="14" className="star-color-g" />
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
+          <ProductGrid items={items} />
         ) : (
-          <ProductList />
+          <ProductList items={items} />
         )}
 
         <div className="float-right my-3">

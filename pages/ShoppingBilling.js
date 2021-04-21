@@ -2,31 +2,43 @@ import {useState} from "react";
 import ShoppingBillingCard from "../component/Card/ShoppingBillingCard/ShoppingBillingCard";
 import ShoppBillInfo from "../component/Card/ShopBillInfo/ShopBillInfo";
 import Billing from "../component/Card/Billing/Billing";
+import PaymentMethod from "../component/Card/PaymentMethod/PaymentMethod";
 import React from "react";
+import Link from "next/link";
+import PaymentMethodDetail from "../component/Card/PaymentMethodDetail/PaymentMethodDetail";
 
 export default function ShoppingCart() {
   const [step, setStep] = useState(0);
   const togglestep = (x) => {
     setStep(x);
   };
-  const shippingOptions = [
+  const shoppingOptions = [
     {
       index: 0,
-      buttonText: "Component 1",
+      buttonText: "Procced To Pay",
       action: () => {
         togglestep(1);
       },
-      component: <div>Step 1</div>,
-      heading: "Component 1",
+      component: <ShoppBillInfo />,
+      heading: "Shopping & Billing",
     },
     {
       index: 1,
-      buttonText: "Button text2",
+      buttonText: "Pay & Checkout",
       action: () => {
         togglestep(2);
       },
-      component: <div>Step 2</div>,
-      heading: "Component 2",
+      component: <PaymentMethod />,
+      heading: "Bill Payment",
+    },
+    {
+      index: 2,
+      buttonText: "Pay & Checkout",
+      action: () => {
+        togglestep(<Link href="/Success"></Link>);
+      },
+      component: <PaymentMethodDetail />,
+      heading: "Bill Payment",
     },
   ];
   return (
@@ -37,14 +49,20 @@ export default function ShoppingCart() {
           <h2 className="arrow"></h2>
           <h2 className="text-sm text-gray-500">Computer</h2>
           <h2 className="arrow"></h2>
-          <h2 className="text-sm text-yellow-600">Shopping & Billing </h2>
+          <h2 className="text-sm text-yellow-600">
+            {shoppingOptions[step].heading}
+          </h2>
         </div>
         <div className="flex space-x-5 items-center my-7">
-          <h1 className="custom-title">Shopping & Billing</h1>
+          <h1 className="custom-title">{shoppingOptions[step].heading}</h1>
         </div>
         <div className="flex space-x-4 py-3">
-          <ShoppingBillingCard />
-          <Billing item={shippingOptions[step]} />
+          <div>
+            <ShoppingBillingCard />
+          </div>
+          <div>
+            <Billing item={shoppingOptions[step]} />
+          </div>
         </div>
       </div>
     </div>

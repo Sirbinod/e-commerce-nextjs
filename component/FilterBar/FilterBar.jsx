@@ -1,25 +1,22 @@
-// import react, {useState} from "react";
+import react, {useState} from "react";
 import Link from "next/link";
 import {BiSearch} from "react-icons/bi";
 import BrandLogo from "../BrandLogo/BrandLogo";
 
-const FilterBar = () => {
-  // const [chacked, setChacked] = useState([]);
-  // const handleToggle = (it) => {
-  //   // return the first index or -1
-  //   const curBarandId = chacked.indexOf(it);
-  //   const newCheckedBrandId = [...chacked];
+const FilterBar = ({brand}) => {
+  const [chacked, setChacked] = useState([]);
 
-  //   // if currently chacked was not already in checked state the push
-  //   // else pull/take off
-  //   if (curBarandId === -1) {
-  //     newCheckedBrandId.push(it);
-  //   } else {
-  //     newCheckedBrandId.splice(curBarandId, 1);
-  //   }
-  //   console.log(newCheckedBrandId);
-  //   // setChacked(newCheckedBrandId);
-  // };
+  const handleToggle = (cat) => () => {
+    const currentbrandId = chacked.indexOf(cat);
+    const newChackedBrandId = [...chacked];
+    if (currentbrandId === -1) {
+      newChackedBrandId.push(cat);
+    } else {
+      newChackedBrandId.splice(currentbrandId, 1);
+    }
+    console.log(newChackedBrandId);
+    setChacked(newChackedBrandId);
+  };
 
   return (
     <div>
@@ -28,28 +25,21 @@ const FilterBar = () => {
         <div className="flex flex-col border-b py-2 border-gray-300">
           {/* brand section  */}
           <h1 className="filter-brand">brand</h1>
-          <div className="my-1">
-            {/* first checkbox with brand name  */}
-            {/* {items.map((it, i) => { */}
-            {/* return ( */}
-            <div className="items-center flex space-x-3">
-              <input
-                type="checkbox"
-                // onChange={handleToggle(it.id)}
-                // value={chacked.indexOf(it.id === -1)}
-                className="form-checkbox h-4 w-4 cursor-pointer"
-              />
-              <h1 className="filter-brand-name cursor-pointer">IPhone</h1>
-            </div>
-
-            {/* end first checkbox  */}
-          </div>
+          {brand.map((cat) => {
+            return (
+              <div className="items-center my-1 flex space-x-3">
+                <input
+                  onChange={handleToggle(cat.id)}
+                  value={chacked.indexOf(cat.id === -1)}
+                  type="checkbox"
+                  className="form-checkbox h-4 w-4 cursor-pointer"
+                />
+                <h1 className="filter-brand-name cursor-pointer">{cat.name}</h1>
+              </div>
+            );
+          })}
+          <div className="my-1">{/* end first checkbox  */}</div>
           {/* end brand section  */}
-
-          {/* view more part  */}
-          {/* <a href="" className="text-base font-semibold text-blue-400">
-            View More
-          </a> */}
         </div>
         {/* price section  */}
         <div className=" mt-3 border-b border-gray-300">
@@ -83,12 +73,11 @@ const FilterBar = () => {
           <h1 className="filter-brand">Processer</h1>
           {/* chack box and Processer name  */}
           <div className="flex items-center my-1 space-x-2">
-            <Link href="/ProductGrid">
-              <input
-                type="checkbox"
-                className="form-checkbox h-4 w-4 text-gray-600 cursor-pointer"
-              />
-            </Link>
+            <input
+              type="checkbox"
+              className="form-checkbox h-4 w-4 text-gray-600 cursor-pointer"
+            />
+
             <h1 className="filter-brand-name cursor-pointer">intel</h1>
           </div>
         </div>

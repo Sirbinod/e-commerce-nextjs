@@ -63,6 +63,15 @@ export default function Home() {
   ];
   return (
     <div>
+      <Head>
+        <title>KTM Cart</title>
+        <link rel="icon" href="/public/mobilelogo.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="description"
+          content="Buy electronics, book hotels, flights"
+        />
+      </Head>
       <section
         className={
           router.pathname == "/"

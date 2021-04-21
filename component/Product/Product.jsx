@@ -4,8 +4,11 @@ import {FcLike} from "react-icons/fc";
 import {AiOutlineStar} from "react-icons/ai";
 import Link from "next/link";
 
+import ReactImageZoom from "react-image-zoom";
+
 const Product = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
+
   const image = {
     id: 1,
     img: [
@@ -76,7 +79,7 @@ const Product = () => {
           </div>
           <div className="flex my-2">
             <h2 className="text-xs text-gray-400">
-              brand:{" "}
+              brand:
               <span className="ret-rev text-blue-700">HP | More from HP</span>
             </h2>
           </div>
@@ -96,7 +99,9 @@ const Product = () => {
             <div className="flex items-center space-x-1">
               <button
                 className="w-6 h-6  bg-gray-400 focus:outline-none"
-                onClick={() => setCount(count - 1)}
+                onClick={() => {
+                  count >= 2 ? setCount(count - 1) : count;
+                }}
               >
                 -
               </button>

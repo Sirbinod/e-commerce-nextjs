@@ -179,7 +179,7 @@ const MegaMenu = () => {
               <img
                 src="/Fav.png"
                 alt="fav-icon"
-                style={{maxHeight: "90%", maxWidth: "90%"}}
+                style={{maxHeight: "70%", maxWidth: "70%"}}
               />
             </h3>
             <div className="flex items-center space-x-3">
@@ -188,7 +188,7 @@ const MegaMenu = () => {
                 <img
                   src="/ShoppingCart.png"
                   alt="fav-icon"
-                  style={{maxHeight: "90%", maxWidth: "90%"}}
+                  style={{maxHeight: "70%", maxWidth: "70%"}}
                 />
               </h3>
               {/* totol mony display */}

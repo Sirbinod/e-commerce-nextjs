@@ -11,7 +11,7 @@ const Billing = ({item}) => {
         </div>
         <button
           onClick={() => item.action()}
-          className=" pro-button text-center w-80 h-11 rounded-3xl  my-3"
+          className=" pro-button text-center w-80 h-11 rounded-3xl  my-3 focus:outline-none"
         >
           {item.buttonText}
         </button>

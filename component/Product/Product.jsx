@@ -12,20 +12,20 @@ const Product = () => {
   const image = {
     id: 1,
     img: [
-      "/selec1.png",
-      "/selec2.png",
+      "/laptop.png",
+      "/laptop.png",
       "/selec3.png",
       "/selec4.png",
       "/selec5.png",
     ],
   };
 
-  const [thump, setThump] = useState("/lap1.png");
+  const [thump, setThump] = useState("/laptop.png");
 
   return (
     <div className="block space-y-3 lg:space-y-0 lg:flex mb-1">
       <div className="w-full text-center py-3 lg:w-1/2 items-center pb-2 bg-white">
-        <div className=" w-72 h-52 sm:w-96 sm:h-72  relative mx-10 sm:mx-40 lg:mx-24 my-5 ">
+        <div className=" w-72 h-52 sm:w-96 sm:h-72  relative mx-10 sm:mx-40 lg:mx-16 my-5 ">
           <img
             //src={imge.img[index]}
             src={thump}
@@ -37,7 +37,7 @@ const Product = () => {
         <div className="hidden sm:flex space-x-4 mx-32 lg:mx-16 mb-4 ">
           {image.img.map((imge) => {
             return (
-              <div className="w-16 h-14 border-gray-300 border px-1.5 py-1.5 hover:border-red-500">
+              <div className="w-16 h-14 border-gray-300 border px-2 py-1.5 hover:border-red-500">
                 <div className="w-11 h-11 relative ">
                   <img
                     src={imge}
@@ -46,7 +46,7 @@ const Product = () => {
                     }}
                     // layout="fill"
                     // objectFit="fill"
-                    style={{maxWidth: "46px", maxHeight: "46px"}}
+                    style={{maxWidth: "100%", maxHeight: "100%"}}
                     alt="product image"
                   />
                 </div>

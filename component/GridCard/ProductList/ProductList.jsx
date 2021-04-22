@@ -40,7 +40,7 @@ const ProductList = ({items}) => {
                         20% off
                       </h2>
                     </div>
-                    <div className="flex  sm:mt-3 mr-5">
+                    <div className="flex  sm:mt-3  mr-5">
                       <IoIosStar size="15" className="star-color" />
                       <IoIosStar size="15" className="star-color" />
                       <IoIosStar size="15" className="star-color" />

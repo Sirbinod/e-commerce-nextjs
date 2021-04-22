@@ -3,7 +3,6 @@ import Image from "next/image";
 import {FcLike} from "react-icons/fc";
 import {AiOutlineStar} from "react-icons/ai";
 import Link from "next/link";
-
 const Product = () => {
   const [count, setCount] = useState(1);
 
@@ -24,11 +23,13 @@ const Product = () => {
     <div className="block space-y-3 lg:space-y-0 lg:flex mb-1">
       <div className="w-full text-center py-3 lg:w-1/2 items-center pb-2 bg-white">
         <div className=" w-72 h-52 sm:w-96 sm:h-72  relative mx-10 sm:mx-40 lg:mx-16 my-5 ">
+          {/* <div style={{height: "200px", width: "200px"}}> */}
           <img
             //src={imge.img[index]}
             src={thump}
-            style={{maxWidth: "100%", maxHeight: "100%"}}
+            style={{maxWidth: "100%", maxHeight: "100%", objectFit: "cover"}}
             alt="product image"
+            id="imageMagnify"
           />
         </div>
 
